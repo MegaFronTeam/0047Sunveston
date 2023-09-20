@@ -545,3 +545,16 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.btn {
+	&-primary {
+		--bs-btn-color: #fff;
+		--bs-btn-hover-color: #fff;
+		--bs-btn-active-color: #fff;
+	}
+	&-outline-primary {
+		--bs-btn-color: #{$body-color};
+		--bs-btn-hover-color: #fff;
+		--bs-btn-active-color: #fff;
+	}
+}

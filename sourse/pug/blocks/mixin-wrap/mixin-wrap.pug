@@ -57,5 +57,105 @@ mixin chat()
 mixin scrollToTop()
 	+b.scroll-to-top: +icon('chevron-up')
 
-//- mixin sidePanel()
-//- 	+b.side-panel
+mixin sidePanel(data)
+	+b.side-panel
+		+e.tags-row.row
+			if data.status.length > 0
+				each item in data.status
+					.col-auto: +e.tag(style=`--bgColor: ${item.bgColor}`)!= item.text
+			//- .col-auto: +e.tag(style='--bgColor: linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)') Ипотека
+			//- Just Indent
+		+e.start!= data.start
+		+e.price-row.row
+			.col
+				+e.price.h1 
+					!= data.price
+					if data.tax
+						+img('img/svg/downgrade.svg')
+			if data.tax
+				.col-auto
+					+e.tax
+						+img('img/svg/tax.svg')
+						| УСН
+		if data.discount
+			+e.discount!= data.discount
+		+e.link(href='#')
+			| Кадастровый номер
+			+icon('open-link')
+		if data.btnOnTop
+			+e.btn.btn.btn-primary.btn-lg(href='#')!= data.filledBtn
+			+e.btn.btn.btn-outline-primary.btn-lg(href='#')!= data.outlineBtn
+		if data.features
+			+e.features-row
+				.row
+					.col-auto
+						+e.feature
+							span 425 м²
+							| Площадь
+					.col-auto
+						+e.feature
+							span 500 000 ₽
+							| Цена за м²
+					.col-auto
+						+e.feature
+							span 2 из 8
+							| Этажи
+		if data.subtitle
+			+e.subtitle!= data.subtitle
+		ul
+			each listItem in data.list
+				li
+					span.wrap-left
+						span.key!= listItem.key
+					span.wrap-right
+						span.val!= listItem.val
+		if !data.btnOnTop
+			+e.btn.btn.btn-primary.btn-lg(href='#')!= data.filledBtn
+			+e.btn.btn.btn-outline-primary.btn-lg(href='#')!= data.outlineBtn
+			+e.requierd Для участия в процедуре необходима электронная подпись
+		+e.person
+			+e.img-wrap: +img(`img/${data.person.img}`, 'bg')
+			div
+				+e.name!= data.person.name
+				+e.post!= data.person.post
+		+e.btn-row.row
+			.col
+				+e.action-btn.btn.btn-sm(href='#')
+					+icon('phone')
+					| Позвонить
+			.col
+				+e.action-btn.btn.btn-sm(href='#')
+					+icon('email')
+					| Написать
+
+mixin catalogCard()
+	+b.catalog-card
+		+e.favorite(href='#'): +icon('like')
+		+e.swiper--js.swiper(href='#')
+			.swiper-wrapper
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				+e.slide.swiper-slide
+					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+			+e.slider-info
+				+e.slider-count
+					span.current-slide 01
+					span.all-slides /23
+				+e.pagination-wrap
+					.swiper-pagination
