@@ -128,34 +128,57 @@ mixin sidePanel(data)
 					+icon('email')
 					| Написать
 
-mixin catalogCard()
-	+b.catalog-card
-		+e.favorite(href='#'): +icon('like')
+mixin catalogCard(data)
+	+b.catalog-card&attributes(attributes)
+		+e.favorite(href='#' class=(data.likeClass)): +icon('like')
 		+e.swiper--js.swiper(href='#')
 			.swiper-wrapper
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
-				+e.slide.swiper-slide
-					+e.img-wrap: +img('img/catalog-card-img-1.jpg', 'bg')
+				- for(let i = 0; i < data.slider.slidesCount; i++)
+					+e.slide.swiper-slide
+						+e.img-wrap(data-fancybox=`gallery-${data.slider.img}` data-src=`img/catalog-card-img-${data.slider.img}-lg.png`): +img(`img/catalog-card-img-${data.slider.img}.jpg`, 'bg')
 			+e.slider-info
 				+e.slider-count
 					span.current-slide 01
 					span.all-slides /23
 				+e.pagination-wrap
 					.swiper-pagination
+		+e.content(href='#')
+			+e.head-row
+				.row
+					.col-auto
+						+e.id ID: 177259
+					if data.tag
+						.col-auto
+							+e.tag(style=`--bgColor: ${data.tag.bgColor}`)!= data.tag.text
+							//- +e.tag(style='--bgColor: linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)') Ипотека
+			+e.title!= data.title
+			+e.price-row.row
+				.col-auto
+					+e.price
+						!= data.price.text
+						+img(`img/svg/${data.price.icon}`)
+				.col-auto
+					+e.discount 29 600 000 ₽
+			ul
+				li
+					+img('img/svg/map-pin.svg')
+					| Москва, ул Мясницкая, д 14/2 стр 2 
+				li
+					+img(`img/svg/${data.metro}`)
+					| Москворечье  ~4 минуты пешком
+			+e.features-row
+				.row
+					.col-auto
+						+e.feature
+							| Площадь
+							span 425 м²
+					.col-auto
+						+e.feature
+							| Цена за м²
+							span 500 000 ₽
+					.col-auto
+						+e.feature
+							| Этажи
+							span 
+								.num 2
+								| /8
