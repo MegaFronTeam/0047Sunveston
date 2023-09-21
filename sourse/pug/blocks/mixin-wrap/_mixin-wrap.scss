@@ -283,6 +283,7 @@
 		margin-bottom: rem(16);
 		--bs-btn-padding-y: #{rem(13)};
 		--bs-btn-padding-x: #{rem(6)};
+		--bs-btn-border-width: 2px;
 		@media screen and (min-width: 374.99px) {
 			--bs-btn-padding-x: #{rem(16)};
 		}
@@ -628,14 +629,13 @@
 		font-size: rem(14);
 		line-height: 1.14;
 		font-weight: 500;
-		color: $gray-600;
+		color: $secondary;
 		span {
 			display: block;
 			line-height: 0.8;
 			font-weight: 700;
 			color: $body-color;
 			margin-top: rem(4);
-			color: $gray-600;
 			.num {
 				color: $body-color;
 				display: inline;

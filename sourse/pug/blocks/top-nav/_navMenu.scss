@@ -26,9 +26,9 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: #{rem(2)};
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 2.5);
 	&.on span {
 		--color: transparent;
 	}
@@ -40,7 +40,7 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: rem(24);
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -67,12 +67,13 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: rem(18);
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
 		backface-visibility: hidden; 
 		transform-origin: 50% 50%;
+		border-radius: 60px;
 	} 
 }
 @include media-breakpoint-down(lg) {

@@ -52,7 +52,6 @@ function eventHandler() {
 
 	const catalogCardSwiper = new Swiper('.catalog-card__swiper--js', {
 		slidesPerView: 'auto',
-		// init: false,
 		pagination: {
 			el: ' .swiper-pagination',
 			type: 'bullets',
@@ -70,17 +69,15 @@ function eventHandler() {
 					}
 				}
 			},
-			// init: function() {
-			// 	if (catalogCardSwiper.slides.length < 9) {
-			// 		catalogCardSwiper.el.childNodes[3].children[0].childNodes[1].innerText = `/0${catalogCardSwiper.slides.length}`;
-			// 	} else {
-			// 		catalogCardSwiper.el.childNodes[3].children[0].childNodes[1].innerText = `/${catalogCardSwiper.slides.length}`;
-			// 	}
-			// },
 		}
 	});
-
-	// catalogCardSwiper.init();
+	for (const item of catalogCardSwiper) {
+		if (item.slides.length < 9) {
+			item.el.childNodes[3].children[0].childNodes[1].innerText = `/0${item.slides.length}`;
+		} else {
+			item.el.childNodes[3].children[0].childNodes[1].innerText = `/${item.slides.length}`;
+		}
+	}
 
 	window.addEventListener('scroll', () => {
 		if(window.scrollY > 220) {
