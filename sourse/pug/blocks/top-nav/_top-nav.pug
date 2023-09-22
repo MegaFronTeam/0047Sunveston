@@ -2,15 +2,6 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
@@ -22,13 +13,56 @@ mixin top-nav()
 	+b.top-nav.section.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
+				.col-12
+					+e.wrap
+						+search()
+						+b.dd-group.dd-group-js
+							+e.item
+								+e.head.dd-head-header-js 
+									| Продажа
+									+icon('chevron-down')
+								+e.content.dd-content-js
+									+e.link.active(href="#") Продажа 
+									+e.link(href="#") Аренда 
+									+e.link(href="#") Торги 
+									+e.link(href="#") Готовый бизнес 
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-light(href='#')
+						+icon('filter')
+						| Фильтры
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-light(href='#')  
+						| Покупка до
+						span &nbsp;60 млн ₽
+						+icon('chevron-down')
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-light(href='#')
+						| Окупаемость до 
+						span &nbsp;8 лет
+						+icon('chevron-down')
+				.col-auto.ms-lg-auto
+					+e.btn.btn.btn-outline-light(href='#') 
+						+icon('height')
+						| Рекомендуемые
+						+icon('chevron-down')
+				.col-auto.ms-auto.ms-lg-0
+					+e.btn.btn.btn-outline-light(href='#')
+						+icon('map')
+						.d-none.d-lg-inline На карте
+				.col-auto.d-none.d-lg-block
+					+e.grid
+						+e.grid-item.active(href='#'): +icon('layout')
+						+e.grid-item(href='#'): +icon('grid')
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-light(href='#')
+						+icon('save-search')
+				//- .col-4
+				//- .col.order-lg-0.order-last
+				//- 	.menu-mobile.menu-mobile--js
+				//- 		.menu-mobile__inner
+				//- 			+menu-toggle()
+				//- 			+mnu()
 					
-				.col-auto.d-lg-none
-					+menu-toggle()
+				//- .col-auto.d-lg-none
+				//- 	+menu-toggle()
 	// end top-nav

@@ -82,21 +82,28 @@
 .search-block{
 	position: relative;
 	input{
-		font-size: 14px;
+		font-size: rem(16);
 		width: 100%;
-		border: none !important;
+		// border: none !important;
 		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+		padding: rem(15) rem(15) rem(15) rem(55);
+		border-radius: 56px 0px 0px 56px;
+		border: 1px solid $gray-200;
+		background-color: $gray-100;
+		line-height: 1.5;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+		&::placeholder {
+			color: $gray-600;
+		}
 	}
 	.icon{
-		font-size: rem(20);
+		font-size: rem(24);
 		border: none !important;
 	}
 	button{
 		position: absolute;
-		left: 0;
+		left: rem(10);
 		top: 0;
 		height: 100%;
 		display: flex;
@@ -104,6 +111,7 @@
 		align-items: center;
 		background: none !important;
 		border: none !important;
+		color: $gray-600;
 	}
 }
 

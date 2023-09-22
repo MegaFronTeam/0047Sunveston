@@ -53,27 +53,100 @@
 	<div class="top-nav section block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="col-12">
+					<div class="top-nav__wrap">
+						<div class="search-block">
+							<form>
+								<button> 
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+								<input type="text" placeholder="Поиск" inputmode="search"/>
+							</form>
+						</div>
+						<div class="dd-group dd-group-js">
+							<div class="dd-group__item">
+								<div class="dd-group__head dd-head-header-js">
+									 Продажа
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</div>
+								<div class="dd-group__content dd-content-js">
+									<a class="dd-group__link active" href="#">Продажа 
+									</a>
+									<a class="dd-group__link" href="#">Аренда 
+									</a>
+									<a class="dd-group__link" href="#">Торги 
+									</a>
+									<a class="dd-group__link" href="#">Готовый бизнес 
+									</a>
+								</div>
 							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</nav>
 						</div>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__btn btn btn-outline-light" href="#">
+						<svg class="icon icon-filter ">
+							<use xlink:href="img/svg/sprite.svg#filter"></use>
+						</svg>Фильтры
+					</a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__btn btn btn-outline-light" href="#">
+						 Покупка до<span>&nbsp;60 млн ₽</span>
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__btn btn btn-outline-light" href="#">Окупаемость до <span>&nbsp;8 лет</span>
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="col-auto ms-lg-auto">
+					<a class="top-nav__btn btn btn-outline-light" href="#"> 
+						<svg class="icon icon-height ">
+							<use xlink:href="img/svg/sprite.svg#height"></use>
+						</svg>Рекомендуемые
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="col-auto ms-auto ms-lg-0">
+					<a class="top-nav__btn btn btn-outline-light" href="#">
+						<svg class="icon icon-map ">
+							<use xlink:href="img/svg/sprite.svg#map"></use>
+						</svg>
+						<div class="d-none d-lg-inline">На карте</div>
+					</a>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<div class="top-nav__grid">
+						<a class="top-nav__grid-item active" href="#">
+							<svg class="icon icon-layout ">
+								<use xlink:href="img/svg/sprite.svg#layout"></use>
+							</svg>
+						</a>
+						<a class="top-nav__grid-item" href="#">
+							<svg class="icon icon-grid ">
+								<use xlink:href="img/svg/sprite.svg#grid"></use>
+							</svg>
+						</a>
 					</div>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__btn btn btn-outline-light" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>

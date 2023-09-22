@@ -89,6 +89,27 @@ function eventHandler() {
 	$('.scroll-to-top').on('click', function() {
 		window.scrollTo(0, 0);
 	});
+
+	document.addEventListener('click', (event) => {
+		let ddTarget = event.target.closest('.dd-head-header-js');
+		if (ddTarget) {
+			let clickedHead = this;
+			$('.dd-head-header-js').parent().toggleClass('active');
+			$('.dd-head-header-js')
+				.next()
+				.slideToggle(function () {
+					$('.dd-head-header-js').toggleClass('active');
+				});
+		} else {
+			$('.dd-head-header-js').parent().removeClass('active');
+			$('.dd-head-header-js')
+				.next()
+				.slideUp(function () {
+					$('.dd-head-header-js').removeClass('active');
+				});
+		};
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
