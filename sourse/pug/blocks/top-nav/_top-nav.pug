@@ -16,12 +16,12 @@ mixin top-nav()
 				.col-12
 					+e.wrap
 						+search()
-						+b.dd-group.dd-group-js
+						+b.dd-group
 							+e.item
 								+e.head.dd-head-header-js 
 									| Продажа
 									+icon('chevron-down')
-								+e.content.dd-content-js
+								+e.content
 									+e.link.active(href="#") Продажа 
 									+e.link(href="#") Аренда 
 									+e.link(href="#") Торги 
@@ -31,20 +31,35 @@ mixin top-nav()
 						+icon('filter')
 						| Фильтры
 				.col-auto.d-none.d-lg-block
-					+e.btn.btn.btn-outline-light(href='#')  
-						| Покупка до
-						span &nbsp;60 млн ₽
-						+icon('chevron-down')
+					+e.wrap
+						+e.btn.btn.btn-outline-light.dd-head-header-js
+							| Покупка до
+							span &nbsp;60 млн ₽
+							+icon('chevron-down')
+						+e.content
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
 				.col-auto.d-none.d-lg-block
-					+e.btn.btn.btn-outline-light(href='#')
-						| Окупаемость до 
-						span &nbsp;8 лет
-						+icon('chevron-down')
+					+e.wrap
+						+e.btn.btn.btn-outline-light.dd-head-header-js(href='#')
+							| Окупаемость до 
+							span &nbsp;8 лет
+							+icon('chevron-down')
+						+e.content
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
 				.col-auto.ms-lg-auto
-					+e.btn.btn.btn-outline-light(href='#') 
-						+icon('height')
-						| Рекомендуемые
-						+icon('chevron-down')
+					+e.wrap
+						+e.btn.btn.btn-outline-light.dd-head-header-js(href='#') 
+							+icon('height')
+							| Рекомендуемые
+							+icon('chevron-down')
+						+e.content
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
+							div Lorem ipsum dolor sit.
 				.col-auto.ms-auto.ms-lg-0
 					+e.btn.btn.btn-outline-light(href='#')
 						+icon('map')

@@ -1,7 +1,16 @@
 
-	// start .header
-	.header {
-		 
+// start .header
+.header {
+	@include mt;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	width: 100%;
+	z-index: 101;
+	&.fixed {
+		box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -94,11 +94,11 @@ function eventHandler() {
 		let ddTarget = event.target.closest('.dd-head-header-js');
 		if (ddTarget) {
 			let clickedHead = this;
-			$('.dd-head-header-js').parent().toggleClass('active');
-			$('.dd-head-header-js')
+			$(ddTarget).parent().toggleClass('active');
+			$(ddTarget)
 				.next()
 				.slideToggle(function () {
-					$('.dd-head-header-js').toggleClass('active');
+					$(ddTarget).toggleClass('active');
 				});
 		} else {
 			$('.dd-head-header-js').parent().removeClass('active');
