@@ -11,32 +11,28 @@ mixin inc2(type, text, name)
       +icon('save-search')
       span Сохранить поиск
     +e.title Настроить фильтры
-  +e.body
+  +e.body.custom-scroll
     +e.wrap
-      .h6 Вид недвижимости
+      .h6 Стоимость
       .range-slider
         .extra-controls
           label
             span от
             input.js-input-from(type='text' value='0')
-            span ₽
           label
             span до
             input.js-input-to(type='text' value='0')
-            span ₽
         input.js-range-slider(type='text' value='')
     +e.wrap
-      .h6 Вид недвижимости
+      .h6 Общая площадь
       .range-slider
         .extra-controls
           label
             span от
-            input.js-input-from2(type='text' value='0')
-            span ₽
+            input.js-input-from2.form-control(type='text' value='0')
           label
             span до
-            input.js-input-to2(type='text' value='0')
-            span ₽
+            input.js-input-to2.form-control(type='text' value='0')
         input.js-range-slider2(type='text' value='')
     +e.wrap
       .h6 Вид недвижимости
@@ -82,11 +78,11 @@ mixin inc2(type, text, name)
           .col-auto
             +e.inner-row.row
               .col-auto
-                +inc2('radio', 'Не последний', 'repair')
+                +inc2('radio', 'Не последний', 'floor')
               .col-auto
-                +inc2('radio', 'Последний', 'repair')
+                +inc2('radio', 'Последний', 'floor')
               .col-auto
-                +inc2('radio', 'Не первый', 'repair')
+                +inc2('radio', 'Не первый', 'floor')
       +e.content
         +e.heading Этажность дома
         +e.floor-row.row

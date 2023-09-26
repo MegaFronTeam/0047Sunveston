@@ -19,15 +19,59 @@ mixin topLine()
 							+icon('like')
 							| 24
 					.col-auto.d-none.d-lg-block
-						.popup.popup-js
-							+e.btn.btn.btn-outline-light.popup-btn-js(href='#')
+						+b.popup.popup-js
+							.btn.btn-outline-light.popup-btn-js.topLine__btn(href='#')
 								+icon('save-search')
 								| 3
-							.popup-content
-								.popup-head 
+							+e.content
+								+e.head 
 									| Поиски
 									.close
-								.popup-body
+								+e.body.custom-scroll
+									+e.item
+										.row
+											.col
+												.h6 Продажа недвижимости
+											.col-auto
+												+e.delete(href="#")
+													| Удалить
+													+icon('delete') 
+										p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+										+input('Электронная почта', 'text')
+										+e.btn.btn.btn-primary(href='#') Получать на почту
+									+e.item
+										.row
+											.col
+												.h6 Аренда недвижимости
+											.col-auto
+												+e.delete(href="#")
+													| Удалить
+													+icon('delete') 
+										p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+										+input('Электронная почта', 'text')
+										+e.btn.btn.btn-primary(href='#') Получать на почту
+									+e.item
+										.row
+											.col
+												.h6 Аренда недвижимости
+											.col-auto
+												+e.delete(href="#")
+													| Удалить
+													+icon('delete') 
+										p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+										+input('Электронная почта', 'text')
+										+e.btn.btn.btn-primary(href='#') Получать на почту
+									+e.item
+										.row
+											.col
+												.h6 Продажа недвижимости
+											.col-auto
+												+e.delete(href="#")
+													| Удалить
+													+icon('delete') 
+										p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+										+input('Электронная почта', 'text')
+										+e.btn.btn.btn-primary(href='#') Получать на почту
 					.col-auto
 						+e.btn.btn.btn-dark(href='#') Войти
 					.col-auto.d-lg-none

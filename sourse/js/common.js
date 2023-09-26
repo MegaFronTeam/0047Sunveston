@@ -118,14 +118,44 @@ function eventHandler() {
 		let popupBtnTarget = event.target.closest('.popup-btn-js');
 		let popupTarget = event.target.closest('.popup-js');
 		let popupCloseTarget = event.target.closest('.popup-js .close');
-		let popup = document.querySelector('.popup-js');
+		let popups = document.querySelectorAll('.popup-js');
 		if (popupBtnTarget) {
-			popup.classList.toggle('active');
-			popup.querySelector('.popup-btn-js').classList.toggle('active');
+			popupTarget.classList.toggle('active');
+			popupTarget.querySelector('.popup-btn-js').classList.toggle('active');
 		} 
-		if (!popupTarget || popupCloseTarget) {
-			popup.classList.remove('active');
-			popup.querySelector('.popup-btn-js').classList.remove('active');
+		if (!popupTarget) {
+			for (const popup of popups) {
+				popup.classList.remove('active');
+				popup.querySelector('.popup-btn-js').classList.remove('active');
+			}
+		}
+		if (popupCloseTarget) {
+			let wrap = popupCloseTarget.closest('.popup-js');
+			wrap.classList.remove('active');
+			wrap.querySelector('.popup-btn-js').classList.remove('active');
+		}
+	})
+
+	document.addEventListener('click', function(event) {
+		let searchBlockTarget = event.target.closest('.search-block');
+		if (searchBlockTarget) {
+			let searchBlock = document.querySelector('.search-block');
+			let searchBlockInput = document.querySelector('.search-block input');
+			searchBlockInput.addEventListener('input', function() {
+				if(searchBlockInput.value.length > 0) {
+					searchBlock.querySelector('.search-block__delete').classList.add('active');
+					searchBlock.querySelector('.search-block__result').classList.add('active');
+				} else {
+					searchBlock.querySelector('.search-block__delete').classList.remove('active');
+					searchBlock.querySelector('.search-block__result').classList.remove('active');
+				}
+			});
+			searchBlock.querySelector('.search-block__delete').addEventListener('click', function() {
+				searchBlockInput.value = '';
+				searchBlockInput.focus();
+				searchBlock.querySelector('.search-block__delete').classList.remove('active');
+				searchBlock.querySelector('.search-block__result').classList.remove('active');
+			})
 		}
 	})
 

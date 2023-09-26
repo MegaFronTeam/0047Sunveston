@@ -90,8 +90,19 @@ mixin top-nav()
 						+e.grid-item.active(href='#'): +icon('layout')
 						+e.grid-item(href='#'): +icon('grid')
 				.col-auto.d-none.d-lg-block
-					+e.btn.btn.btn-outline-light(href='#')
-						+icon('save-search')
+					//- +e.btn.btn.btn-outline-light(href='#')
+					//- 	+icon('save-search')
+					+b.popup.popup-js
+						.btn.btn-outline-light.popup-btn-js.top-nav__btn(href='#')
+							+icon('save-search')
+						+e.content
+							+e.head 
+								| Поиски
+								.close
+							+e.body.custom-scroll
+								+e.empty
+									+icon('save-search')
+									| Сохраняйте поиски, чтобы не пропустить новые предложения
 				//- .col-4
 				.col-auto.m-0.p-0
 					.menu-mobile.menu-mobile--js

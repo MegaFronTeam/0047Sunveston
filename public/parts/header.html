@@ -31,17 +31,98 @@
 					</div>
 					<div class="col-auto d-none d-lg-block">
 						<div class="popup popup-js">
-							<a class="topLine__btn btn btn-outline-light popup-btn-js" href="#">
+							<div class="btn btn-outline-light popup-btn-js topLine__btn" href="#">
 								<svg class="icon icon-save-search ">
 									<use xlink:href="img/svg/sprite.svg#save-search"></use>
 								</svg>3
-							</a>
-							<div class="popup-content">
-								<div class="popup-head">
+							</div>
+							<div class="popup__content">
+								<div class="popup__head">
 									 Поиски
 									<div class="close"></div>
 								</div>
-								<div class="popup-body"></div>
+								<div class="popup__body custom-scroll">
+									<div class="popup__item">
+										<div class="row">
+											<div class="col">
+												<div class="h6">Продажа недвижимости</div>
+											</div>
+											<div class="col-auto">
+												<a class="popup__delete" href="#">Удалить
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+										<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<a class="popup__btn btn btn-primary" href="#">Получать на почту
+										</a>
+									</div>
+									<div class="popup__item">
+										<div class="row">
+											<div class="col">
+												<div class="h6">Аренда недвижимости</div>
+											</div>
+											<div class="col-auto">
+												<a class="popup__delete" href="#">Удалить
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+										<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<a class="popup__btn btn btn-primary" href="#">Получать на почту
+										</a>
+									</div>
+									<div class="popup__item">
+										<div class="row">
+											<div class="col">
+												<div class="h6">Аренда недвижимости</div>
+											</div>
+											<div class="col-auto">
+												<a class="popup__delete" href="#">Удалить
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+										<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<a class="popup__btn btn btn-primary" href="#">Получать на почту
+										</a>
+									</div>
+									<div class="popup__item">
+										<div class="row">
+											<div class="col">
+												<div class="h6">Продажа недвижимости</div>
+											</div>
+											<div class="col-auto">
+												<a class="popup__delete" href="#">Удалить
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+										<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<a class="popup__btn btn btn-primary" href="#">Получать на почту
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -72,7 +153,14 @@
 									</svg>
 								</button>
 								<input type="text" placeholder="Поиск" inputmode="search"/>
+								<div class="search-block__delete">
+									<svg class="icon icon-close ">
+										<use xlink:href="img/svg/sprite.svg#close"></use>
+									</svg>
+								</div>
 							</form>
+							<div class="search-block__result custom-scroll"><a href="#">Электронный аукцион</a><a href="#">Прямая продажа</a><a href="#">Продажа без объявлении цены</a><a href="#">Электронный аукцион</a><a href="#">Электронный аукцион</a><a href="#">Прямая продажа</a><a href="#">Продажа без объявлении цены</a><a href="#">Электронный аукцион</a>
+							</div>
 						</div>
 						<div class="dd-group">
 							<div class="dd-group__item dd-wrap-js">
@@ -222,11 +310,26 @@
 					</div>
 				</div>
 				<div class="col-auto d-none d-lg-block">
-					<a class="top-nav__btn btn btn-outline-light" href="#">
-						<svg class="icon icon-save-search ">
-							<use xlink:href="img/svg/sprite.svg#save-search"></use>
-						</svg>
-					</a>
+					<div class="popup popup-js">
+						<div class="btn btn-outline-light popup-btn-js top-nav__btn" href="#">
+							<svg class="icon icon-save-search ">
+								<use xlink:href="img/svg/sprite.svg#save-search"></use>
+							</svg>
+						</div>
+						<div class="popup__content">
+							<div class="popup__head">
+								 Поиски
+								<div class="close"></div>
+							</div>
+							<div class="popup__body custom-scroll">
+								<div class="popup__empty">
+									<svg class="icon icon-save-search ">
+										<use xlink:href="img/svg/sprite.svg#save-search"></use>
+									</svg>Сохраняйте поиски, чтобы не пропустить новые предложения
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-auto m-0 p-0">
 					<div class="menu-mobile menu-mobile--js">

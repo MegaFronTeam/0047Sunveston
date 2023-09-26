@@ -37,6 +37,16 @@ mixin search()
 			button 
 				+icon("search")
 			input(type="text" placeholder="Поиск" inputmode='search')
+			+e.delete: +icon('close')
+		+e.result.custom-scroll
+			a(href='#') Электронный аукцион
+			a(href='#') Прямая продажа
+			a(href='#') Продажа без объявлении цены
+			a(href='#') Электронный аукцион
+			a(href='#') Электронный аукцион
+			a(href='#') Прямая продажа
+			a(href='#') Продажа без объявлении цены
+			a(href='#') Электронный аукцион
 
 mixin page-head(t,...items)
 	+b.page-head
@@ -188,4 +198,54 @@ mixin controlsBtn()
 		+e.btn--filter.btn.btn-light(data-fancybox='filter-2' data-type="ajax" href='modal/filter.html')
 			+icon('filter')
 			| Фильтры
-		+e.btn--search.btn.btn-light(href='#'): +icon('save-search')
+		+b.popup.popup-js
+			.btn.btn-light.popup-btn-js.controls-btn__btn.controls-btn__btn--search(href='#'): +icon('save-search')
+			+e.content
+				+e.head 
+					| Поиски
+					.close
+				+e.body.custom-scroll
+					+e.item
+						.row
+							.col
+								.h6 Продажа недвижимости
+							.col-auto
+								+e.delete(href="#")
+									| Удалить
+									+icon('delete') 
+						p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+						+input('Электронная почта', 'text')
+						+e.btn.btn.btn-primary(href='#') Получать на почту
+					+e.item
+						.row
+							.col
+								.h6 Аренда недвижимости
+							.col-auto
+								+e.delete(href="#")
+									| Удалить
+									+icon('delete') 
+						p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+						+input('Электронная почта', 'text')
+						+e.btn.btn.btn-primary(href='#') Получать на почту
+					+e.item
+						.row
+							.col
+								.h6 Аренда недвижимости
+							.col-auto
+								+e.delete(href="#")
+									| Удалить
+									+icon('delete') 
+						p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+						+input('Электронная почта', 'text')
+						+e.btn.btn.btn-primary(href='#') Получать на почту
+					+e.item
+						.row
+							.col
+								.h6 Продажа недвижимости
+							.col-auto
+								+e.delete(href="#")
+									| Удалить
+									+icon('delete') 
+						p Торговое помещение, Офис, от 500 м², Под чистовую отделку
+						+input('Электронная почта', 'text')
+						+e.btn.btn.btn-primary(href='#') Получать на почту

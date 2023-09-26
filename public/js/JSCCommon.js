@@ -38,8 +38,8 @@ class JSCCommon {
 							from = data.from;
 							to = data.to;
 					
-							$inputFrom.prop("value", from);
-							$inputTo.prop("value", to);
+							$inputFrom.prop("value", from + " ₽");
+							$inputTo.prop("value", to + " ₽");
 					}
 					
 					$inputFrom.on("change", function () {
@@ -97,8 +97,8 @@ class JSCCommon {
 							from = data.from;
 							to = data.to;
 					
-							$inputFrom2.prop("value", from);
-							$inputTo2.prop("value", to);
+							$inputFrom2.prop("value", from + " м²");
+							$inputTo2.prop("value", to + " м²");
 					}
 					
 					$inputFrom2.on("change", function () {

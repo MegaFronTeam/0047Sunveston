@@ -136,8 +136,8 @@
       --bs-btn-color: #{$body-color};
       --bs-btn-border-color: #{$gray-200};
       --bs-btn-active-color: #fff;
-      --bs-btn-active-bg: #{$body-color};
-      --bs-btn-active-border-color: #{$body-color};
+      --bs-btn-active-bg: #{$primary};
+      --bs-btn-active-border-color: #{$primary};
     }
     &.active,
     &:active {
@@ -316,6 +316,16 @@
     }
     @include media-breakpoint-up(lg) {
       display: none;
+    }
+  }
+  .popup {
+    &__content {
+      @include media-breakpoint-up(lg) {
+        right: rem(-43.800);
+      }
+      @include media-breakpoint-up(xl) {
+        right: rem(-34.200);
+      }
     }
   }
   @include media-breakpoint-up(sm) {
