@@ -142,18 +142,20 @@
     &.active,
     &:active {
       .icon {
-        &-chevron-down,
-        &-save-search {
-          color: var(--bs-btn-active-color);
-        }
-        &-map {
-          @include media-breakpoint-down(lg) {
-            color: var(--bs-btn-active-color);
-          }
-        }
+        color: var(--bs-btn-active-color);
+        // &-chevron-down,
+        // &-save-search {
+        //   color: var(--bs-btn-active-color);
+        // }
+        // &-map {
+        //   color: var(--bs-btn-active-color);
+        //   @include media-breakpoint-down(lg) {
+        //   }
+        // }
       }
     }
     span {
+      @include mt;
       color: $primary;
     }
     .icon {
@@ -217,8 +219,11 @@
     &.active {
       .top-nav__btn {
         --bs-btn-active-color: #fff;
-        --bs-btn-active-bg: #{$body-color};
-        --bs-btn-active-border-color: #{$body-color};
+        --bs-btn-active-bg: #{$primary};
+        --bs-btn-active-border-color: #{$primary};
+        span {
+          color: $body-color;
+        }
       }
     }
   }

@@ -101,16 +101,16 @@ function eventHandler() {
 			$(ddTarget)
 				.next()
 				.slideToggle(function () {
-					$(ddTarget).toggleClass('active');
 				});
+				$(ddTarget).toggleClass('active');
 		}; 
 		if (!ddWrapTarget) {
 			$('.dd-head-header-js').parent().removeClass('active');
 			$('.dd-head-header-js')
 				.next()
 				.slideUp(function () {
-					$('.dd-head-header-js').removeClass('active');
 				});
+				$('.dd-head-header-js').removeClass('active');
 		};
 	});
 
