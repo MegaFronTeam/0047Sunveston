@@ -9,6 +9,128 @@ class JSCCommon {
 		Fancybox.bind('[data-fancybox]', {
 			autoFocus: false,
 			placeFocusBack: false,
+			dragToClose: false,
+			on: {
+				reveal: () => {
+					var $range = $(".js-range-slider");
+					var $inputFrom = $(".js-input-from");
+					var $inputTo = $(".js-input-to");
+					var instance;
+					var min = 0;
+					var max = 20000;
+					var from = 0;
+					var to = 0;
+				
+					$range.ionRangeSlider({
+							skin: "round",
+							type: "double",
+							min: min,
+							max: max,
+							from: 890,
+							to: 18090,
+							onStart: updateInputs,
+							onChange: updateInputs,
+							onFinish: updateInputs
+					});
+					instance = $range.data("ionRangeSlider");
+					
+					function updateInputs (data) {
+							from = data.from;
+							to = data.to;
+					
+							$inputFrom.prop("value", from);
+							$inputTo.prop("value", to);
+					}
+					
+					$inputFrom.on("change", function () {
+							var val = $(this).prop("value");
+							console.log(val);
+							// validate
+							if (val < min) {
+								val = min;
+							} else if (val > to) {
+								val = to;
+							}
+							instance.update({
+								from: val
+							});
+							$(this).prop("value", val);
+						});
+					
+					$inputTo.on("change", function () {
+						var val = $(this).prop("value");
+						// validate
+						if (val < from) {
+								val = from;
+						} else if (val > max) {
+								val = max;
+						}
+						instance.update({
+								to: val
+						});
+						$(this).prop("value", val);
+					});
+
+					var $range2 = $(".js-range-slider2");
+					var $inputFrom2 = $(".js-input-from2");
+					var $inputTo2 = $(".js-input-to2");
+					var instance;
+					var min = 0;
+					var max = 20000;
+					var from = 0;
+					var to = 0;
+				
+					$range2.ionRangeSlider({
+							skin: "round",
+							type: "double",
+							min: min,
+							max: max,
+							from: 890,
+							to: 18090,
+							onStart: updateInputs2,
+							onChange: updateInputs2,
+							onFinish: updateInputs2
+					});
+					instance = $range2.data("ionRangeSlider");
+					
+					function updateInputs2 (data) {
+							from = data.from;
+							to = data.to;
+					
+							$inputFrom2.prop("value", from);
+							$inputTo2.prop("value", to);
+					}
+					
+					$inputFrom2.on("change", function () {
+							var val = $(this).prop("value");
+							console.log(val);
+							// validate
+							if (val < min) {
+								val = min;
+							} else if (val > to) {
+								val = to;
+							}
+							instance.update({
+								from: val
+							});
+							$(this).prop("value", val);
+						});
+					
+					$inputTo2.on("change", function () {
+						var val = $(this).prop("value");
+						// validate
+						if (val < from) {
+								val = from;
+						} else if (val > max) {
+								val = max;
+						}
+						instance.update({
+								to: val
+						});
+						$(this).prop("value", val);
+					});
+				},
+			},
 		});
 		Fancybox.bind(link, {
 			arrows: false,
@@ -370,6 +492,7 @@ class JSCCommon {
 		this.makeDDGroup();
 		this.disabledBtn();
 		this.setScreen();
+		// this.getRange();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

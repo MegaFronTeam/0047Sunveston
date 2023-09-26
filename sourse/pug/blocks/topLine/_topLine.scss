@@ -66,9 +66,9 @@
 			--bs-btn-color: #{$body-color};
 			--bs-btn-border-color: #{$gray-200};
 			--bs-btn-active-color: #fff;
-			--bs-btn-active-bg: #{$body-color};
-			--bs-btn-active-border-color: #{$body-color};
-			&:active {
+			--bs-btn-active-bg: #{$primary};
+			--bs-btn-active-border-color: #{$primary};
+			&:active, &.active {
 				.icon {
 					color: var(--bs-btn-active-color);
 				}

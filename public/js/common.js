@@ -71,11 +71,13 @@ function eventHandler() {
 			},
 		}
 	});
-	for (const item of catalogCardSwiper) {
-		if (item.slides.length < 9) {
-			item.el.childNodes[3].children[0].childNodes[1].innerText = `/0${item.slides.length}`;
-		} else {
-			item.el.childNodes[3].children[0].childNodes[1].innerText = `/${item.slides.length}`;
+	if (catalogCardSwiper.length > 0) {
+		for (const item of catalogCardSwiper) {
+			if (item.slides.length < 9) {
+				item.el.childNodes[3].children[0].childNodes[1].innerText = `/0${item.slides.length}`;
+			} else {
+				item.el.childNodes[3].children[0].childNodes[1].innerText = `/${item.slides.length}`;
+			}
 		}
 	}
 
@@ -92,6 +94,7 @@ function eventHandler() {
 
 	document.addEventListener('click', (event) => {
 		let ddTarget = event.target.closest('.dd-head-header-js');
+		let ddWrapTarget = event.target.closest('.dd-wrap-js');
 		if (ddTarget) {
 			let clickedHead = this;
 			$(ddTarget).parent().toggleClass('active');
@@ -100,7 +103,8 @@ function eventHandler() {
 				.slideToggle(function () {
 					$(ddTarget).toggleClass('active');
 				});
-		} else {
+		}; 
+		if (!ddWrapTarget) {
 			$('.dd-head-header-js').parent().removeClass('active');
 			$('.dd-head-header-js')
 				.next()
@@ -109,6 +113,21 @@ function eventHandler() {
 				});
 		};
 	});
+
+	document.addEventListener('click', (event) => {
+		let popupBtnTarget = event.target.closest('.popup-btn-js');
+		let popupTarget = event.target.closest('.popup-js');
+		let popupCloseTarget = event.target.closest('.popup-js .close');
+		let popup = document.querySelector('.popup-js');
+		if (popupBtnTarget) {
+			popup.classList.toggle('active');
+			popup.querySelector('.popup-btn-js').classList.toggle('active');
+		} 
+		if (!popupTarget || popupCloseTarget) {
+			popup.classList.remove('active');
+			popup.querySelector('.popup-btn-js').classList.remove('active');
+		}
+	})
 
 };
 if (document.readyState !== 'loading') {

@@ -9,7 +9,8 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
-		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -397,6 +398,18 @@
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
+			<div class="controls-btn">
+				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">
+					<svg class="icon icon-filter ">
+						<use xlink:href="img/svg/sprite.svg#filter"></use>
+					</svg>Фильтры
+				</a>
+				<a class="controls-btn__btn controls-btn__btn--search btn btn-light" href="#">
+					<svg class="icon icon-save-search ">
+						<use xlink:href="img/svg/sprite.svg#save-search"></use>
+					</svg>
+				</a>
+			</div>
 			<div class="chat">
 				<svg class="icon icon-chat ">
 					<use xlink:href="img/svg/sprite.svg#chat"></use>
@@ -412,6 +425,7 @@
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

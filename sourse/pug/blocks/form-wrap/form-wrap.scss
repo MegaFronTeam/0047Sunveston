@@ -70,3 +70,57 @@ input::-webkit-inner-spin-button {
 	.select2-selection__arrow {
 	display: none;
 }
+
+.custom-input {
+	@include mt;
+	&__input {
+		background-size: rem(14) rem(13);
+		&:focus {
+			box-shadow: none;
+		}
+	}
+	&__text {
+		font-weight: 600;
+		line-height: 1.5;
+		letter-spacing: -0.5px;
+	}
+}
+
+.custom-input-2 {
+	overflow: hidden;
+	// border-radius: rem(56);
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+	padding-left: 0;
+	border-radius: rem(56);
+	&__input {
+		margin-left: 0 !important;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 0 !important;
+		
+		&:checked {
+			background-image: none;
+			& + .custom-input-2__text {
+				background-color: $primary;
+				border-color: $primary;
+				color: #fff;
+			}
+		}
+	}
+	&__text {
+		display: block;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.71;
+		letter-spacing: -0.5px;
+		border-radius: rem(56);
+		padding: rem(8.5) rem(15.75);
+		border: 1px solid $gray-200;
+	}
+}

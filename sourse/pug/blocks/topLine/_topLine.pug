@@ -19,9 +19,15 @@ mixin topLine()
 							+icon('like')
 							| 24
 					.col-auto.d-none.d-lg-block
-						+e.btn.btn.btn-outline-light(href='#')
-							+icon('save-search')
-							| 3
+						.popup.popup-js
+							+e.btn.btn.btn-outline-light.popup-btn-js(href='#')
+								+icon('save-search')
+								| 3
+							.popup-content
+								.popup-head 
+									| Поиски
+									.close
+								.popup-body
 					.col-auto
 						+e.btn.btn.btn-dark(href='#') Войти
 					.col-auto.d-lg-none
