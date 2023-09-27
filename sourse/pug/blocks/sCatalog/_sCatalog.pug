@@ -1,41 +1,219 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
+			+e.grid-row.row
+				.col-sm-6.col-lg-4
+					+catalogCard({
+						slider: {
+							slidesCount: 11,
+							img: 1,
+						},
+						tag: {
+							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+							text: 'Быстрая сделка',
+						},
+						title: 'Продажа торговой площади 546 м²',
+						price: {
+							text: '28 900 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-1.svg',
+					})
+				.col-sm-6.col-lg-4
+					+catalogCard({
+						slider: {
+							slidesCount: 11,
+							img: 1,
+						},
+						tag: {
+							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+							text: 'Быстрая сделка',
+						},
+						title: 'Продажа торговой площади 546 м²',
+						price: {
+							text: '28 900 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-1.svg',
+					})
+				.col-sm-6.col-lg-4
+					+catalogCard({
+						slider: {
+							slidesCount: 11,
+							img: 1,
+						},
+						tag: {
+							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+							text: 'Быстрая сделка',
+						},
+						title: 'Продажа торговой площади 546 м²',
+						price: {
+							text: '28 900 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-1.svg',
+					})
+				.col-sm-6.col-lg-4
+					+catalogCard({
+						slider: {
+							slidesCount: 11,
+							img: 1,
+						},
+						tag: {
+							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+							text: 'Быстрая сделка',
+						},
+						title: 'Продажа торговой площади 546 м²',
+						price: {
+							text: '28 900 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-1.svg',
+					})
+				.col-sm-6.col-lg-4
+					+catalogCard({
+						slider: {
+							slidesCount: 11,
+							img: 1,
+						},
+						tag: {
+							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+							text: 'Быстрая сделка',
+						},
+						title: 'Продажа торговой площади 546 м²',
+						price: {
+							text: '28 900 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-1.svg',
+					})
+			+e.btn.btn.btn-light(href='#') Показать еще
+			+pugin
+			+e.showed Показано 20 из 378 предложений
 
+mixin sCatalog2(data)
+	// start sCatalog
+	+b.sCatalog--2.section&attributes(attributes)
+		+e.container.container
 			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+				+e.catalog-col.col-lg-8.col-xl.custom-scroll
+					+e.wrap
+						+page-head2('Продажа коммерческой недвижимости в Москве','Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
+						+e.cards.row
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 8,
+										img: 1,
+									},
+									tag: {
+										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+										text: 'Быстрая сделка',
+									},
+									title: 'Продажа торговой площади 546 м²',
+									price: {
+										text: '28 900 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-1.svg',
+									likeClass: 'active',
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 8,
+										img: 1,
+									},
+									tag: {
+										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+										text: 'Быстрая сделка',
+									},
+									title: 'Продажа торговой площади 546 м²',
+									price: {
+										text: '28 900 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-1.svg',
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 8,
+										img: 1,
+									},
+									tag: {
+										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+										text: 'Быстрая сделка',
+									},
+									title: 'Продажа торговой площади 546 м²',
+									price: {
+										text: '28 900 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-1.svg',
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 8,
+										img: 1,
+									},
+									tag: {
+										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+										text: 'Быстрая сделка',
+									},
+									title: 'Продажа торговой площади 546 м²',
+									price: {
+										text: '28 900 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-1.svg',
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 8,
+										img: 1,
+									},
+									tag: {
+										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+										text: 'Быстрая сделка',
+									},
+									title: 'Продажа торговой площади 546 м²',
+									price: {
+										text: '28 900 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-1.svg',
+								}).--horizontal
+						+e.btn.btn.btn-light(href='#') Показать еще
+						+pugin
+						+e.showed Показано 20 из 378 предложений
+				.col-lg
+					+e.map
+						#map
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f11-bb68-eb2d6371a737" type="text/javascript")
+					script.
+						var myMap;
+						ymaps.ready(init);
 
+						function init () {
+							myMap = new ymaps.Map('map', {
+									center: [55.76, 37.64],
+									zoom: 10
+							}, {
+									searchControlProvider: 'yandex#search'
+							});
+							//- myGeoObject = new ymaps.GeoObject({
+							//- 	geometry: {
+							//- 			type: "Point",
+							//- 			coordinates: [55.8, 37.8]
+							//- 	},
+							//- 	properties: {
+							//- 		iconContent: '22,5 млн ₽',
+							//- 	}
+							//- });
+							//- myMap.geoObjects.add(myGeoObject);
+						};
 	// end sCatalog
