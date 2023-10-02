@@ -183,6 +183,79 @@ function eventHandler() {
 		}
 	}, { passive: true });
 
+	const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 3,
+		// direction: 'vertical',
+		navigation: {
+			nextEl: '.sProdCard__thumb-arrow-wrap .swiper-button-next',
+			prevEl: '.sProdCard__thumb-arrow-wrap .swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 6,
+				direction: 'vertical',
+			},
+			1200: {
+				slidesPerView: 4,
+				direction: 'vertical',
+			}
+		},
+	});
+	const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
+			prevEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-prev',
+		},
+		thumbs: {
+			swiper: sProdCardThumbSwiper,
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			dynamicBullets: true,
+			dynamicMainBullets: 4,
+		},
+		on: {
+			slideChange: function () {
+				if (sProdCardSwiper2.activeIndex < 9) {
+					sProdCardSwiper2.el.childNodes[3].children[0].childNodes[0].innerText = `0${sProdCardSwiper2.activeIndex + 1}`;
+				} else {
+					sProdCardSwiper2.el.childNodes[3].children[0].childNodes[0].innerText =  sProdCardSwiper2.activeIndex + 1;
+				}
+				// for (const item of sProdCardSwiper2) {
+				// }
+			},
+		}
+	});	
+	if (sProdCardSwiper2) {
+		if (sProdCardSwiper2.slides.length < 9) {
+			sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
+		} else {
+			sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper2.slides.length}`;
+		}
+		// for (const item of sProdCardSwiper2) {
+		// 	if (item.slides.length < 9) {
+		// 		sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
+		// 	} else {
+		// 		sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper2.slides.length}`;
+		// 	}
+		// }
+	}
+
+	$('.side-panel').hcSticky({
+    stickTo: $('.sProdCard__col'),
+		top: 97+24,
+		mobileFirst: true,
+		disable: true,
+		responsive: {
+			998: {
+				disable: false,
+			}
+		}
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

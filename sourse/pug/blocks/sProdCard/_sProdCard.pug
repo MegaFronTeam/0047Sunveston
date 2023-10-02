@@ -1,0 +1,161 @@
+mixin sProdCard(secondVariant)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-7.col-xl-8
+					+e.full-slider-wrap
+						+e.thumb-arrow-wrap.d-none.d-lg-block
+							+e.thumb-slider--thumb-js.swiper
+								.swiper-wrapper
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-1.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-2.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-3.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-4.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-1.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-2.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-3.jpg', 'bg')
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-sm-4.jpg', 'bg')
+							.d-none.d-md-block
+								+arrow()
+						+e.swiper-wrap
+							+e.slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 8; i++)
+										+e.slide.swiper-slide
+											+e.img-wrap(data-fancybox='prod-card-gallery' data-src='img/sProdCard-img-1.jpg')
+												.img-wrap-center
+													+img(`img/sProdCard-img-1.jpg`, 'bg')
+								+e.slider-info.d-none.d-sm-flex
+									+e.slider-count
+										span.current-slide 01
+										span.all-slides /00
+									+e.pagination-wrap
+										.swiper-pagination
+							+e.main-slider-arrow-wrap.d-none.d-sm-block
+								+arrow()
+					+e.wrap
+						h2 Описание
+						p Сдается в&nbsp;аренду помещение свободного назначения&nbsp;&mdash; 175,3 м2&nbsp;Два уровня: 99&nbsp;м2&nbsp;на цокольном этаже и&nbsp;76,3 м2&nbsp;на первом этаже. Мощность 35&nbsp;кВт (с&nbsp;возможностью увеличения). Потолок от&nbsp;2,5&nbsp;м. Два отдельных входа как для первого этажа, так и&nbsp;для цокольного. Входы расположены во&nbsp;дворе здания, с&nbsp;проходом через арку. На&nbsp;земельный участок внутреннего двора заключен договор аренды с&nbsp;администрацией города, и&nbsp;имеются парковочные места
+						+e.btn.btn.btn-light(href='#') Запросить презентацию объекта
+					+e.wrap
+						h2 Характеристики
+						ul
+							li
+								span.wrap-left
+									span.key Окна
+								span.wrap-right
+									span.val Пластиковые
+				+e.col.col-lg-5.col-xl-4
+					if secondVariant
+						+sidePanel({
+							status: false,
+
+							start: 'Начальная цена',
+							price: '48 112 100 ₽',
+							discount: false,
+							tax: false,
+
+							features: false,
+
+							btnOnTop: false,
+							filledBtn: 'Принять участие',
+							outlineBtn: 'Подготовка документов на участие',
+						
+							subtitle: false,
+							list: [
+								{
+									key: 'Шаг',
+									val: '283 850 ₽',
+								},
+								{
+									key: 'Сумма задатка',
+									val: '567 700 ₽',
+								},
+								{
+									key: 'Внесение задатка до',
+									val: '21.09.2023 23:59',
+								},
+								{
+									key: 'Прием заявок до',
+									val: '21.09.2023 23:59',
+								}
+							],
+
+							person: {
+								img: 'avatar-2.jpg',
+								name: 'Алексей Черницкий',
+								post: 'Эксперт по продажам'
+							}
+						})
+					else
+						+sidePanel({
+							status: [
+								{
+									bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+									text: 'Быстрая сделка'
+								},
+								{
+									bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+									text: 'Ипотека'
+								}
+							],
+
+							start: 'Стоимость объекта',
+							price: '25 500 000 ₽',
+							discount: '25 500 000 ₽',
+							tax: true,
+
+							features: true,
+
+							btnOnTop: true,
+							filledBtn: 'Предложить свою цену',
+							outlineBtn: 'Расчитать ипотеку',
+
+							subtitle: 'Финансовые показатели',
+							list: [
+								{
+									key: 'Доходность',
+									val: '14,5%',
+								},
+								{
+									key: 'Окупаемость',
+									val: '8 лет',
+								},
+								{
+									key: 'Месячный арендный поток',
+									val: '500 000 ₽',
+								}
+							],
+
+							person: {
+								img: 'avatar.jpg',
+								name: 'Валентина Иванова',
+								post: 'Эксперт по продажам'
+							}
+						})
+	// end sProdCard

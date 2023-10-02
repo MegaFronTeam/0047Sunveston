@@ -32,10 +32,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-chevron-left-2 {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
 .icon-chevron-right {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-chevron-right-2 {
+	$h: 32;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
 }
 .icon-chevron-up {
 	$h: 24;

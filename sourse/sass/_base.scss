@@ -584,3 +584,15 @@ iframe {
 		--bs-btn-active-color: #fff;
 	}
 }
+
+.header-indent {
+	main {
+		padding-top: 104px;
+		@media screen and (min-width: 374.99px) {
+			padding-top: rem(119);
+		}
+		@include media-breakpoint-up(sm) {
+			padding-top: rem(97);
+		}
+	}
+}

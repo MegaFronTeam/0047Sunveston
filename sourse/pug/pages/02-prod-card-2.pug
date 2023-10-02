@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sProdCard/_sProdCard.pug
+
+block variables
+	- let  mainPage= 'main-page header-indent' 
+	- let  bg= 'main-2.jpg'
+
+block title
+	- let  title= 'Карточка товара'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-2')
+	main
+		+sProdCard(true)
+	//- +parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()
