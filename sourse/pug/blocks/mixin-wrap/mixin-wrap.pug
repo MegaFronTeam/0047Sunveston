@@ -147,58 +147,64 @@ mixin sidePanel(data)
 
 mixin catalogCard(data)
 	+b.catalog-card&attributes(attributes)
-		+e.favorite(href='#' class=(data.likeClass)): +icon('like')
-		+e.swiper--js.swiper(href='#')
-			.swiper-wrapper
-				- for(let i = 0; i < data.slider.slidesCount; i++)
-					+e.slide.swiper-slide
-						+e.img-wrap(data-fancybox=`gallery-${data.slider.img}` data-src=`img/catalog-card-img-${data.slider.img}-lg.png`): +img(`img/catalog-card-img-${data.slider.img}.jpg`, 'bg')
-			+e.slider-info
-				+e.slider-count
-					span.current-slide 01
-					span.all-slides /23
-				+e.pagination-wrap
-					.swiper-pagination
-		+e.content(href='#')
-			+e.head-row
-				.row
-					.col-auto
-						+e.id ID: 177259
-					if data.tag
+		if data.banner
+			+e.banner!= data.banner
+		else
+			+e.favorite(href='#' class=(data.likeClass)): +icon('like')
+			+e.swiper--js.swiper(href='#')
+				.swiper-wrapper
+					- for(let i = 0; i < data.slider.slidesCount; i++)
+						+e.slide.swiper-slide
+							+e.img-wrap(data-fancybox=`gallery-${data.slider.img}-${data.slider.gallery}` data-src=`img/catalog-card-img-${data.slider.img}-lg.png`): img(src=`img/catalog-card-img-${data.slider.img}.jpg`).object-fit-js
+				+e.slider-info
+					+e.slider-count
+						span.current-slide 01
+						span.all-slides /23
+					+e.pagination-wrap
+						.swiper-pagination
+			+e.content(href='#')
+				+e.head-row
+					.row
 						.col-auto
-							+e.tag(style=`--bgColor: ${data.tag.bgColor}`)!= data.tag.text
-							//- +e.tag(style='--bgColor: linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)') Ипотека
-			+e.title!= data.title
-			+e.price-row.row
-				.col-auto
-					+e.price
-						!= data.price.text
-						+img(`img/svg/${data.price.icon}`)
-				.col-auto
-					+e.discount 29 600 000 ₽
-			ul
-				li
-					+img('img/svg/map-pin.svg')
-					| Москва, ул Мясницкая, д 14/2 стр 2 
-				li
-					+img(`img/svg/${data.metro}`)
-					| Москворечье  ~4 минуты пешком
-			+e.features-row
-				.row
+							+e.id ID: 177259
+						if data.tag
+							each item in data.tag
+								.col-auto
+									+e.tag(style=`--bgColor: ${item.bgColor}`)!= item.text
+									//- +e.tag(style='--bgColor: linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)') Ипотека
+				+e.title!= data.title
+				+e.price-row.row
 					.col-auto
-						+e.feature
-							| Площадь
-							span 425 м²
+						+e.price
+							!= data.price.text
+							if data.price.icon
+								+img(`img/svg/${data.price.icon}`)
 					.col-auto
-						+e.feature
-							| Цена за м²
-							span 500 000 ₽
-					.col-auto
-						+e.feature
-							| Этажи
-							span.text-secondary
-								.num 2
-								| /8
+						+e.discount 29 600 000 ₽
+				ul
+					li
+						+img('img/svg/map-pin.svg')
+						| Москва, ул Мясницкая, д 14/2 стр 2 
+					li
+						+img(`img/svg/${data.metro}`)
+						| Москворечье  ~4 минуты пешком
+				+e.features-row
+					.row
+						if data.features
+							.col-auto
+								+e.feature
+									| Площадь
+									span!= data.features.area
+							.col-auto
+								+e.feature
+									| Цена за м²
+									span!= data.features.price
+							.col-auto
+								+e.feature
+									| Этажи
+									span.text-secondary
+										.num!= data.features.floor
+										| #{data.features.allFloors}
 
 mixin controlsBtn()
 	+b.controls-btn

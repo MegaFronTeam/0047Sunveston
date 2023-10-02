@@ -99,7 +99,13 @@
         @include media-breakpoint-up(lg) {
           display: inline-block;
         }
-        &:hover,
+        &:hover {
+          color: $primary;
+          @include media-breakpoint-up(lg) {
+            color: $primary;
+            background-color: $gray-100;
+          }
+        }
         &.active {
           color: $primary;
           @include media-breakpoint-up(lg) {
@@ -117,6 +123,10 @@
     --bs-btn-padding-x: #{rem(15)};
     --bs-btn-padding-y: #{rem(9)};
     --bs-btn-font-size: #{rem(14)};
+
+    --bs-btn-hover-color: #{$primary};
+    --bs-btn-hover-bg: #{$gray-100};
+    --bs-btn-hover-border-color: #{$gray-200};
     @include media-breakpoint-up(lg) {
       --bs-btn-padding-x: #{rem(8)};
       --bs-btn-padding-y: #{rem(7.3)};
@@ -240,6 +250,7 @@
       border-radius: 50%;
       padding: rem(7);
       line-height: 1;
+      color: $body-color;
       @include media-breakpoint-up(lg) {
         padding: rem(6.5);
       }
@@ -255,7 +266,9 @@
           font-size: rem(24);
         }
       }
-      &:hover,
+      &:hover {
+        color: $primary;
+      }
       &.active {
         background-color: #fff;
         color: $primary;

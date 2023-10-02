@@ -158,6 +158,30 @@ function eventHandler() {
 			})
 		}
 	})
+	
+	document.addEventListener('click', function(event) {
+		let toggleMapBtnTarget = event.target.closest('.top-nav__btn--map-js');
+		if(toggleMapBtnTarget) {
+			if (window.matchMedia('(max-width: 992px)').matches) {
+				let toggleMapBtn = document.querySelector('.top-nav__btn--map-js');
+				let mapBlock = document.querySelector('.sCatalog__map');
+				toggleMapBtn.classList.toggle('active');
+				mapBlock.classList.toggle('active');
+				$('body').toggleClass('fixed-map');
+			};
+		}
+	})
+	window.addEventListener('resize', () => {
+		if (window.matchMedia('(min-width: 992px)').matches ) {
+			let toggleMapBtn = document.querySelector('.top-nav__btn--map-js');
+			let mapBlock = document.querySelector('.sCatalog__map');
+			if(toggleMapBtn && mapBlock) {
+				toggleMapBtn.classList.remove('active');
+				mapBlock.classList.remove('active');
+			}
+			$('body').removeClass('fixed-map');
+		}
+	}, { passive: true });
 
 };
 if (document.readyState !== 'loading') {

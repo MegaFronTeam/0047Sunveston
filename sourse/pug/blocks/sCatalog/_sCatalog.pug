@@ -3,90 +3,181 @@ mixin sCatalog(data)
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+e.grid-row.row
-				.col-sm-6.col-lg-4
+				.col-sm-6.col-lg-4.col-xl-3
 					+catalogCard({
 						slider: {
-							slidesCount: 11,
+							slidesCount: 23,
 							img: 1,
+							gallery: 1,
 						},
-						tag: {
-							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-							text: 'Быстрая сделка',
-						},
+						tag: [
+							{
+								bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+								text: 'Быстрая сделка',
+							}
+						],
 						title: 'Продажа торговой площади 546 м²',
 						price: {
 							text: '28 900 000 ₽',
 							icon: 'downgrade.svg'
 						},
 						metro: 'metro-1.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
 					})
-				.col-sm-6.col-lg-4
+				.col-sm-6.col-lg-4.col-xl-3
 					+catalogCard({
 						slider: {
-							slidesCount: 11,
-							img: 1,
+							slidesCount: 23,
+							img: 2,
+							gallery: 2,
 						},
-						tag: {
-							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-							text: 'Быстрая сделка',
-						},
-						title: 'Продажа торговой площади 546 м²',
+						tag: false,
+						title: 'Продажа торговой площади 952 м²',
 						price: {
-							text: '28 900 000 ₽',
+							text: '47 950 000 ₽',
 							icon: 'downgrade.svg'
 						},
-						metro: 'metro-1.svg',
+						metro: 'metro-2.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
 					})
-				.col-sm-6.col-lg-4
+				.col-sm-6.col-lg-4.col-xl-3
 					+catalogCard({
 						slider: {
-							slidesCount: 11,
-							img: 1,
+							slidesCount: 23,
+							img: 3,
+							gallery: 3,
 						},
-						tag: {
-							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-							text: 'Быстрая сделка',
-						},
+						tag: [
+							{
+								bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+								text: 'Ипотека',
+							},
+						],
 						title: 'Продажа торговой площади 546 м²',
 						price: {
-							text: '28 900 000 ₽',
-							icon: 'downgrade.svg'
+							text: '34 480 000 ₽',
+							icon: 'upgrade.svg'
 						},
-						metro: 'metro-1.svg',
+						metro: 'metro-3.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
 					})
-				.col-sm-6.col-lg-4
+				.col-sm-6.col-lg-4.col-xl-3
+					+catalogCard({
+						banner: 'Banner 668x160 px'
+					}).--banner
+				.col-sm-6.col-lg-4.col-xl-3
 					+catalogCard({
 						slider: {
-							slidesCount: 11,
-							img: 1,
+							slidesCount: 23,
+							img: 4,
+							gallery: 5,
 						},
-						tag: {
-							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-							text: 'Быстрая сделка',
-						},
-						title: 'Продажа торговой площади 546 м²',
+						tag: [
+							{
+								bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+								text: 'Ипотека',
+							},
+						],
+						title: 'Продажа торговой площади 246 м²',
 						price: {
-							text: '28 900 000 ₽',
-							icon: 'downgrade.svg'
+							text: '34 480 000 ₽',
+							icon: false
 						},
-						metro: 'metro-1.svg',
+						metro: 'metro-3.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
 					})
-				.col-sm-6.col-lg-4
+				.col-sm-6.col-lg-4.col-xl-3
 					+catalogCard({
 						slider: {
-							slidesCount: 11,
-							img: 1,
+							slidesCount: 23,
+							img: 5,
+							gallery: 6,
 						},
-						tag: {
-							bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-							text: 'Быстрая сделка',
+						tag: [
+							{
+								bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+								text: 'Быстрая сделка',
+							}
+						],
+						title: 'Продажа торговой площади 526 м²',
+						price: {
+							text: '22 000 000 ₽',
+							icon: 'upgrade.svg'
 						},
+						metro: 'metro-4.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
+					})
+				.col-sm-6.col-lg-4.col-xl-3
+					+catalogCard({
+						slider: {
+							slidesCount: 23,
+							img: 6,
+							gallery: 7,
+						},
+						tag: false,
 						title: 'Продажа торговой площади 546 м²',
 						price: {
 							text: '28 900 000 ₽',
-							icon: 'downgrade.svg'
+							icon: false
 						},
 						metro: 'metro-1.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
+					})
+				.col-sm-6.col-lg-4.col-xl-3
+					+catalogCard({
+						slider: {
+							slidesCount: 23,
+							img: 7,
+							gallery: 8,
+						},
+						tag: [
+							{
+								bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+								text: 'Ипотека',
+							},
+						],
+						title: 'Продажа торговой площади 952 м²',
+						price: {
+							text: '47 950 000 ₽',
+							icon: 'downgrade.svg'
+						},
+						metro: 'metro-2.svg',
+						features: {
+							area: '526 м²',
+							price: '500 000 ₽',
+							floor: '2',
+							allFloors: '/8',
+						}
 					})
 			+e.btn.btn.btn-light(href='#') Показать еще
 			+pugin
@@ -97,103 +188,126 @@ mixin sCatalog2(data)
 	+b.sCatalog--2.section&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				+e.catalog-col.col-lg-8.col-xl.custom-scroll
+				+e.catalog-col.col-lg-7.col-xl-8.col-xxl.custom-scroll
 					+e.wrap
 						+page-head2('Продажа коммерческой недвижимости в Москве','Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
 						+e.cards.row
 							.col-sm-6.col-lg-12
 								+catalogCard({
 									slider: {
-										slidesCount: 8,
+										slidesCount: 23,
 										img: 1,
+										gallery: 9,
 									},
-									tag: {
-										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-										text: 'Быстрая сделка',
-									},
-									title: 'Продажа торговой площади 546 м²',
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+											text: 'Ипотека',
+										}
+									],
+									title: 'Продажа торговой площади 526 м²',
 									price: {
-										text: '28 900 000 ₽',
+										text: '34 850 200 ₽',
+										icon: 'upgrade.svg'
+									},
+									metro: 'metro-2.svg',
+									features: {
+										area: '425 м²',
+										price: '368 200 ₽',
+										floor: '8',
+										allFloors: '/24',
+									}
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 3,
+										gallery: 10,
+									},
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+											text: 'Быстрая сделка',
+										}
+									],
+									title: 'Продажа торговой площади 2 026 м²',
+									price: {
+										text: '25 500 900 ₽',
 										icon: 'downgrade.svg'
 									},
-									metro: 'metro-1.svg',
+									metro: 'metro-5.svg',
+									features: {
+										area: '2 026 м²',
+										price: '557 900 ₽',
+										floor: '5',
+										allFloors: '/5',
+									}
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 6,
+										gallery: 11,
+									},
+									tag: false,
+									title: 'Продажа торговой площади 425 м²',
 									likeClass: 'active',
+									price: {
+										text: '46 365 600 ₽',
+										icon: false
+									},
+									metro: 'metro-1.svg',
+									features: {
+										area: '425 м²',
+										price: '725 970 ₽',
+										floor: '2',
+										allFloors: '/8',
+									}
 								}).--horizontal
 							.col-sm-6.col-lg-12
 								+catalogCard({
-									slider: {
-										slidesCount: 8,
-										img: 1,
-									},
-									tag: {
-										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-										text: 'Быстрая сделка',
-									},
-									title: 'Продажа торговой площади 546 м²',
-									price: {
-										text: '28 900 000 ₽',
-										icon: 'downgrade.svg'
-									},
-									metro: 'metro-1.svg',
-								}).--horizontal
+									banner: 'Banner 668x160 px'
+								}).--horizontal.--banner
 							.col-sm-6.col-lg-12
 								+catalogCard({
 									slider: {
-										slidesCount: 8,
-										img: 1,
+										slidesCount: 23,
+										img: 4,
+										gallery: 12,
 									},
-									tag: {
-										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-										text: 'Быстрая сделка',
-									},
-									title: 'Продажа торговой площади 546 м²',
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+											text: 'Ипотека',
+										},
+										{
+											bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+											text: 'Быстрая сделка',
+										}
+									],
+									title: 'Продажа торговой площади 1 826 м²',
 									price: {
-										text: '28 900 000 ₽',
+										text: '52 957 800 ₽',
 										icon: 'downgrade.svg'
 									},
-									metro: 'metro-1.svg',
-								}).--horizontal
-							.col-sm-6.col-lg-12
-								+catalogCard({
-									slider: {
-										slidesCount: 8,
-										img: 1,
-									},
-									tag: {
-										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-										text: 'Быстрая сделка',
-									},
-									title: 'Продажа торговой площади 546 м²',
-									price: {
-										text: '28 900 000 ₽',
-										icon: 'downgrade.svg'
-									},
-									metro: 'metro-1.svg',
-								}).--horizontal
-							.col-sm-6.col-lg-12
-								+catalogCard({
-									slider: {
-										slidesCount: 8,
-										img: 1,
-									},
-									tag: {
-										bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
-										text: 'Быстрая сделка',
-									},
-									title: 'Продажа торговой площади 546 м²',
-									price: {
-										text: '28 900 000 ₽',
-										icon: 'downgrade.svg'
-									},
-									metro: 'metro-1.svg',
+									metro: 'metro-3.svg',
+									features: {
+										area: '1 826 м²',
+										price: '520 927 ₽',
+										floor: '4',
+										allFloors: '/6',
+									}
 								}).--horizontal
 						+e.btn.btn.btn-light(href='#') Показать еще
 						+pugin
 						+e.showed Показано 20 из 378 предложений
-				.col-lg
+				.col-lg-5.col-xl-4.col-xxl
 					+e.map
+						+e.search: +in-c('checkbox', 'Поиск при перемещении карты', 'search')
 						#map
-					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f11-bb68-eb2d6371a737" type="text/javascript")
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f23-bb68-eb2d6371a737" type="text/javascript")
 					script.
 						var myMap;
 						ymaps.ready(init);

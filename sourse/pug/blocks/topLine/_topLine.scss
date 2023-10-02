@@ -65,6 +65,9 @@
 		&.btn-outline-light {
 			--bs-btn-color: #{$body-color};
 			--bs-btn-border-color: #{$gray-200};
+			--bs-btn-hover-color: #{$primary};
+			--bs-btn-hover-bg: #{$gray-100};
+			--bs-btn-hover-border-color: #{$gray-200};
 			--bs-btn-active-color: #fff;
 			--bs-btn-active-bg: #{$primary};
 			--bs-btn-active-border-color: #{$primary};
@@ -79,6 +82,11 @@
 				margin-right: rem(16);
 				color: $primary;
 			}
+		}
+		&.btn-dark {
+			--bs-btn-hover-color: #fff;
+			--bs-btn-hover-bg: #{$primary};
+			--bs-btn-hover-border-color: #{$primary};
 		}
 	}
 	@include media-breakpoint-up(xl) {}
