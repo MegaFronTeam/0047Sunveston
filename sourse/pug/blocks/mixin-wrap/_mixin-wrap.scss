@@ -230,11 +230,83 @@
 	.breadcrumb {
 		margin-bottom: rem(24);
 	}
+	&__row {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(16)};
+			--bs-gutter-y: #{rem(16)};
+		}
+	}
 	h1 {
 		font-weight: 700;
 		line-height: 1.5;
 		letter-spacing: -0.5px;
 		margin-bottom: 0;
+		font-size: rem(32);
+	}
+	&__btn {
+		--bs-btn-color: #{$body-color};
+		--bs-btn-border-color: #{$gray-200};
+		--bs-btn-hover-color: #{$primary};
+		--bs-btn-hover-bg: #{$gray-100};
+		--bs-btn-hover-border-color: #{$gray-200};
+		--bs-btn-active-color: #fff;
+		--bs-btn-active-bg: #{$primary};
+		--bs-btn-active-border-color: #{$primary};
+		--bs-btn-padding-x: #{rem(9)};
+		@include media-breakpoint-up(lg) {
+			--bs-btn-padding-x: #{rem(15)};
+		}
+		&:active, &.active {
+			.icon {
+				color: var(--bs-btn-active-color);
+			}
+		}
+		.icon {
+			@include mt;
+			font-size: rem(24);
+			color: $primary;
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(16);
+			}
+		}
+	}
+	&__addres {
+		display: flex;
+		align-items: center;
+		line-height: 1.14;
+		font-size: rem(14);
+		font-weight: 500;
+		img {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: rem(20);
+			margin-right: rem(8);
+		}
+	}
+	&__metro {
+		display: flex;
+		align-items: center;
+		line-height: 1.14;
+		font-size: rem(14);
+		font-weight: 500;
+		img {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: rem(26);
+			margin-right: rem(8);
+		}
+		span {
+			color: $gray-600;
+		}
+	}
+	&__id {
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.14;
 	}
 }
 
@@ -590,6 +662,7 @@
 		border-radius: rem(24);
 		border: 1px solid $gray-200;
 		// overflow: hidden;
+		cursor: pointer;
 		&:hover {
 			img {
 				scale: 1.1;

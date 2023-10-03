@@ -8,6 +8,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sSimilar/_sSimilar.pug
 
 block variables
 	- let  mainPage= 'main-page header-indent' 
@@ -22,7 +23,9 @@ block pagecontent
 	
 	+parts('header-2')
 	main
+		+page-head('Продажа торговой площади 526 м²', 'Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
 		+sProdCard
+		+sSimilar
 	//- +parts('footer')
 	+controlsBtn()
 	+chat()

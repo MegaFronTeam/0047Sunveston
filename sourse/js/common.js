@@ -246,6 +246,7 @@ function eventHandler() {
 	}
 
 	$('.side-panel').hcSticky({
+    innerSticker: $('.sProdCard__col'),
     stickTo: $('.sProdCard__col'),
 		top: 97+24,
 		mobileFirst: true,
@@ -256,6 +257,30 @@ function eventHandler() {
 			}
 		}
   });
+
+	const sSimilarSwiper = new Swiper('.sSimilar__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			998: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		}
+	});	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

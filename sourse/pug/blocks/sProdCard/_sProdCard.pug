@@ -58,19 +58,262 @@ mixin sProdCard(secondVariant)
 										.swiper-pagination
 							+e.main-slider-arrow-wrap.d-none.d-sm-block
 								+arrow()
-					+e.wrap
-						h2 Описание
-						p Сдается в&nbsp;аренду помещение свободного назначения&nbsp;&mdash; 175,3 м2&nbsp;Два уровня: 99&nbsp;м2&nbsp;на цокольном этаже и&nbsp;76,3 м2&nbsp;на первом этаже. Мощность 35&nbsp;кВт (с&nbsp;возможностью увеличения). Потолок от&nbsp;2,5&nbsp;м. Два отдельных входа как для первого этажа, так и&nbsp;для цокольного. Входы расположены во&nbsp;дворе здания, с&nbsp;проходом через арку. На&nbsp;земельный участок внутреннего двора заключен договор аренды с&nbsp;администрацией города, и&nbsp;имеются парковочные места
-						+e.btn.btn.btn-light(href='#') Запросить презентацию объекта
-					+e.wrap
-						h2 Характеристики
-						ul
-							li
-								span.wrap-left
-									span.key Окна
-								span.wrap-right
-									span.val Пластиковые
-				+e.col.col-lg-5.col-xl-4
+					if secondVariant
+						+sidePanel({
+							status: false,
+
+							start: 'Начальная цена',
+							price: '48 112 100 ₽',
+							discount: false,
+							tax: false,
+
+							features: false,
+
+							btnOnTop: false,
+							filledBtn: 'Принять участие',
+							outlineBtn: 'Подготовка документов на участие',
+						
+							subtitle: false,
+							list: [
+								{
+									key: 'Шаг',
+									val: '283 850 ₽',
+								},
+								{
+									key: 'Сумма задатка',
+									val: '567 700 ₽',
+								},
+								{
+									key: 'Внесение задатка до',
+									val: '21.09.2023 23:59',
+								},
+								{
+									key: 'Прием заявок до',
+									val: '21.09.2023 23:59',
+								}
+							],
+
+							person: {
+								img: 'avatar-2.jpg',
+								name: 'Алексей Черницкий',
+								post: 'Эксперт по продажам'
+							}
+						}).d-block.d-lg-none
+					else
+						+sidePanel({
+							status: [
+								{
+									bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+									text: 'Быстрая сделка'
+								},
+								{
+									bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+									text: 'Ипотека'
+								}
+							],
+
+							start: 'Стоимость объекта',
+							price: '25 500 000 ₽',
+							discount: '25 500 000 ₽',
+							tax: true,
+
+							features: true,
+
+							btnOnTop: true,
+							filledBtn: 'Предложить свою цену',
+							outlineBtn: 'Расчитать ипотеку',
+
+							subtitle: 'Финансовые показатели',
+							list: [
+								{
+									key: 'Доходность',
+									val: '14,5%',
+								},
+								{
+									key: 'Окупаемость',
+									val: '8 лет',
+								},
+								{
+									key: 'Месячный арендный поток',
+									val: '500 000 ₽',
+								}
+							],
+
+							person: {
+								img: 'avatar.jpg',
+								name: 'Валентина Иванова',
+								post: 'Эксперт по продажам'
+							}
+						}).d-block.d-lg-none
+					if secondVariant
+						+e.wrap
+							h2 Описание
+							p Сдается в&nbsp;аренду помещение свободного назначения&nbsp;&mdash; 175,3 м2&nbsp;Два уровня: 99&nbsp;м2&nbsp;на цокольном этаже и&nbsp;76,3 м2&nbsp;на первом этаже. Мощность 35&nbsp;кВт (с&nbsp;возможностью увеличения). Потолок от&nbsp;2,5&nbsp;м. Два отдельных входа как для первого этажа, так и&nbsp;для цокольного. Входы расположены во&nbsp;дворе здания, с&nbsp;проходом через арку. На&nbsp;земельный участок внутреннего двора заключен договор аренды с&nbsp;администрацией города, и&nbsp;имеются парковочные места
+							+e.info-table
+								table
+									mixin tr(key, val)
+										tr
+											td!= key
+											td
+												if val
+													!= val
+												else 
+													block
+									+tr('Направление продаж', 'Имущество частных собственников')
+									+tr('Вид процедуры', 'Аукцион с открытой формой подачи предложений')
+									+tr('Код лота', '')
+										a(href="#") РАД-347018 
+									+tr('Код процедуры', '')
+										a(href="#") 163929
+									+tr('Адрес', 'Самарская обл., Кошкинский р-н, Кошки&nbsp;с, ул.&nbsp;60&nbsp;лет Октября, дом 23А; Самарская обл., Кошкинский р-н, с. Кошки, ул.&nbsp;60&nbsp;лет Октября, д. 21Б')
+						+e.wrap
+							h2 Характеристики
+							ul
+								mixin li(key,val)
+									li
+										span.wrap-left
+											span.key!=key
+										span.wrap-right
+											span.val!= val
+								+li('Окна', 'Пластиковые')
+								+li('Планировка', 'Открытая')
+								+li('Высота потолков', '99 м²')
+								+li('Вход', 'Отдельный')
+								+li('Ремонт', 'Предчистовая отделка')
+								+li('Эл. мощность', '35 кВт')
+								+li('Окна', 'Пластиковые')
+								+li('Планировка', 'Открытая')
+								+li('Высота потолков', '99 м²')
+								+li('Вход', 'Отдельный')
+						+e.wrap
+							h2 Арендаторы
+							+e.table-wrap
+								table
+									thead
+										tr
+											th Арендатор
+											th МАП
+											th ГАП
+											th.text-center Договор
+											th.text-center Индексация
+											th Детализация арендного потока
+									tbody 
+										tr
+											td Бургер Кинг
+											td 290 000 ₽
+											td 3 480 000 ₽
+											td.text-center ДДА
+											td.text-center 5%
+											td ДДА до 02.2024г
+										tr
+											td Хорошая компания
+											td 301 032 ₽
+											td 3 612 384 ₽
+											td.text-center КДА
+											td.text-center 5%
+											td ДА 13.03.2023 - 31.03.2026
+										tr
+											td Антидот ритейл
+											td 320 000 ₽
+											td 3 840 000 ₽
+											td.text-center ДДА
+											td.text-center 5%
+											td ДДА до 12.2026г
+						+e.wrap
+							h2 Расположение
+							+e.map: #map 
+					else
+						+e.wrap
+							h2 Описание
+							p Сдается в&nbsp;аренду помещение свободного назначения&nbsp;&mdash; 175,3 м2&nbsp;Два уровня: 99&nbsp;м2&nbsp;на цокольном этаже и&nbsp;76,3 м2&nbsp;на первом этаже. Мощность 35&nbsp;кВт (с&nbsp;возможностью увеличения). Потолок от&nbsp;2,5&nbsp;м. Два отдельных входа как для первого этажа, так и&nbsp;для цокольного. Входы расположены во&nbsp;дворе здания, с&nbsp;проходом через арку. На&nbsp;земельный участок внутреннего двора заключен договор аренды с&nbsp;администрацией города, и&nbsp;имеются парковочные места
+							+e.btn.btn.btn-light(href='#') Запросить презентацию объекта
+						+e.wrap
+							h2 Характеристики
+							ul
+								mixin li(key,val)
+									li
+										span.wrap-left
+											span.key!=key
+										span.wrap-right
+											span.val!= val
+								+li('Окна', 'Пластиковые')
+								+li('Планировка', 'Открытая')
+								+li('Высота потолков', '99 м²')
+								+li('Вход', 'Отдельный')
+								+li('Ремонт', 'Предчистовая отделка')
+								+li('Эл. мощность', '35 кВт')
+								+li('Окна', 'Пластиковые')
+								+li('Планировка', 'Открытая')
+								+li('Высота потолков', '99 м²')
+								+li('Вход', 'Отдельный')
+						+e.wrap
+							h2 Арендаторы
+							+e.table-wrap
+								table
+									thead
+										tr
+											th Арендатор
+											th МАП
+											th ГАП
+											th.text-center Договор
+											th.text-center Индексация
+											th Детализация арендного потока
+									tbody 
+										tr
+											td Бургер Кинг
+											td 290 000 ₽
+											td 3 480 000 ₽
+											td.text-center ДДА
+											td.text-center 5%
+											td ДДА до 02.2024г
+										tr
+											td Хорошая компания
+											td 301 032 ₽
+											td 3 612 384 ₽
+											td.text-center КДА
+											td.text-center 5%
+											td ДА 13.03.2023 - 31.03.2026
+										tr
+											td Антидот ритейл
+											td 320 000 ₽
+											td 3 840 000 ₽
+											td.text-center ДДА
+											td.text-center 5%
+											td ДДА до 12.2026г
+						+e.wrap
+							h2 Расположение
+							+e.map: #map 
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f23-bb68-eb2d6371a737" type="text/javascript")
+					script.
+						var myMap;
+						ymaps.ready(init);
+
+						function init () {
+							myMap = new ymaps.Map('map', {
+									center: [55.77353559113589,37.59458184788507],
+									zoom: 18
+							}, {
+									searchControlProvider: 'yandex#search'
+							});
+							myPlacemark = new ymaps.Placemark([55.77353559113589,37.59458184788507], {
+									// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+									//- balloonContentHeader: "Балун метки",
+									//- balloonContentBody: "Содержимое <em>балуна</em> метки",
+									//- balloonContentFooter: "Подвал",
+									//- hintContent: "Хинт метки"
+							}, {
+								iconLayout: 'default#image',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/map-pin-2.svg',
+								// Размеры метки.
+								iconImageSize: [48, 77],
+								// Смещение левого верхнего угла иконки относительно
+								// её "ножки" (точки привязки).
+								iconImageOffset: [-24, -38]
+							});
+							myMap.geoObjects.add(myPlacemark);
+						};
+				+e.col.col-lg-5.col-xl-4.d-none.d-lg-block
 					if secondVariant
 						+sidePanel({
 							status: false,

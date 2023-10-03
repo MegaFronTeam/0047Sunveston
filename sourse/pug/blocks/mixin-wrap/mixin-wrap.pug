@@ -53,8 +53,28 @@ mixin page-head(t,...items)
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
-
-			h1= t
+			+e.row.row
+				.col-lg
+					h1= t
+				.col-auto.order-last.order-lg-0
+					+e.btn.btn.btn-outline.light(href='#')
+						+icon('share')
+						span.d-none.d-lg-inline Поделиться
+				.col-auto.order-last.order-lg-0
+					+e.btn.btn.btn-outline.light(href='#')
+						+icon('like')
+						span.d-none.d-lg-inline В избранное
+				.col-12.p-0.m-0.d-none.d-lg-block
+				.col-lg-auto
+					+e.addres
+						+img('img/svg/map-pin.svg')
+						| Москва, ул Мясницкая, д 14/2 стр 2
+				.col-lg-auto
+					+e.metro
+						+img('img/svg/metro-6.svg')
+						| Москворечье&nbsp;#[span ~4 минуты пешком]
+				.col-auto.me-auto.me-lg-0.ms-lg-auto
+					+e.id ID: 177259
 
 mixin page-head2(t,...items)
 	+b.page-head
@@ -75,7 +95,7 @@ mixin scrollToTop()
 	+b.scroll-to-top: +icon('chevron-up')
 
 mixin sidePanel(data)
-	+b.side-panel
+	+b.side-panel&attributes(attributes)
 		+e.tags-row.row
 			if data.status.length > 0
 				each item in data.status
@@ -151,7 +171,7 @@ mixin catalogCard(data)
 			+e.banner!= data.banner
 		else
 			+e.favorite(href='#' class=(data.likeClass)): +icon('like')
-			+e.swiper--js.swiper(href='#')
+			+e.swiper--js.swiper
 				.swiper-wrapper
 					- for(let i = 0; i < data.slider.slidesCount; i++)
 						+e.slide.swiper-slide
