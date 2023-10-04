@@ -484,7 +484,7 @@ class JSCCommon {
 
 	static init() {
 		this.modalCall();
-		// this.tabscostume('tabs');
+		this.tabscostume('tabs');
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();

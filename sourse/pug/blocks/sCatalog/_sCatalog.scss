@@ -149,6 +149,26 @@
 			height: 100%;
 		}
 	}
+	.ymaps-2-1-79-svg-icon {
+		background-image: none;
+	}
+	.ymaps-2-1-79-svg-icon-content {
+		background-image: url("data:image/svg+xml,%3Csvg width='106' height='36' viewBox='0 0 106 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='104' height='34' rx='17' fill='%23303135'/%3E%3Crect x='1' y='1' width='104' height='34' rx='17' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		// padding: rem(4);
+		color: #fff;
+		width: max-content !important;
+		min-width: 106px;
+		min-height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(14) !important;
+		font-weight: 700 !important;
+		line-height: 1.71 !important;
+	}
 	&__search {
 		position: absolute;
 		top: rem(25);

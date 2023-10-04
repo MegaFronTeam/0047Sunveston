@@ -12,7 +12,7 @@
 		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
 		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -755,21 +755,59 @@
 									
 									function init () {
 										myMap = new ymaps.Map('map', {
-												center: [55.76, 37.64],
-												zoom: 10
+												center: [55.74970871386722,37.619038094446765],
+												zoom: 14
 										}, {
 												searchControlProvider: 'yandex#search'
 										});
-										//- myGeoObject = new ymaps.GeoObject({
-										//- 	geometry: {
-										//- 			type: "Point",
-										//- 			coordinates: [55.8, 37.8]
-										//- 	},
-										//- 	properties: {
-										//- 		iconContent: '22,5 млн ₽',
-										//- 	}
-										//- });
-										//- myMap.geoObjects.add(myGeoObject);
+										myGeoObject = new ymaps.GeoObject({
+											geometry: {
+												type: "Point",
+												coordinates: [55.752416579013975,37.61647938752435]
+											},
+											properties: {
+												iconContent: '22,5&nbsp;млн&nbsp;₽',
+											}
+										}, {
+												draggable: false
+										}),
+										myGeoObject2 = new ymaps.GeoObject({
+											geometry: {
+												type: "Point",
+												coordinates: [55.74721258081211,37.624719133618086]
+											},
+											properties: {
+												iconContent: '22,5&nbsp;млн&nbsp;₽',
+											}
+										}, {
+												draggable: false
+										}),
+										myGeoObject3 = new ymaps.GeoObject({
+											geometry: {
+												type: "Point",
+												coordinates: [55.746026455764785,37.604205599072195]
+											},
+											properties: {
+												iconContent: '22,5&nbsp;млн&nbsp;₽',
+											}
+										}, {
+												draggable: false
+										}),
+										myGeoObject4 = new ymaps.GeoObject({
+											geometry: {
+												type: "Point",
+												coordinates: [55.740252595800484,37.622559180922636]
+											},
+											properties: {
+												iconContent: '22,5&nbsp;млн&nbsp;₽',
+											}
+										}, {
+												draggable: false
+										}),
+										myMap.geoObjects.add(myGeoObject);
+										myMap.geoObjects.add(myGeoObject2);
+										myMap.geoObjects.add(myGeoObject3);
+										myMap.geoObjects.add(myGeoObject4);
 									};
 								</script>
 							</div>
