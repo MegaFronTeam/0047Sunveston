@@ -231,11 +231,13 @@ function eventHandler() {
 		}
 	});
 	if ($('.sProdCard__slider--js')) {
-		if (sProdCardSwiper2.slides.length < 9) {
-			sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
-		} else {
-			sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper2.slides.length}`;
-		}
+		sProdCardSwiper2.on('beforeResize', () => {
+			if (sProdCardSwiper2.slides.length < 9) {
+				sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
+			} else {
+				sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper2.slides.length}`;
+			}
+		});
 	}
 
 	const sProdCardSwiper3 = new Swiper('.sProdCard__slider--mob-js', {
@@ -267,18 +269,14 @@ function eventHandler() {
 		}
 	});
 	if ($('.sProdCard__slider--mob-js')) {
-		if (sProdCardSwiper3.slides.length < 9) {
-			sProdCardSwiper3.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper3.slides.length}`;
-		} else {
-			sProdCardSwiper3.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper3.slides.length}`;
-		}
-		// for (const item of sProdCardSwiper2) {
-		// 	if (item.slides.length < 9) {
-		// 		sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
-		// 	} else {
-		// 		sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper2.slides.length}`;
-		// 	}
-		// }
+		sProdCardSwiper3.on('beforeResize', () => {
+
+			if (sProdCardSwiper3.slides.length < 9) {
+				sProdCardSwiper3.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper3.slides.length}`;
+			} else {
+				sProdCardSwiper3.el.childNodes[3].children[0].childNodes[1].innerText = `/${sProdCardSwiper3.slides.length}`;
+			};
+		});
 	}
 
 
