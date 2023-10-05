@@ -352,11 +352,15 @@ function eventHandler() {
 			{
 				trigger: box,
 				type: "y",
-				edgeResistance: .9,
+				edgeResistance: .2,
 				bounds: ".sticky-block-wrap",
 				inertia: true,
+				throwResistance : 500,
+				maxDuration: 5000,
+				minDuration : 1,
+				overshootTolerance: 0,
 				// throwProps: true,
-				autoScroll: 2,
+				// autoScroll: 2,
 				// minimumMovement: 60,
 				onDragEnd: function () {
 					let pos = this.endY;
@@ -368,28 +372,12 @@ function eventHandler() {
 					console.log(this);
 					if (pos != this.minY && document.body.classList.contains('fixed-card')) {
 						document.body.classList.remove('fixed-card')
-					}
-					// if ( pos > this.minY) {
-					// document.querySelector(".dark-block").style.opacity = this.endY / this.minY
-					// }
-
+					} 
 				},
 				
 				onMove: function () {
-					let pos = this.endY;
-					// if (pos == this.minY) {
-					// 	console.log(this);
-					// 	document.body.classList.add('fixed-card')
-					// }
-
-					// console.log(this);
-					// if (pos != this.minY && document.body.classList.contains('fixed-card')) {
-					// 	document.body.classList.remove('fixed-card')
-					// }
-					// if ( pos > this.minY) {
-					document.querySelector(".dark-block").style.opacity = this.endY / this.minY
-					// }
-
+					let pos = this.endY; 
+					document.querySelector(".dark-block").style.opacity = pos / this.minY 
 				},
 
 			});
