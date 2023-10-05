@@ -1,26 +1,24 @@
 mixin sProdCardMobile(secondVariant)
 	// start sProdCard
-	+b.sProdCard--mobile.section.d-md-none&attributes(attributes)
+	+b.sProdCard--mobile.section.pb-0.d-lg-none&attributes(attributes)
 		
-		.container
-			+e.row.row
-				.col-lg-7.col-xl-8
-					+e.swiper-wrap
-						+e.slider--mob-js.swiper
-							.swiper-wrapper
-								-for(let i = 0; i < 8; i++)
-									+e.slide.swiper-slide
-										+e.img-wrap(data-fancybox='prod-card-gallery' data-src='img/sProdCard-img-1.jpg')
-											.img-wrap-center
-												+img(`img/sProdCard-img-1.jpg`, 'bg')
-							+e.slider-info.d-none.d-sm-flex
-								+e.slider-count
-									span.current-slide 01
-									span.all-slides /00
-								+e.pagination-wrap
-									.swiper-pagination
-						+e.main-slider-arrow-wrap.d-none.d-sm-block
-							+arrow()
+		.container 
+			+e.swiper-wrap
+				+e.slider--mob-js.swiper
+					.swiper-wrapper
+						-for(let i = 0; i < 8; i++)
+							+e.slide.swiper-slide
+								+e.img-wrap(data-fancybox='prod-card-gallery' data-src='img/sProdCard-img-1.jpg')
+									.img-wrap-center
+										+img(`img/sProdCard-img-1.jpg`, 'bg')
+					+e.slider-info
+						+e.slider-count
+							span.current-slide 01
+							span.all-slides /00
+						+e.pagination-wrap
+							.swiper-pagination
+				+e.main-slider-arrow-wrap.d-none.d-sm-block
+					+arrow()
 	// end sProdCard
 mixin sProdCard(secondVariant)
 	// start sProdCard
@@ -29,7 +27,7 @@ mixin sProdCard(secondVariant)
 		.container
 			+e.row.row
 				.col-lg-7.col-xl-8
-					+e.full-slider-wrap.d-none.d-md-flex
+					+e.full-slider-wrap.d-none.d-lg-flex
 						+e.thumb-arrow-wrap
 							+e.thumb-slider--thumb-js.swiper
 								.swiper-wrapper
@@ -41,7 +39,7 @@ mixin sProdCard(secondVariant)
 														+img(`img/sProdCard-img-sm-${x}.jpg`, 'bg')
 							.d-none.d-md-block
 								+arrow()
-						+e.swiper-wrap.d-none.d-md-block
+						+e.swiper-wrap
 							+e.slider--js.swiper
 								.swiper-wrapper
 									-for(let i = 0; i < 8; i++)
@@ -49,16 +47,15 @@ mixin sProdCard(secondVariant)
 											+e.img-wrap(data-fancybox='prod-card-gallery' data-src='img/sProdCard-img-1.jpg')
 												.img-wrap-center
 													+img(`img/sProdCard-img-1.jpg`, 'bg')
-								+e.slider-info.d-none.d-sm-flex
+								+e.slider-info
 									+e.slider-count
 										span.current-slide 01
 										span.all-slides /00
 									+e.pagination-wrap
 										.swiper-pagination
-							+e.main-slider-arrow-wrap.d-none.d-sm-block
+							+e.main-slider-arrow-wrap
 								+arrow()
-					.dark-block
-					.drug-toggle
+					
 					if secondVariant
 						+sidePanel({
 							status: false,

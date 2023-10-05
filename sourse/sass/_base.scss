@@ -599,6 +599,12 @@ iframe {
 
 
 @include media-breakpoint-down(sm){
+	.sProdCard--mobile{
+		.container{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 	.page-card {
 
 		// .sProdCard__full-slider-wrap,
@@ -623,6 +629,7 @@ iframe {
 			pointer-events: none;
 			// z-index: -1;
 			opacity: 0;
+			
 		}
 		.side-panel{
 			// transform: translateY(var(--prodHeadH));
@@ -638,7 +645,7 @@ iframe {
 			// 	width: 100%;
 			// }
 		}
-		overflow: hidden;
+		// overflow: hidden;
 	}
 	.sticky-block{
 		// position: fixed;
@@ -648,12 +655,18 @@ iframe {
 		width: 100%;
 		z-index: 2;
 		// top: calc(var(--prodHeadH) + var(--stickyTop));
-		overflow-x: hidden;
 		height: calc(100vh - var(--stickyTop));
 		padding-bottom: calc(env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px));
 		// position: absolute;
 		position: relative;
+		overflow: hidden;
 		z-index: 3;
+		&__body{
+			position: relative;
+			overflow-x: hidden;
+			height: 100%;
+
+		}
 		// height: calc();
 	}
 	// .sticky-block-wrap{
@@ -663,9 +676,12 @@ iframe {
 	// }
 	
 	.drug-toggle{
-		padding: 5px;
+		padding: 10px;
 		background-color: #000;
 		cursor: pointer;
+		position: fixed;
+			width: 100%;
+			z-index: 4;
 	}
 } 
 
@@ -674,3 +690,4 @@ iframe {
 		transform: none !important;
 	}
 }
+
