@@ -5,6 +5,7 @@
 
 
 .fancybox__slide {
+	justify-content: center;
 	@include media-breakpoint-down(sm) {
 		padding: 0;
 		&::before, &:after {

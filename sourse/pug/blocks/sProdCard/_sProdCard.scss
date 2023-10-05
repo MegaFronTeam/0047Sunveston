@@ -3,9 +3,17 @@
 	--sPT: #{rem(0)};
 	--sPB: #{rem(96)};
 	// --sTPB: #{rem()};
-	border-top: 1px solid $gray-200;
+	// border-top: 1px solid $gray-200;
 	@include media-breakpoint-up(sm) {
 		--sPT: #{rem(24)};
+	}
+	@include media-breakpoint-up(lg) {
+		border-top: 1px solid $gray-200;
+	}
+	&--mobile {
+		@include media-breakpoint-down(lg) {
+			border-top: 1px solid $gray-200;
+		}
 	}
 	&__row {
 		--bs-gutter-x: #{rem(40)};
