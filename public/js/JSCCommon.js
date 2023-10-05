@@ -1,6 +1,6 @@
 'use strict';
 
-function rangeSlider(slider, inputFrom, inputTo) {
+function rangeSlider(slider, inputFrom, inputTo, prefix=" ₽") {
 	var $range = $(slider);
 	var $inputFrom = $(inputFrom);
 	var $inputTo = $(inputTo);
@@ -27,8 +27,8 @@ function rangeSlider(slider, inputFrom, inputTo) {
 			from = data.from;
 			to = data.to;
 	
-			$inputFrom.prop("value", from + " ₽");
-			$inputTo.prop("value", to + " ₽");
+			$inputFrom.prop("value", from + prefix);
+			$inputTo.prop("value", to + prefix);
 	}
 	
 	$inputFrom.on("change", function () {
@@ -75,7 +75,11 @@ class JSCCommon {
 			on: {
 				reveal: () => {
 					rangeSlider(".js-range-slider", ".js-input-from", ".js-input-to");
-					rangeSlider(".js-range-slider2", ".js-input-from2", ".js-input-to2");
+					rangeSlider(".js-range-slider2", ".js-input-from2", ".js-input-to2", ' м²');
+					rangeSlider(".js-range-slider3", ".js-input-from3", ".js-input-to3");
+					rangeSlider(".js-range-slider4", ".js-input-from4", ".js-input-to4");
+					rangeSlider(".js-range-slider5", ".js-input-from5", ".js-input-to5");
+					rangeSlider(".js-range-slider6", ".js-input-from6", ".js-input-to6", ' м²');
 
 					// mask for input
 					let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));

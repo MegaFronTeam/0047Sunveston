@@ -1,0 +1,122 @@
+include ../../layout/include.pug
+
+mixin inc2(type, text, name)
+  +b.LABEL.custom-input-2.form-check
+    input.custom-input-2__input.form-check-input(name=name type=type)
+    span.custom-input-2__text.form-check-label!= text
+
++b.modal-win
+  +e.head
+    +e.save-search(href='#')
+      +icon('save-search')
+      span Сохранить поиск
+    +e.title Настроить фильтры
+  +e.body.custom-scroll
+    +e.wrap
+      .h6 Общие параметры
+      +e.input-row.row
+        .col-12
+          +input('Не выбрано', 'select', 'Вид торгов')
+        .col-12
+          +input('Не выбрано', 'select', 'Форма проведения торгов')
+        .col-12
+          +input('Не выбрано', 'select', 'Субъект местонахождения имущества')
+        .col-12
+          +input('Введите адрес в свободной форме', 'input', 'Местонахождение имущества')
+    +e.wrap
+      .h6 Параметры лота
+      +e.select-row.row
+        .col-lg-6
+          +input('Не выбрано', 'select', 'Статус')
+        .col-lg-6
+          +input('Рубли', 'select', 'Валюта')
+      +e.range-title Начальная цена
+      .range-slider
+        .extra-controls
+          label
+            span от
+            input.js-input-from3.form-control(type='text' value='0')
+          label
+            span до
+            input.js-input-to3.form-control(type='text' value='0')
+        input.js-range-slider3(type='text' value='')
+      +e.range-title Итоговая цена
+      .range-slider
+        .extra-controls
+          label
+            span от
+            input.js-input-from4.form-control(type='text' value='0')
+          label
+            span до
+            input.js-input-to4.form-control(type='text' value='0')
+        input.js-range-slider4(type='text' value='')
+    +e.wrap
+      .h6 Категория
+      +e.input-row.row
+        .col-sm-4
+          +in-c('checkbox', 'Офис', 'type')
+        .col-sm-4
+          +in-c('checkbox', 'Общ. питания', 'type')
+        .col-sm-4
+          +in-c('checkbox', 'Склад', 'type')
+        .col-sm-4
+          +in-c('checkbox', 'Торговое помещение', 'type')
+        .col-sm-4
+          +in-c('checkbox', 'Свобод. назначения', 'type')
+        .col-sm-4
+          +in-c('checkbox', 'Производство', 'type')
+    +e.wrap
+      .h6 Характеристики
+      +e.select-row.row
+        .col-lg-6
+          +input('Не выбрано', 'select', 'Статус')
+        .col-lg-6
+          +input('Рубли', 'select', 'Валюта')
+        .col-lg-6
+          +input('Введите значение', 'input', 'Кадастровый номер')
+        .col-lg-6
+          +input('Введите значение', 'input', 'Назначение помещения')
+      +e.range-title Общая площадь
+      .range-slider
+        .extra-controls
+          label
+            span от
+            input.js-input-from5.form-control(type='text' value='0')
+          label
+            span до
+            input.js-input-to5.form-control(type='text' value='0')
+        input.js-range-slider5(type='text' value='')
+      +e.range-title Кадастровая стоимость
+      .range-slider
+        .extra-controls
+          label
+            span от
+            input.js-input-from6.form-control(type='text' value='0')
+          label
+            span до
+            input.js-input-to6.form-control(type='text' value='0')
+        input.js-range-slider6(type='text' value='')
+      +e.select-row.row.align-items-center
+        .col-lg-6
+          +input('Не выбрано', 'select', 'Форма собственности')
+        .col-lg-6
+          +in-c('checkbox', 'Торги среди МСП', 'deal')
+    +e.wrap
+      .h6 Правообладатель
+      +e.input-row.row
+        .col-lg-6
+          +input('Введите значение','text','Наименование')
+        .col-lg-6
+          +input('Введите значение','text','ИНН')
+        .col-lg-6
+          +input('Введите значение','text','КПП')
+        .col-lg-6
+          +input('Введите значение','text','ОГРН')
+  +e.footer
+    .row
+      .col-md
+        +e.reset(href='#')
+          +icon('refresh')
+          | Сбросить фильтры
+      .col-md-auto
+        +e.btn.btn.btn-primary(href='#') Показать 8 562 предложения

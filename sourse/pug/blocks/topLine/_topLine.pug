@@ -11,7 +11,8 @@ mixin topLine()
 					.col
 						+e.logo(href='/'): +img('img/svg/logo.svg')
 					.col-auto.d-none.d-lg-block
-						+e.tel(href='tel:88003330600')
+						//- +e.tel(href='tel:88003330600')
+						+e.tel(data-fancybox data-type="ajax" href='modal/call.html')
 							+icon('phone')
 							| 8 800 333-0-600
 					.col-auto.d-none.d-lg-block
