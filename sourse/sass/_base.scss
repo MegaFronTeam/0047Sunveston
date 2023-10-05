@@ -675,14 +675,31 @@ iframe {
 	// 	// top: calc(var(--stickyTop) + var(--prodTitleH) );
 	// }
 	
-	.drug-toggle{
-		padding: 10px;
-		background-color: #000;
-		cursor: pointer;
-		position: fixed;
-			width: 100%;
-			z-index: 4;
-	}
+	.drug-toggle {
+    padding: 10px;
+    background-color: $gray-100;
+    cursor: pointer;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+		&:focus-visible {
+			&:after  {
+				background-color: $gray-200;
+			}
+		}
+    &:before {
+			@include block;
+      content: '';
+      width: rem(54);
+      height: rem(6);
+      border-radius: 40px;
+      background-color: #d9d9d9;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: rem(8);
+    }
+  }
 } 
 
 .sticky-block{
@@ -690,4 +707,3 @@ iframe {
 		transform: none !important;
 	}
 }
-
