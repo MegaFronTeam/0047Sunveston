@@ -14,12 +14,16 @@
 			margin-bottom: 0;
 		}
 		.row {
+			--bs-gutter-x: #{rem(8)};
 			align-items: center;
 		}
 		&__btn {
 			--bs-btn-color: #{$body-color};
 			--bs-btn-border-color: #{$gray-200};
 			letter-spacing: -0.5px;
+			@include media-breakpoint-down(sm) {
+				text-transform: capitalize;
+			}
 		}
 	}
 	&__slider {

@@ -230,7 +230,7 @@ function eventHandler() {
 			},
 		}
 	});	
-	if (sProdCardSwiper2) {
+	if (sProdCardSwiper2.length > 0) {
 		if (sProdCardSwiper2.slides.length < 9) {
 			sProdCardSwiper2.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper2.slides.length}`;
 		} else {

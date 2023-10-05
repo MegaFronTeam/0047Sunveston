@@ -1,8 +1,11 @@
 include ../../layout/include.pug
 
-+b.modal-win
++b.modal-win--callback
 	+form-wrap 
-		+e.title Нужна помощь в&nbsp;выборе ASIC-майнера?
-		p.after-headline Оставьте свой телефон и&nbsp;мы&nbsp;перезвоним в&nbsp;ближайшее время
-		+input("Телефон",'tel')(required)  
-		+e.BUTTON.btn.btn(type="submit"  ).btn-primary.w-100 Заказать звонок
+		+e.title.h1 Отправить заявку
+		+input("Имя",'text')
+		+input("Контактный телефон",'tel')(required)  
+			span +7
+		+input("Электоронная почта",'email')(required)  
+		+e.BUTTON.btn.btn(type="submit").btn-primary.w-100 Отправить заявку
+		+policy()
