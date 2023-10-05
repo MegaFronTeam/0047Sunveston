@@ -11,7 +11,7 @@ include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sSimilar/_sSimilar.pug
 
 block variables
-	- let  mainPage= 'main-page header-indent' 
+	- let  mainPage= 'page-card header-indent' 
 	- let  bg= 'main-2.jpg'
 
 block title
@@ -23,9 +23,12 @@ block pagecontent
 	
 	+parts('header-2')
 	main
-		+page-head('Продажа торговой площади 526 м²', 'Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
-		+sProdCard
-		+sSimilar
+		.sticky-block-wrap
+			+page-head('Продажа торговой площади 526 м²', 'Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
+			+sProdCardMobile
+			.sticky-block.sticky-block--js
+				+sProdCard
+				+sSimilar
 	//- +parts('footer')
 	+controlsBtn()
 	+chat()

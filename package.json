@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.22",
+    "gsap": "^3.12.2",
     "hc-sticky": "^2.2.7",
     "inputmask": "^5.0.8",
     "ion-rangeslider": "^2.3.1",
