@@ -670,13 +670,13 @@ iframe {
     position: fixed;
     width: 100%;
     z-index: 4;
-		&:focus-visible {
-			&:after  {
-				background-color: $gray-200;
+		&:active {
+			&:before  {
+				background-color: $body-color;
 			}
 		}
     &:before {
-			@include block;
+			@include mt;
       content: '';
       width: rem(54);
       height: rem(6);
