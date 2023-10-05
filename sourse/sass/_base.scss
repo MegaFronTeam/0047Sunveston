@@ -668,3 +668,9 @@ iframe {
 		cursor: pointer;
 	}
 } 
+
+.sticky-block{
+	@include media-breakpoint-up(sm){
+		transform: none !important;
+	}
+}
