@@ -343,25 +343,25 @@ function eventHandler() {
 			{
 				trigger: box,
 				type: "y",
-				edgeResistance: .2,
+				edgeResistance: 1,
 				bounds: ".sticky-block-wrap",
 				inertia: true,
-				throwResistance : 500,
-				maxDuration: 5000,
-				minDuration : 1,
-				overshootTolerance: 0,
-				// throwProps: true,
-				// autoScroll: 2,
-				// minimumMovement: 60,
+				edgeResistance:0.05,
+				autoScroll: .1,
+				ease: "power1", 
+				// throwResistance : 5000,
+				// maxDuration: 5000,
+				// minDuration : 1,
+				// overshootTolerance: 0,
+				// // throwProps: true,
+				// autoScroll: 20,
+				minimumMovement: .1,
 				onDragEnd: function () {
 					let pos = this.endY;
-					if (pos == this.minY) {
-						console.log(this);
+					if (pos == this.minY) { 
 						document.body.classList.add('fixed-card')
-					}
-
-					console.log(this);
-					if (pos != this.minY && document.body.classList.contains('fixed-card')) {
+					} 
+					else if (pos != this.minY && document.body.classList.contains('fixed-card')) {
 						document.body.classList.remove('fixed-card')
 					} 
 				},
