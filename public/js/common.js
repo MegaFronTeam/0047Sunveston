@@ -393,6 +393,22 @@ Draggable.create(".sticky-block--js",
 	bounds:".sticky-block-wrap", 
 	inertia:true,
 	throwProps:true,
+	onDragEnd: function() {
+		let pos = this.endY;
+		if (pos == this.minY){
+			console.log(this);
+			document.body.classList.add('fixed-card')
+		}
+		
+		console.log(this);
+		if (pos != this.minY && document.body.classList.contains('fixed-card')){
+			document.body.classList.remove('fixed-card')
+		}
+		// if ( pos > this.minY) {
+			document.querySelector(".dark-block").style.opacity = this.endY / this.minY
+		// }
+
+}
 });
 
 };
