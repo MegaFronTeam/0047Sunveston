@@ -266,7 +266,7 @@ function eventHandler() {
 			},
 		}
 	});
-	if (sProdCardSwiper3.length > 0) {
+	if ($('.sProdCard__slider--mob-js')) {
 		if (sProdCardSwiper3.slides.length < 9) {
 			sProdCardSwiper3.el.childNodes[3].children[0].childNodes[1].innerText = `/0${sProdCardSwiper3.slides.length}`;
 		} else {
