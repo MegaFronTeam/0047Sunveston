@@ -83,6 +83,37 @@ mixin page-head2(t,...items)
 
 		h1= t
 
+mixin fixedProdCard(...items)
+	+b.fixed-prod-card
+		.container
+			+breadcrumb('Главная',...items)
+			+e.row.row
+				.col-sm-auto
+					+e.img-wrap: +img('img/sProdCard-img-sm-2.jpg', 'bg')
+				.col
+					.h5 Продажа торговой площади 526 м²
+					+e.inner-row.row
+						.col-lg-auto
+							+e.addres
+								+img('img/svg/map-pin.svg')
+								| Москва, ул Мясницкая, д 14/2 стр 2
+						.col-lg-auto
+							+e.metro
+								+img('img/svg/metro-6.svg')
+								| Москворечье&nbsp;#[span ~4 минуты пешком]
+				.col-12.m-0.p-0.d-lg-none
+				.col.col-lg-auto
+					+e.btn.btn.btn-outline.light(href='#')
+						+icon('share')
+					+e.btn.btn.btn-outline.light(href='#')
+						+icon('like')
+				.col-auto
+					+e.price
+						.h2 25 500 000 ₽
+						+e.price-per-meter Цена за м²:
+							| 
+							span 500 000 ₽
+
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)

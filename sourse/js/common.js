@@ -280,7 +280,7 @@ function eventHandler() {
 	}
 
 
-	$('.side-panel').hcSticky({
+	let sidePanel = $('.side-panel').hcSticky({
 		innerSticker: $('.sProdCard__col'),
 		stickTo: $('.sProdCard__col'),
 		top: 97 + 24,
@@ -373,6 +373,21 @@ function eventHandler() {
 
 			});
 	}
+
+	window.addEventListener('scroll', () => {
+		// console.log(window.scrollY);
+		if(window.scrollY >780) {
+			$('.fixed-prod-card').addClass('active');
+			sidePanel.hcSticky('update', {
+				top: 97 + 24 + 155,
+			});
+		} else {
+			$('.fixed-prod-card').removeClass('active');
+			sidePanel.hcSticky('update', {
+				top: 97 + 24,
+			});
+		}
+	}, { passive: true });
 
 };
 if (document.readyState !== 'loading') {
