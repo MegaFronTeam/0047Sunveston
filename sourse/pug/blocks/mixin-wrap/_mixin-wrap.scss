@@ -1177,7 +1177,7 @@
 .fixed-prod-card {
 	@include mt;
 	position: fixed;
-	top: 104px;
+	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: #fff;
@@ -1191,12 +1191,12 @@
 		opacity: 1;
 		pointer-events: all;
 	}
-	@media screen and (min-width: 374.99px) {
-		top: rem(119);
-	}
-	@include media-breakpoint-up(sm) {
-		top: rem(97);
-	}
+	// @media screen and (min-width: 374.99px) {
+	// 	top: rem(119);
+	// }
+	// @include media-breakpoint-up(sm) {
+	// 	top: rem(97);
+	// }
 	&__row {
 		--bs-gutter-x: #{rem(16)};
 		--bs-gutter-y: #{rem(16)};
