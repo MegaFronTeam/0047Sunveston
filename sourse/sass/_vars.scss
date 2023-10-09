@@ -487,7 +487,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1440px
+  xxl: 1440px,
+  xxxl: 2000px,
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -505,7 +506,8 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1440px
+  xxl: 1440px,
+  xxxl: 1940px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -634,7 +636,7 @@ $h1-font-size:                rem(32);
 $h2-font-size:                rem(24);
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                rem(20) !default;
 $h6-font-size:                rem(16) !default;
 // scss-docs-end font-variables
 

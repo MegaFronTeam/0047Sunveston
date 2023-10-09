@@ -1,9 +1,13 @@
 // start .sSimilar
 .sSimilar {
 	// --sPT: #{rem()};
+	--sPT: #{rem(56)};
 	--sPB: #{rem(99)};
 	// --sTPB: #{rem()};
-	
+	border-top: 1px solid $gray-200;
+	// @include media-breakpoint-up(lg) {
+
+	// }
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};

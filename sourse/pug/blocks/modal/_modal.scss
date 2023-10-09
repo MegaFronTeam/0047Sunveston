@@ -225,22 +225,31 @@
 		align-items: center;
 		width: 100%;
 		max-width: rem(285);
+		.modal-win__input-wrap {
+			input {
+				padding: rem(12) rem(16) rem(12) rem(38);
+			}
+			&:nth-child(1) {
+				input {
+					border-radius: rem(56) 0px 0px rem(56);
+				}
+			}
+			&:nth-child(2) {
+				input {
+					border-radius: 0px rem(56) rem(56) 0px;
+				}
+			}
+		}
 	}
 	&__input-wrap {
 		flex-grow: 1;
 		position: relative;
-		&:nth-child(1) {
-			input {
-				border-radius: rem(56) 0px 0px rem(56);
-			}
-		}
-		&:nth-child(2) {
-			input {
-				border-radius: 0px rem(56) rem(56) 0px;
-			}
+		label {
+			width: 100%;
 		}
 		input {
-			padding: rem(12) rem(16) rem(12) rem(38);
+			border-radius: rem(56);
+			padding: rem(12) rem(16) rem(12) rem(16);
 			font-size: rem(16);
 			font-weight: 600;
 			line-height: 1.5;
@@ -248,7 +257,7 @@
 			background-color: $gray-100;
 			border: 1px solid $gray-200;
 		}
-		span {
+		.tel, .prefix {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -259,6 +268,43 @@
 			line-height: 1.5;
 			letter-spacing: -0.5px;
 		}
+		.form-select {
+			padding: rem(11) rem(15);
+			border-radius: 56px;
+			border: 1px solid $gray-200;
+			background-color: $gray-100;
+			font-size: rem(16);
+			font-weight: 600;
+			line-height: 1.5;
+			letter-spacing: -0.5px;
+			option {
+				:nth-child(1) {
+					color: $gray-600;
+				}
+			}
+		}
+	}
+	&__select-row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(32)};
+		}
+		.custom-input {
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(20);
+			}
+		}
+	}
+	&__input-title,
+	&__range-title {
+		color: $gray-600;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 1;
+		margin-bottom: rem(8);
 	}
 	&__floor-row {
 		--bs-gutter-x: #{rem(8)};
