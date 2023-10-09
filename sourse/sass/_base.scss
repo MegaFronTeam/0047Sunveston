@@ -696,3 +696,7 @@ iframe {
 		transform: none !important;
 	}
 }
+
+[data-bvi-images="false"] img.object-fit-js{
+	display: none;
+}
