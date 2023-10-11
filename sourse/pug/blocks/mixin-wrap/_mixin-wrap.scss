@@ -1187,9 +1187,11 @@
 	padding: rem(20) 0 rem(24);
 	opacity: 0;
 	pointer-events: none;
+	@include media-breakpoint-up(sm) {
 	&.active {
 		opacity: 1;
 		pointer-events: all;
+	}
 	}
 	// @media screen and (min-width: 374.99px) {
 	// 	top: rem(119);
