@@ -341,7 +341,7 @@ function eventHandler() {
 		if(window.scrollY >780) {
 			$('.fixed-prod-card').addClass('active');
 			sidePanel.hcSticky('update', {
-				top: 97 + 24 + 155,
+				top: 24 + 155,
 			});
 		} else {
 			$('.fixed-prod-card').removeClass('active');
