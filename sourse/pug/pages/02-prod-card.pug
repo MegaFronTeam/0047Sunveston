@@ -23,15 +23,13 @@ block pagecontent
 	
 	.dark-block.d-sm-none
 	+parts('header-2')
-	main
-		.sticky-block-wrap
-			+page-head('Продажа торговой площади 526 м²', 'Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
-			+sProdCardMobile
-			.sticky-block.sticky-block--js
-				.drug-toggle
-				.sticky-block__body
-					+sProdCard
-					+sSimilar
+	main 
+		+page-head('Продажа торговой площади 526 м²', 'Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
+		+sProdCardMobile
+		.sticky-block
+			.sticky-block__body
+				+sProdCard
+				+sSimilar
 	//- +parts('footer')
 	//- +controlsBtn()
 	+chat()

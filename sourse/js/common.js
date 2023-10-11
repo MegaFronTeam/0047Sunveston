@@ -334,45 +334,7 @@ function eventHandler() {
 	window.addEventListener('resize', () => {
 		getProdHadHeight();
 	}, { passive: true });
-
-
-	var box = $(".drug-toggle");
-	if (box.length > 0) {
-		gsap.registerPlugin(Draggable);
-		Draggable.create(".sticky-block--js",
-			{
-				trigger: box,
-				type: "y",
-				edgeResistance: 1,
-				bounds: ".sticky-block-wrap",
-				inertia: true,
-				edgeResistance:0.05,
-				autoScroll: .1,
-				ease: "power1", 
-				// throwResistance : 5000,
-				// maxDuration: 5000,
-				// minDuration : 1,
-				// overshootTolerance: 0,
-				// // throwProps: true,
-				// autoScroll: 20,
-				minimumMovement: .1,
-				onDragEnd: function () {
-					let pos = this.endY;
-					if (pos == this.minY) { 
-						document.body.classList.add('fixed-card')
-					} 
-					else if (pos != this.minY && document.body.classList.contains('fixed-card')) {
-						document.body.classList.remove('fixed-card')
-					} 
-				},
-				
-				onMove: function () {
-					let pos = this.endY; 
-					document.querySelector(".dark-block").style.opacity = pos / this.minY 
-				},
-
-			});
-	}
+ 
 
 	window.addEventListener('scroll', () => {
 		// console.log(window.scrollY);
