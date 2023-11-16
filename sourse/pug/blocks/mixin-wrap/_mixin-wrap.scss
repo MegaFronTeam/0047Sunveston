@@ -1305,3 +1305,12 @@
 		}
 	}
 }
+
+.img-cover {
+	@include block(400,327);
+	border-radius: rem(24);
+	overflow: hidden;
+	@include media-breakpoint-up(sm) {
+		--ratio: 1360/680;
+	}
+}
