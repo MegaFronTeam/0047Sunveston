@@ -76,14 +76,21 @@ mixin page-head(t,...items)
 				.col-auto.me-auto.me-lg-0.ms-lg-auto
 					+e.id ID: 177259
 
-mixin page-head2(t,s,...items)
-	+b.page-head--content
-		.container
-			if items.length > 0
-				+breadcrumb('Главная',...items)
-			h1!= t
-			if s
-				+e.subtitle= s
+mixin page-head2(data)
+	+b.page-head
+		if data.container
+			.container
+				if data.items
+					+breadcrumb('Главная', ...data.items)
+				h1!= data.title
+				if data.subtitle
+					+e.subtitle!= data.subtitle
+		else
+			if data.items
+				+breadcrumb('Главная', ...data.items)
+			h1!= data.title
+			if data.subtitle
+				+e.subtitle!= data.subtitle
 
 mixin fixedProdCard(...items)
 	+b.fixed-prod-card

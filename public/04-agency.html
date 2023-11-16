@@ -27,72 +27,31 @@
 			}
 		</script>
 	</head>
-	<body class="main-page" data-bg="main-2.jpg">
+	<body data-bg="03-home.jpg">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<!-- start sAbout-->
-				<section class="sAbout section" id="sAbout">
+				<div class="page-head">
 					<div class="container">
-						<div class="section-title text-center">
-							<h1>Инвестиционное агентство <span>коммерческой</span> недвижимости</h1>
-							<div class="section-title__subtitle">Первое и единственное агентство в России, которое не только продаёт, но и создаёт арендный бизнес
-							</div>
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item breadcrumb-item--home swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">
+										<svg class="icon icon-home ">
+											<use xlink:href="img/svg/sprite.svg#home"></use>
+										</svg>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О компании</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебные крошки</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1>Агентство</h1>
+						<div class="page-head__subtitle">Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.
 						</div>
-						<ul class="sAbout__service">
-							<li class="sAbout__service-item">
-								<div class="sAbout__service-text">
-									<div class="sAbout__title">Продажа
-									</div>
-									<div class="sAbout__descr">Офисы,Склады, Производство,  ПСН, ПСУ ОСЗ, Гостиницы, Нежилые здания
-									</div>
-									<a class="sAbout__btn btn btn-outline-light" data-fancybox="" data-type="ajax" href="modal/call.html">Подобрать
-									</a>
-								</div>
-								<div class="sAbout__service-img"><img src="img/svg/about-1.svg" alt="" loading="lazy"/>
-								</div>
-							</li>
-							<li class="sAbout__service-item">
-								<div class="sAbout__service-text">
-									<div class="sAbout__title">Аренда
-									</div>
-									<div class="sAbout__descr">Label links
-									</div>
-									<a class="sAbout__btn btn btn-outline-light" data-fancybox="" data-type="ajax" href="modal/call.html">Подобрать
-									</a>
-								</div>
-								<div class="sAbout__service-img"><img src="img/svg/about-2.svg" alt="" loading="lazy"/>
-								</div>
-							</li>
-							<li class="sAbout__service-item">
-								<div class="sAbout__service-text">
-									<div class="sAbout__title">Торги
-									</div>
-									<div class="sAbout__descr">Label links
-									</div>
-									<a class="sAbout__btn btn btn-outline-light" data-fancybox="" data-type="ajax" href="modal/call.html">Подобрать
-									</a>
-								</div>
-								<div class="sAbout__service-img"><img src="img/svg/about-3.svg" alt="" loading="lazy"/>
-								</div>
-							</li>
-							<li class="sAbout__service-item">
-								<div class="sAbout__service-text">
-									<div class="sAbout__title">Готовый бизнес
-									</div>
-									<div class="sAbout__descr">Label links
-									</div>
-									<a class="sAbout__btn btn btn-outline-light" data-fancybox="" data-type="ajax" href="modal/call.html">Подобрать
-									</a>
-								</div>
-								<div class="sAbout__service-img"><img src="img/svg/about-4.svg" alt="" loading="lazy"/>
-								</div>
-							</li>
-						</ul>
 					</div>
-				</section>
-				<!-- end sAbout-->
+				</div>
 			</main>
 			<div class="controls-btn">
 				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">

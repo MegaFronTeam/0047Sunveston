@@ -227,8 +227,12 @@
 .page-head {
 	padding-top: rem(24);
 	padding-bottom: rem(24);
+	text-align: center;
 	.breadcrumb {
-		margin-bottom: rem(24);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
 	}
 	&__row {
 		--bs-gutter-x: #{rem(8)};
@@ -242,10 +246,20 @@
 	}
 	h1 {
 		font-weight: 700;
-		line-height: 1.5;
+		line-height: 1.16;
 		letter-spacing: -0.5px;
-		margin-bottom: 0;
+		// margin-bottom: 0;
+		margin-bottom: rem(24);
 		font-size: rem(32);
+		max-width: rem(900);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(48);
+		}
+		span {
+			color: $primary;
+		}
 	}
 	&__btn {
 		--bs-btn-color: #{$body-color};
@@ -308,40 +322,55 @@
 		font-weight: 700;
 		line-height: 1.14;
 	}
-	&--content {
-		padding-top: rem(24);
-		padding-bottom: rem(12);
-		@include media-breakpoint-up(lg) {
-			padding-top: rem(56);
-			padding-bottom: rem(28);
-
-		}
-		h1 {
-			margin-bottom: rem(24);
-			text-align: center;
-			font-size: rem(32);
-			line-height:125%;
-			letter-spacing: -0.5px;
-			@include media-breakpoint-up(lg) {
-				line-height: 116.667%;
-				font-size: rem(48);
-			}
-			span {
-				color: $primary;
-			}
-		}
-	}
-	.page-head__subtitle {
+	&__subtitle {
 		margin: 0 auto;
-		max-width: 659px;
+		// max-width: 659px;
+		max-width: rem(900);
 		text-align: center;
 		font-size: rem(14);
 		font-weight: 500;
-		line-height: 155.556%;
+		line-height: 1.55;
+		color: $gray-600;
 		@include media-breakpoint-up(lg) {
 			font-size: rem(18);
 		}
 	}
+	// &--content {
+	// 	padding-top: rem(24);
+	// 	padding-bottom: rem(12);
+	// 	@include media-breakpoint-up(lg) {
+	// 		padding-top: rem(56);
+	// 		padding-bottom: rem(28);
+
+	// 	}
+	// 	h1 {
+	// 		margin-bottom: rem(24);
+	// 		text-align: center;
+	// 		font-size: rem(32);
+	// 		line-height:125%;
+	// 		letter-spacing: -0.5px;
+	// 		@include media-breakpoint-up(lg) {
+	// 			line-height: 116.667%;
+	// 			font-size: rem(48);
+	// 		}
+	// 		span {
+	// 			color: $primary;
+	// 		}
+	// 	}
+	// }
+	// .page-head__subtitle {
+	// 	margin: 0 auto;
+	// 	// max-width: 659px;
+	// 	max-width: rem(900);
+	// 	text-align: center;
+	// 	font-size: rem(14);
+	// 	font-weight: 500;
+	// 	line-height: 1.55;
+	// 	color: $gray-600;
+	// 	@include media-breakpoint-up(lg) {
+	// 		font-size: rem(18);
+	// 	}
+	// }
 }
 
 .chat {
