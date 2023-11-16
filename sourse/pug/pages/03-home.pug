@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sAbout/_sAbout.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main-2.jpg'
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header-3')
+	main
+		+page-head2(`Инвестиционное агентство <span> коммерческой</span> недвижимости`,'Первое и единственное агентство в России, которое не только продаёт, но и создаёт арендный бизнес')
+		+sAbout
+	+controlsBtn()
+	+chat()
+	+scrollToTop()
+	//- +parts('footer')
+

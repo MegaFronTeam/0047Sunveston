@@ -9,19 +9,15 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
-		
+		h1 {
+			
+		}
 	}
 	&__col{
 		
 	}
 	&__item{
 		
-	}
-	.img-cover {
-		margin-bottom: rem(56);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(56);
-		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

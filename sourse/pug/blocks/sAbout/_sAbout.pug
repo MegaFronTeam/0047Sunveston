@@ -1,6 +1,22 @@
+mixin service(title, descr,img)
+	+e.service-item.LI
+		+e.service-text
+			+e.title= title
+			+e.descr= descr
+			+e.btn.btn.btn-outline-light(data-fancybox="" data-type="ajax" href="modal/call.html") Подобрать
+		+e.service-img
+			+img(`img/svg/about-${img}.svg`)
+			
 mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+imgCover('imgCover-1.png')
+			+b.section-title.text-center
+				h1 Инвестиционное агентство #[span коммерческой] недвижимости
+				+e.subtitle Первое и единственное агентство в России, которое не только продаёт, но и создаёт арендный бизнес
+			+e.service.UL
+				+service('Продажа','Офисы,Склады, Производство,  ПСН, ПСУ ОСЗ, Гостиницы, Нежилые здания','1')
+				+service('Аренда','Label links','2')
+				+service('Торги','Label links','3')
+				+service('Готовый бизнес','Label links','4')
 	// end sAbout

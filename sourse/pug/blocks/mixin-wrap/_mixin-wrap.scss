@@ -308,6 +308,40 @@
 		font-weight: 700;
 		line-height: 1.14;
 	}
+	&--content {
+		padding-top: rem(24);
+		padding-bottom: rem(12);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(56);
+			padding-bottom: rem(28);
+
+		}
+		h1 {
+			margin-bottom: rem(24);
+			text-align: center;
+			font-size: rem(32);
+			line-height:125%;
+			letter-spacing: -0.5px;
+			@include media-breakpoint-up(lg) {
+				line-height: 116.667%;
+				font-size: rem(48);
+			}
+			span {
+				color: $primary;
+			}
+		}
+	}
+	.page-head__subtitle {
+		margin: 0 auto;
+		max-width: 659px;
+		text-align: center;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: 155.556%;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+		}
+	}
 }
 
 .chat {

@@ -8,7 +8,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(recommended="true",view="rtue") 
 	// start top-nav
 	+b.top-nav.section.block-with-lazy
 		.container
@@ -47,7 +47,7 @@ mixin top-nav()
 							+in-c('checkbox', 'Прямая продажа', 'buy')
 							+in-c('checkbox', 'Продажа без объявлении цены', 'buy')
 							+in-c('checkbox', 'Электронный аукцион', 'buy')
-				.col-auto.d-none.d-lg-block
+				.col-auto.d-none.d-lg-block.me-auto
 					+e.wrap.dd-wrap-js
 						+e.btn.btn.btn-outline-light.dd-head-header-js
 							| Окупаемость до 
@@ -64,31 +64,33 @@ mixin top-nav()
 							+in-c('checkbox', 'Прямая продажа', 'buy2')
 							+in-c('checkbox', 'Продажа без объявлении цены', 'buy2')
 							+in-c('checkbox', 'Электронный аукцион', 'buy2')
-				.col-auto.ms-lg-auto
-					+e.wrap.dd-wrap-js
-						+e.btn.btn.btn-outline-light.dd-head-header-js 
-							+icon('height')
-							| Рекомендуемые
-							+icon('chevron-down')
-						+e.content.custom-scroll
-							+in-c('checkbox', 'Электронный аукцион', 'buy3')
-							+in-c('checkbox', 'Публичное предложение', 'buy3')
-							+in-c('checkbox', 'Прямая продажа', 'buy3')
-							+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
-							+in-c('checkbox', 'Электронный аукцион', 'buy3')
-							+in-c('checkbox', 'Электронный аукцион', 'buy3')
-							+in-c('checkbox', 'Публичное предложение', 'buy3')
-							+in-c('checkbox', 'Прямая продажа', 'buy3')
-							+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
-							+in-c('checkbox', 'Электронный аукцион', 'buy3')
+				if recommended
+					.col-auto.ms-lg-auto
+						+e.wrap.dd-wrap-js
+							+e.btn.btn.btn-outline-light.dd-head-header-js 
+								+icon('height')
+								| Рекомендуемые
+								+icon('chevron-down')
+							+e.content.custom-scroll
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Публичное предложение', 'buy3')
+								+in-c('checkbox', 'Прямая продажа', 'buy3')
+								+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Публичное предложение', 'buy3')
+								+in-c('checkbox', 'Прямая продажа', 'buy3')
+								+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
 				.col-auto.ms-auto.ms-lg-0
 					+e.btn--map-js.btn.btn-outline-light(href='#')
 						+icon('map')
 						.d-none.d-lg-inline На карте
-				.col-auto.d-none.d-lg-block
-					+e.grid
-						+e.grid-item.active(href='#'): +icon('layout')
-						+e.grid-item(href='#'): +icon('grid')
+				if view
+					.col-auto.d-none.d-lg-block
+						+e.grid
+							+e.grid-item.active(href='#'): +icon('layout')
+							+e.grid-item(href='#'): +icon('grid')
 				.col-auto.d-none.d-lg-block
 					//- +e.btn.btn.btn-outline-light(href='#')
 					//- 	+icon('save-search')
