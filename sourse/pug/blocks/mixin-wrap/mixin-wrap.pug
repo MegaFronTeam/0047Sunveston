@@ -323,6 +323,7 @@ mixin controlsBtn()
 						+input('Электронная почта', 'text')
 						+e.btn.btn.btn-primary(href='#') Получать на почту
 
-mixin imgCover(img)
-	+b.img-cover
-		+img(`img/${img}`, 'bg')
+mixin imgCover(img, imgSm)
+	picture.img-cover
+		source(media="(min-width: 768px)", srcset=`img/${img}`)
+		img(src=`img/${imgSm}`).object-fit-js

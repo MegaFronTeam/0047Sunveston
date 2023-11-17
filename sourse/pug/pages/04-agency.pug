@@ -4,10 +4,14 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
+include ../blocks/sDescriptionAboutUs/_sDescriptionAboutUs.pug
+include ../blocks/sKeyFigures/_sKeyFigures.pug
+include ../blocks/sTeam/_sTeam.pug
+
 
 block variables
 	- let  mainPage= '' 
-	- let  bg= '03-home.jpg'
+	- let  bg= '04-agency.jpg'
 
 block title
 	- let  title= 'Агентство'
@@ -24,7 +28,9 @@ block pagecontent
 			subtitle: 'Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.',
 			items: ['О компании', 'Хлебные крошки']
 		})
-		//- +page-head2('Агентство', 'Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.', 'О компании', 'Хлебные крошки')
+		+sDescriptionAboutUs
+		+sKeyFigures
+		+sTeam
 	//- +parts('footer')
 	+controlsBtn()
 	+chat()

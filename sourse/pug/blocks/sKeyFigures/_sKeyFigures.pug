@@ -1,0 +1,27 @@
+mixin sKeyFigures(data)
+	// start sKeyFigures
+	+b.SECTION.sKeyFigures.section#sKeyFigures&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				.row
+					.col-lg-4.col-xl-6
+						h2.h1 Ключевые цифры
+					.col-lg-8.col-xl-6
+						p Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.
+			+e.row.row
+				mixin item(title, num, text)
+					+e.item&attributes(attributes)
+						+e.title
+							span!= num
+							| 
+							!=title
+						p!= text
+				.col-6.col-lg-4.col-xl-3
+					+item('лет', '200+', 'на&nbsp;рынке коммереской недвижимости').--primary
+				.col-6.col-lg-4.col-xl-3
+					+item('тыс', '>300', 'довольных клиентов из&nbsp;XX отраслей')
+				.col-6.col-lg-4.col-xl-3
+					+item('лет', '30%', 'наших клиентов с&nbsp;нами более&nbsp;X лет')
+				.col-6.col-lg-4.col-xl-3
+					+item('тыс. человек', '720', 'наших клиентов рекомендуют нас коллегам')
+	// end sKeyFigures

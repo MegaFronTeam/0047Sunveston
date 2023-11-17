@@ -350,7 +350,6 @@ function eventHandler() {
 			});
 		}
 	}, { passive: true });
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
