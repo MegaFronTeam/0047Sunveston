@@ -613,6 +613,37 @@ iframe {
 	z-index: 4;
 	position: relative;
 }
+
+.main-page {
+	.page-head {
+		text-align: left;
+		h1 {
+			margin-bottom: 0;
+			font-size: rem(32);
+			margin-left: 0;
+		}
+		.breadcrumb {
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+}
+
+.home-page {
+	.page-head {
+		padding-top: rem(24);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(56);
+		}
+	}
+}
+
+
+
+
+
+
 // @include media-breakpoint-down(sm){
 // 	.sProdCard--mobile{
 // 		.container{

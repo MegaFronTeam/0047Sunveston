@@ -9,8 +9,8 @@ include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSimilar/_sSimilar.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= 'main-2.jpg'
+	- let  mainPage= 'home-page' 
+	- let  bg= '03-home.jpg'
 
 block title
 	- let  title= index.head.title
@@ -21,7 +21,12 @@ block pagecontent
 	
 	+parts('header-3')
 	main
-		+page-head2(`Инвестиционное агентство <span> коммерческой</span> недвижимости`,'Первое и единственное агентство в России, которое не только продаёт, но и создаёт арендный бизнес')
+		+page-head2({
+			container: true,
+			title: 'Инвестиционное агентство <span> коммерческой</span> недвижимости',
+			subtitle: 'Первое и единственное агентство в России, которое не только<br>продаёт, но и создаёт арендный бизнес'
+		})
+		//- +page-head2(`Инвестиционное агентство <span> коммерческой</span> недвижимости`,'Первое и единственное агентство в России, которое не только<br>продаёт, но и создаёт арендный бизнес')
 		+sAbout
 		+sSimilar('Лучшие предложения','row')
 	+controlsBtn()
