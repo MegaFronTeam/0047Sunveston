@@ -8,5 +8,17 @@ mixin sTeam(data)
 						h2.h1 Команда
 					.col-lg-8.col-xl-6
 						p Мы&nbsp;&mdash; коллектив профессионалов на&nbsp;рынке недвижимости, который способен решить самые сложные задачи. Наши сотрудники являются настоящими экспертами рынка недвижимости. Мы&nbsp;уделяем большое внимание кадровой политике и&nbsp;собрали команду единомышленников.
+			mixin item(img, name, status)
+				+e.item
+					+e.img-wrap: +img(`img/${img}`, 'bg')
+					.h4!=name 
+					+e.status!= status
 			+e.row.row
+				.col-6.col-md-4.col-xl-6: +item('sTeam-img-1.jpg', 'Дарина Солодкова ', 'CEO')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-2.jpg', 'Алексей Маслов', 'Эксперт по продажам')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-3.jpg', 'Елена Никифорова', 'Эксперт по продажам')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-4.jpg', 'Валерий Иванов', 'Эксперт по продажам')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-5.jpg', 'Оксана Танюшина', 'Эксперт по продажам')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-6.jpg', 'Лилия Маркова', 'Эксперт по продажам')
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-7.jpg', 'Сергей Матушкин', 'Эксперт по продажам')
 	// end sTeam
