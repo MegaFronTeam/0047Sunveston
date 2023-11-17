@@ -8,17 +8,24 @@
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
-	.section-title{
-		h1 {
-			
+	&__service {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 12px;
+		list-style-type: none;
+		@include media-breakpoint-up(lg) {
+			gap: 24px;
 		}
 	}
-	&__col{
-		
+	&__service {
+		padding: rem(32);
+		border-radius: 24px;
+		background: #F5F5F7;
+		@include media-breakpoint-up(lg) {
+			padding: rem(20);
+		}
 	}
-	&__item{
-		
-	}
+
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

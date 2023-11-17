@@ -334,8 +334,7 @@ function eventHandler() {
 	window.addEventListener('resize', () => {
 		getProdHadHeight();
 	}, { passive: true });
- 
-
+	
 	window.addEventListener('scroll', () => {
 		// console.log(window.scrollY);
 		if(window.scrollY >780) {
@@ -357,6 +356,7 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
 
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
