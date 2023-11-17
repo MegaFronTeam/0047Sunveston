@@ -1,13 +1,26 @@
-mixin sSimilar(data)
+mixin sSimilar(title="Похожие объекты",row)
 	// start sSimilar
 	+b.SECTION.sSimilar.section#sSimilar&attributes(attributes)
 		.container
 			+b.section-title
 				.row
 					.col
-						h2.h1 Похожие объекты
-					.col-auto
-						+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
+						h2.h1= title
+					if row
+						.col-12
+							.sSimilar__btn-row.swiper.btn-slider--js
+								.swiper-wrapper
+									.swiper-slide
+										.sSimilar__btn.btn.btn-primary(href="#") Продажа
+									.swiper-slide
+										.sSimilar__btn.btn.btn.white-btn(href="#") Аренда
+									.swiper-slide
+										.sSimilar__btn.btn.btn.white-btn(href="#") Торги
+									.swiper-slide
+										.sSimilar__btn.btn.btn.white-btn(href="#") Готовый бизнес
+					else
+						.col-auto
+							+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
 			+e.slider--js.swiper
 				.swiper-wrapper
 					-for(let i = 0; i < 6; i++)

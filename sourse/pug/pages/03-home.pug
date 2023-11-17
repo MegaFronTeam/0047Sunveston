@@ -6,6 +6,7 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSimilar/_sSimilar.pug
 
 block variables
 	- let  mainPage= 'home-page' 
@@ -27,6 +28,7 @@ block pagecontent
 		})
 		//- +page-head2(`Инвестиционное агентство <span> коммерческой</span> недвижимости`,'Первое и единственное агентство в России, которое не только<br>продаёт, но и создаёт арендный бизнес')
 		+sAbout
+		+sSimilar('Лучшие предложения','row')
 	+controlsBtn()
 	+chat()
 	+scrollToTop()
