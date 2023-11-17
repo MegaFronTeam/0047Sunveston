@@ -30,6 +30,18 @@
 			}
 		}
 	}
+	&__btn-row {
+		padding-top: 24px;
+		.swiper-slide {
+			width: auto;
+		}
+		.btn-primary {
+			--bs-btn-color: #{$white};
+		}
+		.white-btn {
+			border: none;
+		}
+	}
 	&__slider {
 		padding-bottom: rem(60);
 		overflow: visible;

@@ -50,6 +50,15 @@ function eventHandler() {
 		watchOverflow: true
 	});
 
+	new Swiper('.btn-slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		freeMode: true,
+		watchOverflow: true
+	});
+
+	
+
 	const catalogCardSwiper = new Swiper('.catalog-card__swiper--js', {
 		slidesPerView: 'auto',
 		pagination: {
