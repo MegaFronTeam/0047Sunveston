@@ -7,6 +7,9 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sDescriptionAboutUs/_sDescriptionAboutUs.pug
 include ../blocks/sKeyFigures/_sKeyFigures.pug
 include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sCooperation/_sCooperation.pug
 
 
 block variables
@@ -30,8 +33,11 @@ block pagecontent
 		})
 		+sDescriptionAboutUs
 		+sKeyFigures
-		+sTeam
-	//- +parts('footer')
+		+sTeam()
+		+sServices
+		+sPartners
+		+sCooperation
+	+parts('footer')
 	+controlsBtn()
 	+chat()
 	+scrollToTop()

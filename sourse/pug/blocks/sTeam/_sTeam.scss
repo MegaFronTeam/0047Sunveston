@@ -8,6 +8,19 @@
 		--sPB: #{rem(96)};
 		--sTPB: #{rem(56)};
 	}
+	&__container {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% - var(--bs-gutter-x));
+			height: 1px;
+			left: calc(var(--bs-gutter-x) / 2);
+			bottom: calc(var(--sPB) * -1);
+			background-color: $gray-200;
+		}
+	}
 	&__row{
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: #{rem(16)};
@@ -35,6 +48,7 @@
 			line-height: 1.6;
 			font-weight: 700;
 			margin-bottom: rem(4);
+			color: $body-color;
 			@include media-breakpoint-up(lg) {
 				font-size: rem(20);
 			}

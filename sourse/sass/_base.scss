@@ -160,6 +160,14 @@ main{
 .section-title {
 	margin-bottom: var(--sTPB);
 }
+.section-title--small {
+	h2 {
+		color: $secondary;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 170%;
+	}
+}
 
 
 
@@ -614,7 +622,7 @@ iframe {
 	position: relative;
 }
 
-.main-page {
+.main-page, .page-card {
 	.page-head {
 		text-align: left;
 		h1 {
@@ -646,8 +654,6 @@ iframe {
 		}
 	}
 }
-
-
 
 
 // @include media-breakpoint-down(sm){

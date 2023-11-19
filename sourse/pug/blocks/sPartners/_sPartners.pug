@@ -1,0 +1,25 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.--small
+				h2 Наши партнеры
+			+e.slider.swiper.free-slider--js
+				.swiper-wrapper
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-1.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-2.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-3.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-4.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-5.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-6.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-7.png')
+					.swiper-slide
+						+e.item(href="#"): +img('img/partner-8.png')
+	// end sPartners
