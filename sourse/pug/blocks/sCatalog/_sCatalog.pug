@@ -370,3 +370,191 @@ mixin sCatalog2(data)
 							myMap.geoObjects.add(myPlacemark4);
 						};
 	// end sCatalog
+
+mixin sCatalog3(data)
+	// start sCatalog
+	+b.sCatalog--2.section&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.catalog-col.col-lg-7.col-xl-8.col-xxl.custom-scroll
+					+e.wrap
+						+page-head2({
+							container: false,
+							items: ['Контакты', 'Хлебные крошки'],
+							title: 'Контакты'
+						})
+						//- +page-head2('Продажа коммерческой недвижимости в Москве','Продажа недвижимости', 'Торговая недвижимость', 'Хлебные крошки')
+						+e.cards.row
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 1,
+										gallery: 9,
+									},
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+											text: 'Ипотека',
+										}
+									],
+									title: 'Продажа торговой площади 526 м²',
+									price: {
+										text: '34 850 200 ₽',
+										icon: 'upgrade.svg'
+									},
+									metro: 'metro-2.svg',
+									features: {
+										area: '425 м²',
+										price: '368 200 ₽',
+										floor: '8',
+										allFloors: '/24',
+									}
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 3,
+										gallery: 10,
+									},
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+											text: 'Быстрая сделка',
+										}
+									],
+									title: 'Продажа торговой площади 2 026 м²',
+									price: {
+										text: '25 500 900 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-5.svg',
+									features: {
+										area: '2 026 м²',
+										price: '557 900 ₽',
+										floor: '5',
+										allFloors: '/5',
+									}
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 6,
+										gallery: 11,
+									},
+									tag: false,
+									title: 'Продажа торговой площади 425 м²',
+									likeClass: 'active',
+									price: {
+										text: '46 365 600 ₽',
+										icon: false
+									},
+									metro: 'metro-1.svg',
+									features: {
+										area: '425 м²',
+										price: '725 970 ₽',
+										floor: '2',
+										allFloors: '/8',
+									}
+								}).--horizontal
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									banner: 'Banner 668x160 px'
+								}).--horizontal.--banner
+							.col-sm-6.col-lg-12
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 4,
+										gallery: 12,
+									},
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+											text: 'Ипотека',
+										},
+										{
+											bgColor: 'linear-gradient(180deg, #58B971 0%, #A0D275 100%)',
+											text: 'Быстрая сделка',
+										}
+									],
+									title: 'Продажа торговой площади 1 826 м²',
+									price: {
+										text: '52 957 800 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-3.svg',
+									features: {
+										area: '1 826 м²',
+										price: '520 927 ₽',
+										floor: '4',
+										allFloors: '/6',
+									}
+								}).--horizontal
+						+e.btn.btn.btn-light(href='#') Показать еще
+						+pugin
+						+e.showed Показано 20 из 378 предложений
+				.col-lg-5.col-xl-4.col-xxl
+					+e.map
+						+e.search: +in-c('checkbox', 'Поиск при перемещении карты', 'search')
+						#map
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f23-bb68-eb2d6371a737" type="text/javascript")
+					script.
+						var myMap;
+						ymaps.ready(init);
+
+						function init () {
+							myMap = new ymaps.Map('map', {
+									center: [55.74970871386722,37.619038094446765],
+									zoom: 14
+							}, {
+									searchControlProvider: 'yandex#search'
+							});
+							myPlacemark1 = new ymaps.Placemark([55.752416579013975,37.61647938752435], {
+								iconContent: '22,5&nbsp;млн&nbsp;₽',
+							}, {
+								iconLayout: 'default#imageWithContent',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/price.svg',
+								iconImageSize: [106,36],
+								iconImageOffset: [-53, -18],
+								iconContentOffset: [16, 7],
+							}),
+							myPlacemark2 = new ymaps.Placemark([55.74721258081211,37.624719133618086], {
+								iconContent: '22,5&nbsp;млн&nbsp;₽',
+							}, {
+								iconLayout: 'default#imageWithContent',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/price.svg',
+								iconImageSize: [106,36],
+								iconImageOffset: [-53, -18],
+								iconContentOffset: [16, 7],
+							}),
+							myPlacemark3 = new ymaps.Placemark([55.746026455764785,37.604205599072195], {
+								iconContent: '22,5&nbsp;млн&nbsp;₽',
+							}, {
+								iconLayout: 'default#imageWithContent',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/price.svg',
+								iconImageSize: [106,36],
+								iconImageOffset: [-53, -18],
+								iconContentOffset: [16, 7],
+							}),
+							myPlacemark4 = new ymaps.Placemark([55.740252595800484,37.622559180922636], {
+								iconContent: '22,5&nbsp;млн&nbsp;₽',
+							}, {
+								iconLayout: 'default#imageWithContent',
+								// Своё изображение иконки метки.
+								iconImageHref: 'img/svg/price.svg',
+								iconImageSize: [106,36],
+								iconImageOffset: [-53, -18],
+								iconContentOffset: [16, 7],
+							}),
+							myMap.geoObjects.add(myPlacemark1);
+							myMap.geoObjects.add(myPlacemark2);
+							myMap.geoObjects.add(myPlacemark3);
+							myMap.geoObjects.add(myPlacemark4);
+						};
+	// end sCatalog

@@ -1377,3 +1377,26 @@
 		--ratio: 1360/680;
 	}
 }
+
+.tabs {
+	&__caption {
+		@include roww('8px', '', m);
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(26);
+		justify-content: center;
+	}
+	&__btn {
+		@include mt;
+		font-size: rem(14);
+		letter-spacing: -0.5px;
+		line-height: 1.71;
+		padding: rem(6) rem(16);
+		border-radius: rem(56);
+		font-weight: 700;
+		&:hover, &.active {
+			color: #fff;
+			background-color: $primary;
+		}
+	}
+}

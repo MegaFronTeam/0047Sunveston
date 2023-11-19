@@ -56,6 +56,25 @@
 		line-height: 1.5;
 		font-weight: 500;
 	}
+	.tabs {
+		&__caption {
+			margin-bottom: rem(21);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(42);
+			}
+		}
+	}
+	&--2 {
+		--sPT: 0;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(10)};
+		}
+		.sTeam__row {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-y: #{rem(36.8)};
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
