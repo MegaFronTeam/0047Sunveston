@@ -8,7 +8,7 @@ mixin sSimilar(title="Похожие объекты",row)
 						h2.h1= title
 					if row
 						.col-12
-							.sSimilar__btn-row.swiper.btn-slider--js
+							.sSimilar__btn-row.swiper.free-slider--js
 								.swiper-wrapper
 									.swiper-slide
 										.sSimilar__btn.btn.btn-primary(href="#") Продажа
@@ -21,36 +21,39 @@ mixin sSimilar(title="Похожие объекты",row)
 					else
 						.col-auto
 							+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
-			+e.slider--js.swiper
-				.swiper-wrapper
-					-for(let i = 0; i < 6; i++)
-						+e.slide.swiper-slide
-							+catalogCard({
-								slider: {
-									slidesCount: 23,
-									img: 7,
-									gallery: 8+i,
-								},
-								tag: [
-									{
-										bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
-										text: 'Ипотека',
+			if block
+				block
+			else
+				+e.slider--js.swiper
+					.swiper-wrapper
+						-for(let i = 0; i < 6; i++)
+							+e.slide.swiper-slide
+								+catalogCard({
+									slider: {
+										slidesCount: 23,
+										img: 7,
+										gallery: 8+i,
 									},
-								],
-								title: 'Продажа торговой площади 952 м²',
-								price: {
-									text: '47 950 000 ₽',
-									icon: 'downgrade.svg'
-								},
-								metro: 'metro-2.svg',
-								features: {
-									area: '526 м²',
-									price: '500 000 ₽',
-									floor: '2',
-									allFloors: '/8',
-								}
-							})
-				.d-none.d-lg-block
-					+arrow
-				.swiper-scrollbar
+									tag: [
+										{
+											bgColor: 'linear-gradient(180deg, #6BB8D0 0%, #4FD5FF 100%)',
+											text: 'Ипотека',
+										},
+									],
+									title: 'Продажа торговой площади 952 м²',
+									price: {
+										text: '47 950 000 ₽',
+										icon: 'downgrade.svg'
+									},
+									metro: 'metro-2.svg',
+									features: {
+										area: '526 м²',
+										price: '500 000 ₽',
+										floor: '2',
+										allFloors: '/8',
+									}
+								})
+					.d-none.d-lg-block
+						+arrow
+					.swiper-scrollbar
 	// end sSimilar

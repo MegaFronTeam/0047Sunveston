@@ -1,9 +1,37 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-12.col-xl-3
+					+e.logo(href="#")
+						+img('img/svg/logo.svg')
+				.col-12.col-lg-8.col-xl-6
+					+e.nav.NAV
+						ul
+							li: a(href="#") Продажа недвижимости
+							li: a(href="#") Покупка на торгах
+							li: a(href="#") Аренда недвижимости
+							li: a(href="#") Готовый бизнес
+							li: a(href="#") Агентство
+							li: a(href="#") Услуги
+							li: a(href="#") Контакты
+				.col-12.col-lg-4.col-xl-3
+						+e.phone Информационная линия Sunveston
+							a(href="tel:+78003330600") 8 800 333-0-600
+						address г. Москва, Нижний Кисловский&nbsp;пер., д.&nbsp;6&nbsp;стр&nbsp;2
+				.col-12.col-lg-8.col-xl-9.order-1.order-lg-0
+					+e.copyright
+						p © 2023 Renton Yard. 
+						p Все права защищены, Любое использование материалов сайта без разрешения запрещено.
+				.col-12.col-lg-4.col-xl-3
+					+soc
+						+item-sos('vk')
+						+item-sos('ok')
+						+item-sos('youtube')
+						+item-sos('zen')
+				.col-12.order-last
+					+e.bottom-links
+						ul
+							li: a(href="#") Правила использования
+							li: a(href="#") Правовая информация
+							li: a(href="#") Сообщить об ошибке на сайте

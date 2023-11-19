@@ -7,6 +7,11 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSimilar/_sSimilar.pug
+include ../blocks/sRenton/_sRenton.pug
+include ../blocks/sKeyFigures/_sKeyFigures.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sCooperation/_sCooperation.pug
 
 block variables
 	- let  mainPage= 'home-page' 
@@ -26,11 +31,34 @@ block pagecontent
 			title: 'Инвестиционное агентство <span> коммерческой</span> недвижимости',
 			subtitle: 'Первое и единственное агентство в России, которое не только<br>продаёт, но и создаёт арендный бизнес'
 		})
-		//- +page-head2(`Инвестиционное агентство <span> коммерческой</span> недвижимости`,'Первое и единственное агентство в России, которое не только<br>продаёт, но и создаёт арендный бизнес')
 		+sAbout
 		+sSimilar('Лучшие предложения','row')
+		+sRenton()
+		+sKeyFigures
+		+sServices
+		+sPartners
+		+sSimilar('Журнал')
+			.blog__slider.blog__slider--js.swiper
+				.swiper-wrapper
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-1','Новости','Рейтинг коммерческой недвижимости ТОП 10',date="24 апр 2023")
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-2','Недвижимость','Как купить офис: 6 советов по выбору помещения',date="24 апр 2023")
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-3','Недвижимость','Как лучше инвестировать в недвижимость',date="24 апр 2023")
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-1','Новости','Рейтинг коммерческой недвижимости ТОП 10',date="24 апр 2023")
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-2','Недвижимость','Как купить офис: 6 советов по выбору помещения',date="24 апр 2023")
+					.sSimilar__slide.swiper-slide
+						+blogItem('blog-3','Недвижимость','Как лучше инвестировать в недвижимость',date="24 апр 2023")
+				.sSimilar__controls
+					+arrow
+					.sSimilar__scrollbar
+						.swiper-scrollbar
+		+sCooperation
 	+controlsBtn()
 	+chat()
 	+scrollToTop()
-	//- +parts('footer')
+	+parts('footer')
 

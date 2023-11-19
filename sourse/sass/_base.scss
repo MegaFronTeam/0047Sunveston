@@ -160,6 +160,14 @@ main{
 .section-title {
 	margin-bottom: var(--sTPB);
 }
+.section-title--small {
+	h2 {
+		color: $secondary;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 170%;
+	}
+}
 
 
 
