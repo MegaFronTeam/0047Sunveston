@@ -4,15 +4,16 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
-include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sCooperation/_sCooperation.pug
 
 
 block variables
 	- let  mainPage= 'team-page' 
-	- let  bg= '08-team.jpg'
+	- let  bg= '09-service.jpg'
 
 block title
-	- let  title= 'Наша команда'
+	- let  title= 'Сервис'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -22,10 +23,10 @@ block pagecontent
 	main
 		+page-head2({
 			container: true,
-			title: 'Наша команда',
-			items: ['О компании', 'Хлебные крошки']
+			items: ['breadcrums', 'Хлебные крошки']
 		})
-		+sTeam2
+		+sServices2
+		+sCooperation
 	+parts('footer')
 	+controlsBtn()
 	+chat()

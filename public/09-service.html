@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Сервис</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="team-page" data-bg="09-service.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header-3`)</script>
+			<div id="header-3Wrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item breadcrumb-item--home swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">
+										<svg class="icon icon-home ">
+											<use xlink:href="img/svg/sprite.svg#home"></use>
+										</svg>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">breadcrums</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебные крошки</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1></h1>
+					</div>
+				</div>
+				<!-- start sServices-->
+				<section class="sServices sServices--2 section" id="sServices">
+					<div class="container">
+						<div class="sServices__container">
+							<ul class="sServices__list">
+								<li class="sServices__item">
+									<a class="sServices__item-link" href="#">Покупка на торгах&nbsp;<span class="sServices__link-arrow"></span>
+									</a>
+								</li>
+								<li class="sServices__item">
+									<a class="sServices__item-link" href="#">Продажа&nbsp;<span class="sServices__link-arrow"></span>
+									</a>
+								</li>
+								<li class="sServices__item">
+									<a class="sServices__item-link" href="#">Реализация инвестиционных проектов&nbsp;<span class="sServices__link-arrow"></span>
+									</a>
+								</li>
+								<li class="sServices__item">
+									<a class="sServices__item-link" href="#">Поиск арендатора&nbsp;<span class="sServices__link-arrow"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- end sServices-->
+				<!-- start sCooperation-->
+				<section class="sCooperation section" id="sCooperation">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>Приглашаем к сотрудничеству</h2>
+						</div>
+						<p class="text-center">Мы&nbsp;уверены в&nbsp;своей экспертности. Покажем реальные успешные кейсы, расскажем, как и&nbsp;что делали. Предоставим финансовые модели потенциальных проектов. </p>
+						<div class="sCooperation__row row">
+							<div class="col-md-4">
+								<div class="sCooperation__item">
+									<svg class="icon icon-keys ">
+										<use xlink:href="img/svg/sprite.svg#keys"></use>
+									</svg>
+									<div class="sCooperation__item-title">Собственников
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="sCooperation__item">
+									<svg class="icon icon-broker ">
+										<use xlink:href="img/svg/sprite.svg#broker"></use>
+									</svg>
+									<div class="sCooperation__item-title">Собственников
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="sCooperation__item">
+									<svg class="icon icon-invest ">
+										<use xlink:href="img/svg/sprite.svg#invest"></use>
+									</svg>
+									<div class="sCooperation__item-title">Инвесторов
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCooperation-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="controls-btn">
+				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">
+					<svg class="icon icon-filter ">
+						<use xlink:href="img/svg/sprite.svg#filter"></use>
+					</svg>Фильтры
+				</a>
+				<div class="popup popup-js"><a class="btn btn-light popup-btn-js controls-btn__btn controls-btn__btn--search" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg></a>
+					<div class="popup__content">
+						<div class="popup__head">
+							 Поиски
+							<div class="close"></div>
+						</div>
+						<div class="popup__body custom-scroll">
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chat">
+				<svg class="icon icon-chat ">
+					<use xlink:href="img/svg/sprite.svg#chat"></use>
+				</svg>
+			</div>
+			<div class="scroll-to-top">
+				<svg class="icon icon-chevron-up ">
+					<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

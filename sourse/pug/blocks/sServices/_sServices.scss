@@ -63,6 +63,11 @@
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+	&--2 {
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(30)};
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
