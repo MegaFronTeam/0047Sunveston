@@ -1,4 +1,4 @@
-mixin sSimilar(title="Похожие объекты",row)
+mixin sSimilar(title="Похожие объекты",row, btn=true)
 	// start sSimilar
 	+b.SECTION.sSimilar.section#sSimilar&attributes(attributes)
 		.container
@@ -6,21 +6,22 @@ mixin sSimilar(title="Похожие объекты",row)
 				.row
 					.col
 						h2.h1= title
-					if row
-						.col-12
-							.sSimilar__btn-row.swiper.free-slider--js
-								.swiper-wrapper
-									.swiper-slide
-										.sSimilar__btn.btn.btn-primary(href="#") Продажа
-									.swiper-slide
-										.sSimilar__btn.btn.btn.white-btn(href="#") Аренда
-									.swiper-slide
-										.sSimilar__btn.btn.btn.white-btn(href="#") Торги
-									.swiper-slide
-										.sSimilar__btn.btn.btn.white-btn(href="#") Готовый бизнес
-					else
-						.col-auto
-							+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
+					if btn
+						if row
+							.col-12
+								.sSimilar__btn-row.swiper.free-slider--js
+									.swiper-wrapper
+										.swiper-slide
+											.sSimilar__btn.btn.btn-primary(href="#") Продажа
+										.swiper-slide
+											.sSimilar__btn.btn.btn.white-btn(href="#") Аренда
+										.swiper-slide
+											.sSimilar__btn.btn.btn.white-btn(href="#") Торги
+										.swiper-slide
+											.sSimilar__btn.btn.btn.white-btn(href="#") Готовый бизнес
+						else
+							.col-auto
+								+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
 			if block
 				block
 			else

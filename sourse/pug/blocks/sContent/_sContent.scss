@@ -4,6 +4,7 @@
 	--sPT: #{rem(20)};
 	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
+	counter-reset: title;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(30)};
 		--sPB: #{rem(96)};
@@ -38,6 +39,10 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(24);
 			font-size: rem(32);
+		}
+		&::before {
+			counter-increment: title;
+			content: counter(title) ". ";
 		}
 	}
 	p {
