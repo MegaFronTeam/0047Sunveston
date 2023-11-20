@@ -249,7 +249,7 @@
 		line-height: 1.16;
 		letter-spacing: -0.5px;
 		// margin-bottom: 0;
-		margin-bottom: rem(24);
+		margin-bottom: 0;
 		font-size: rem(32);
 		max-width: rem(900);
 		margin-left: auto;
@@ -329,8 +329,9 @@
 		text-align: center;
 		font-size: rem(14);
 		font-weight: 500;
-		line-height: 1.55;
+		line-height: 1.54;
 		color: $gray-600;
+		margin-top: rem(24);
 		@include media-breakpoint-up(lg) {
 			font-size: rem(18);
 		}

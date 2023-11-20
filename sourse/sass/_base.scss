@@ -626,7 +626,6 @@ iframe {
 	.page-head {
 		text-align: left;
 		h1 {
-			margin-bottom: 0;
 			font-size: rem(32);
 			margin-left: 0;
 		}
@@ -647,22 +646,7 @@ iframe {
 	}
 }
 
-.team-page {
-	.page-head {
-		h1 {
-			margin-bottom: 0;
-		}
-	}
-}
-
 .blog-page {
-	.page-head {
-		h1 {
-			@include media-breakpoint-down(md) {
-				margin-bottom: 0;
-			}
-		}
-	}
 	.breadcrumb {
 		@include media-breakpoint-down(md) {
 			display: none;
@@ -670,6 +654,13 @@ iframe {
 	}
 }
 
+.article-page {
+	.page-head {
+		&__subtitle {
+			text-align: left;
+		}
+	}
+}
 
 // @include media-breakpoint-down(sm){
 // 	.sProdCard--mobile{
