@@ -14,3 +14,4 @@
 5. <https://megafronteam.github.io/0047Sunveston/07-article.html>
 7. <https://megafronteam.github.io/0047Sunveston/08-team.html>
 8. <https://megafronteam.github.io/0047Sunveston/09-service.html>
+9. <https://megafronteam.github.io/0047Sunveston/10-service-article.html>
