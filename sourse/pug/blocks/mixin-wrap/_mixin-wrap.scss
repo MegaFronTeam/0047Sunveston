@@ -336,6 +336,17 @@
 			font-size: rem(18);
 		}
 	}
+	&__price {
+		margin: rem(18) 0;
+		font-size: rem(18);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1.33;
+		@include media-breakpoint-up(lg) {
+			margin: rem(24) 0;
+			font-size: rem(24);
+		}
+	}
 	// &--content {
 	// 	padding-top: rem(24);
 	// 	padding-bottom: rem(12);
