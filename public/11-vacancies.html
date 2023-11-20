@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Вакансии</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="10-service-article.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header-3`)</script>
+			<div id="header-3Wrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item breadcrumb-item--home swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">
+										<svg class="icon icon-home ">
+											<use xlink:href="img/svg/sprite.svg#home"></use>
+										</svg>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Карьера</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебные крошки</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1>Вакансии</h1>
+						<div class="page-head__subtitle">Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.
+						</div>
+					</div>
+				</div>
+				<!-- start sRenton-->
+				<section class="sRenton section" id="sRenton">
+					<div class="container">
+						<div class="sRenton__container">
+							<div class="section-title text-center">
+								<h2>Sunveston&nbsp;&mdash; инвестиционное агентство недвижимости, которое входит в&nbsp;группу компаний Renton Yard</h2>
+							</div>
+							<p>Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.</p>
+							<div class="sRenton__img-block"> 
+								<div class="sRenton__text">Экспертность и опыт команды
+								</div>
+								<div class="sRenton__title text-center">Агентство
+								</div>
+								<picture>
+									<source media="(min-width: 768px)" srcset="img/renton-lg.jpg"/><img class="object-fit-js" src="img/renton-sm.jpg"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sRenton-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="controls-btn">
+				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">
+					<svg class="icon icon-filter ">
+						<use xlink:href="img/svg/sprite.svg#filter"></use>
+					</svg>Фильтры
+				</a>
+				<div class="popup popup-js"><a class="btn btn-light popup-btn-js controls-btn__btn controls-btn__btn--search" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg></a>
+					<div class="popup__content">
+						<div class="popup__head">
+							 Поиски
+							<div class="close"></div>
+						</div>
+						<div class="popup__body custom-scroll">
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chat">
+				<svg class="icon icon-chat ">
+					<use xlink:href="img/svg/sprite.svg#chat"></use>
+				</svg>
+			</div>
+			<div class="scroll-to-top">
+				<svg class="icon icon-chevron-up ">
+					<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
