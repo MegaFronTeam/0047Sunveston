@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Статья</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="blog-page" data-bg="05-contacts.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item breadcrumb-item--home swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">
+										<svg class="icon icon-home ">
+											<use xlink:href="img/svg/sprite.svg#home"></use>
+										</svg>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Events</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебные крошки</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1>Как купить офис: 6 советов по выбору помещения</h1>
+						<div class="page-head__subtitle">Если театр начинается с вешалки, то бизнес – с офиса. Переоценить его значение трудно, а подобрать офисное помещение – тот еще квест. Однако есть правила, благодаря которым, вы сможете принять верное решение.
+						</div>
+					</div>
+				</div>
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent">
+					<div class="container">
+						<div class="sContent__container">
+							<div class="sContent__img-wrap"><img src="img/article-1.jpg" alt="" loading="lazy"/>
+							</div>
+							<div class="sContent__text">
+								<p>Итак, 6&nbsp;шагов на&nbsp;пути к&nbsp;идеальному офису:</p>
+								<ol>
+									<li> 
+										<h2>1. Обозначаем бюджет</h2>
+										<p>Молодой компании ни&nbsp;к&nbsp;чему дорогой офис в&nbsp;центре города. Даже если у&nbsp;вас есть на&nbsp;это деньги, лучше вложить их&nbsp;в&nbsp;развитие бизнеса.</p>
+										<p>Однако всегда стоит помнить о&nbsp;том, что цена офиса состоит из&nbsp;нескольких составляющих: арендная ставка, коммунальные платежи, эксплуатационные платежи и&nbsp;т.&nbsp;д. Не&nbsp;забывайте об&nbsp;этом в&nbsp;своем стремлении сэкономить при подборе офиса.</p>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sContent-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="controls-btn">
+				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">
+					<svg class="icon icon-filter ">
+						<use xlink:href="img/svg/sprite.svg#filter"></use>
+					</svg>Фильтры
+				</a>
+				<div class="popup popup-js"><a class="btn btn-light popup-btn-js controls-btn__btn controls-btn__btn--search" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg></a>
+					<div class="popup__content">
+						<div class="popup__head">
+							 Поиски
+							<div class="close"></div>
+						</div>
+						<div class="popup__body custom-scroll">
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chat">
+				<svg class="icon icon-chat ">
+					<use xlink:href="img/svg/sprite.svg#chat"></use>
+				</svg>
+			</div>
+			<div class="scroll-to-top">
+				<svg class="icon icon-chevron-up ">
+					<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+				</svg>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

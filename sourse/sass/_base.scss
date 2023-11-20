@@ -655,6 +655,21 @@ iframe {
 	}
 }
 
+.blog-page {
+	.page-head {
+		h1 {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.breadcrumb {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+}
+
 
 // @include media-breakpoint-down(sm){
 // 	.sProdCard--mobile{
