@@ -1,25 +1,53 @@
 
-	// start .sForm
-	.sForm {
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+// start .sForm
+.sForm {
+	--sPT: #{rem(28)};
+	--sPB: #{rem(48)};
+	--sTPB: #{rem(28)};
+	background-color: $gray-100;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(56)};
+		--sPB: #{rem(96)};
+		--sTPB: #{rem(56)};
 	}
 	.section-title{
-		
+		max-width: rem(898);
+		margin-left: auto;
+		margin-right: auto;
+		h2 {
+			line-height: 1.25;
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+		p {
+			margin-bottom: 0;
+			color: $gray-600;
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.55;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+		}
 	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
+	.form-wrap {
+		max-width: rem(668);
+		margin: 0 auto;
+		.row {
+			--bs-gutter-x: #{rem(12)};
+			--bs-gutter-y: #{rem(12)};
+		}
+		&__policy {
+			font-size: rem(14);
+			a {
+				text-decoration: underline;
+			}
+		}
+		&__btn {
+			width: 100%;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

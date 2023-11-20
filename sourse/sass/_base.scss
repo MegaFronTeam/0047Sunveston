@@ -660,6 +660,11 @@ iframe {
 			text-align: left;
 		}
 	}
+	.sServices {
+		@include media-breakpoint-up(lg) {
+			--sTPB: #{rem(68)};
+		}
+	}
 }
 
 // @include media-breakpoint-down(sm){

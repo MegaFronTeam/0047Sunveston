@@ -3,14 +3,15 @@ mixin sForm()
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
+				h2.h1 Оставить заявку
+				p Мы&nbsp;уверены в&nbsp;своей экспертности. Покажем реальные успешные кейсы, расскажем, как и&nbsp;что делали. Предоставим финансовые модели потенциальных проектов.
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+				+input("Фамилия имя отчество",'text', 'ФИО')
+				+input("", 'tel', 'Контактный телефон')
+					span.tel +7
+				.row
+					.col-lg-auto.order-lg-1
+						+e.btn.btn.btn-primary(type="submit") Отправить
+					.col-lg
+						+policy2
 	// end sForm
