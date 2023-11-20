@@ -4,7 +4,6 @@
 	--sPT: #{rem(20)};
 	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
-	counter-reset: title;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(30)};
 		--sPB: #{rem(96)};
@@ -39,10 +38,6 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(24);
 			font-size: rem(32);
-		}
-		&::before {
-			counter-increment: title;
-			content: counter(title) ". ";
 		}
 	}
 	p {
@@ -88,6 +83,24 @@
 				top: rem(10);
 				left: rem(10);
 			}
+		}
+	}
+	ol {
+		padding-left: 0;
+		counter-reset: title;
+		list-style-type: none;
+		li {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		h2::before {
+			counter-increment: title;
+			content: counter(title) ". ";
 		}
 	}
 	blockquote {

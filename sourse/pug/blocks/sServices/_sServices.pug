@@ -5,7 +5,7 @@ mixin sServices(data)
 			+e.container
 				+b.section-title.--small
 					h2 Наши услуги
-				+e.list.UL
+				ul
 					//- mixin serviceItem(title)
 					//- 	+e.item.LI
 					//- 		+e.item-link(href="#")= title
@@ -15,10 +15,10 @@ mixin sServices(data)
 					//- +serviceItem('Продажа')
 					//- +serviceItem('Реализация инвестиционных проектов')
 					//- +serviceItem('Поиск арендатора')
-					+e.item.LI: +e.item-link(href="#") Покупка на торгах&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Продажа&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Реализация инвестиционных проектов&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Поиск арендатора&nbsp;#[span.sServices__link-arrow ]
+					li: a(href="#") Покупка на торгах&nbsp;#[span]
+					li: a(href="#") Продажа&nbsp;#[span]
+					li: a(href="#") Реализация инвестиционных проектов&nbsp;#[span]
+					li: a(href="#") Поиск арендатора&nbsp;#[span]
 	// end sServices
 
 mixin sServices2(data)
@@ -26,9 +26,9 @@ mixin sServices2(data)
 	+b.SECTION.sServices--2.section#sServices&attributes(attributes)
 		.container
 			+e.container
-				+e.list.UL
-					+e.item.LI: +e.item-link(href="#") Покупка на торгах&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Продажа&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Реализация инвестиционных проектов&nbsp;#[span.sServices__link-arrow ]
-					+e.item.LI: +e.item-link(href="#") Поиск арендатора&nbsp;#[span.sServices__link-arrow ]
+				ul
+					li: a(href="#") Покупка на торгах&nbsp;#[span]
+					li: a(href="#") Продажа&nbsp;#[span]
+					li: a(href="#") Реализация инвестиционных проектов&nbsp;#[span]
+					li: a(href="#") Поиск арендатора&nbsp;#[span]
 	// end sServices
