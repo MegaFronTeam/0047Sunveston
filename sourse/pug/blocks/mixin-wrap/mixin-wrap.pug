@@ -330,7 +330,7 @@ mixin imgCover(img, imgSm)
 
 
 mixin blogItem(img,cat,title,date="24 апр 2023")
-	+b.blog-item
+	+b.blog-item(href="#")
 		+e.img-wrap
 			+img(`img/${img}.jpg`)
 		+e.category= cat

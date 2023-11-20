@@ -1403,6 +1403,11 @@
 }
 
 .blog-item {
+	&:hover {
+		.blog-item__title {
+			color: $primary;
+		}
+	}
 	&__img-wrap {
 		margin-bottom: 8px;
 		height: 210px;
@@ -1433,6 +1438,8 @@
 		margin-bottom: 4px;
 		font-size: rem(18);
 		line-height: 133%;
+		color: $body-color;
+		@include mt;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 8px;
 			line-height: 145.455%;
@@ -1440,6 +1447,7 @@
 		}
 	}
 	&__date {
+		color: $body-color;
 		font-size: rem(14);
 		@include media-breakpoint-up(lg) {
 			font-size: rem(16);
