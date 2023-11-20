@@ -1,0 +1,43 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sBlog/_sBlog.pug
+
+
+block variables
+	- let  mainPage= 'blog-page' 
+	- let  bg= '05-contacts.jpg'
+
+block title
+	- let  title= 'Статья'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			title: 'Как купить офис: 6 советов по выбору помещения',
+			items: ['Events', 'Хлебные крошки'],
+			subtitle: 'Если театр начинается с вешалки, то бизнес – с офиса. Переоценить его значение трудно, а подобрать офисное помещение – тот еще квест. Однако есть правила, благодаря которым, вы сможете принять верное решение.'
+		})
+		+sContent
+			+e.container
+				+e.img-wrap
+					+img('img/article-1.jpg')
+				+e.text
+					p Итак, 6&nbsp;шагов на&nbsp;пути к&nbsp;идеальному офису:
+					ol
+						li 
+							h2 1. Обозначаем бюджет
+							p Молодой компании ни&nbsp;к&nbsp;чему дорогой офис в&nbsp;центре города. Даже если у&nbsp;вас есть на&nbsp;это деньги, лучше вложить их&nbsp;в&nbsp;развитие бизнеса.
+							p Однако всегда стоит помнить о&nbsp;том, что цена офиса состоит из&nbsp;нескольких составляющих: арендная ставка, коммунальные платежи, эксплуатационные платежи и&nbsp;т.&nbsp;д. Не&nbsp;забывайте об&nbsp;этом в&nbsp;своем стремлении сэкономить при подборе офиса.
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

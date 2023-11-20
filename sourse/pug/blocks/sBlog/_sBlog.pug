@@ -2,8 +2,19 @@ mixin sBlog(data)
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBlog
-				
 			+e.row.row
+				.col-sm-6.col-lg-4
+					+blogItem('blog-1','Новости','Рейтинг коммерческой недвижимости ТОП 10',date="24 апр 2023")
+				.col-sm-6.col-lg-4
+					+blogItem('blog-2','Недвижимость','Как купить офис: 6 советов по выбору помещения',date="24 апр 2023")
+				.col-sm-6.col-lg-4
+					+blogItem('blog-3','Недвижимость','Как лучше инвестировать в недвижимость',date="24 апр 2023")
+				.col-sm-6.col-lg-4
+					+blogItem('blog-2','Недвижимость','Как купить офис: 6 советов по выбору помещения',date="24 апр 2023")
+				.col-sm-6.col-lg-4
+					+blogItem('blog-1','Новости','Рейтинг коммерческой недвижимости ТОП 10',date="24 апр 2023")
+				.col-sm-6.col-lg-4
+					+blogItem('blog-3','Недвижимость','Как лучше инвестировать в недвижимость',date="24 апр 2023")
+			+e.btn.btn.btn-light.BUTTON Показать еще
+			+pugin
 	// end sBlog

@@ -1,15 +1,38 @@
 // start .sBlog
 .sBlog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(8)};
+	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
-	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(96)};
 	}
-	.section-title{
-		
+	&__row{
+		margin-bottom: rem(32);
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(56);
+			--bs-gutter-y: #{rem(56)};
+		}
+	}
+	&__btn {
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	.page-numbers {
+		li:first-child {
+			margin-right: 32px;
+		}
+		li:last-child {
+			margin-left: 32px;
+		}
+		li {
+			@include media-breakpoint-down(md) {
+				&:nth-child(n+6):not(:last-child) {
+					display: none;
+				}
+			}
+		}
 	}
 	&__col{
 		
