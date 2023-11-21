@@ -38,7 +38,7 @@
 			}
 		}
 		@include media-breakpoint-up(xxl) {
-			padding: rem(20) calc(var(--bs-gutter-x) / 2);
+			padding: 0 calc(var(--bs-gutter-x) / 2);
 
 		}
 		.icon {
