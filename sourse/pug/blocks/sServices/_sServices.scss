@@ -52,9 +52,9 @@
 			span{
 				display: inline-block;
 				flex-shrink: 0;
-				margin-left: 16px;
-				width: 40px;
-				height: 40px;
+				margin-left: rem(16);
+				width: rem(40);
+				height: rem(40);
 				background-color: $gray-100;
 				border-radius: 50%;
 				background-image: url('../img/svg/chevron-right-2.svg');

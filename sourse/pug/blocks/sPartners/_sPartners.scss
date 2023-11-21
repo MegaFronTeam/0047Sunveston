@@ -25,16 +25,16 @@
 		overflow: visible;
 	}
 	.swiper-slide {
-		height: 140px;
-		width: 130px;
+		height: rem(140);
+		width: rem(130);
 		&:not(:last-child) {
-			margin-right: 16px;
+			margin-right: rem(16);
 		}
 		@include media-breakpoint-up(md) {
-			height: 300px;
-			width: 322px;
+			height: rem(300);
+			width: rem(322);
 			&:not(:last-child) {
-				margin-right: 24px;
+				margin-right: rem(24);
 			}
 		}
 	}

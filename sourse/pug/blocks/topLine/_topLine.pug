@@ -8,8 +8,15 @@ mixin topLine()
 		.container
 			+e.content
 				+e.row.row
-					.col
+					.col.col-xxl-auto
 						+e.logo(href='/'): +img('img/svg/logo.svg')
+					.col-auto.col-lg-12.order-lg-last.order-xxl-0.col-xxl
+						.menu-mobile.menu-mobile--js
+							.menu-mobile__inner
+								+e.tel(href='tel:88003330600').d-lg-none
+									+icon('phone')
+									| 8 800 333-0-600
+								+mnu
 					.col-auto.d-none.d-lg-block
 						//- +e.tel(href='tel:88003330600')
 						+e.tel(data-fancybox data-type="ajax" href='modal/call.html')

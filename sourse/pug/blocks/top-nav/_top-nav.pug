@@ -8,7 +8,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav(recommended="true",view="rtue") 
+mixin top-nav(recommended="true",view="true") 
 	// start top-nav
 	+b.top-nav.section.block-with-lazy
 		.container
@@ -82,6 +82,25 @@ mixin top-nav(recommended="true",view="rtue")
 								+in-c('checkbox', 'Прямая продажа', 'buy3')
 								+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
 								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+				else
+					.col-auto.ms-lg-auto.d-lg-none
+						+e.wrap.dd-wrap-js
+							+e.btn.btn.btn-outline-light.dd-head-header-js 
+								+icon('height')
+								| Рекомендуемые
+								+icon('chevron-down')
+							+e.content.custom-scroll
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Публичное предложение', 'buy3')
+								+in-c('checkbox', 'Прямая продажа', 'buy3')
+								+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+								+in-c('checkbox', 'Публичное предложение', 'buy3')
+								+in-c('checkbox', 'Прямая продажа', 'buy3')
+								+in-c('checkbox', 'Продажа без объявлении цены', 'buy3')
+								+in-c('checkbox', 'Электронный аукцион', 'buy3')
+
 				.col-auto.ms-auto.ms-lg-0
 					+e.btn--map-js.btn.btn-outline-light(href='#')
 						+icon('map')
@@ -106,13 +125,13 @@ mixin top-nav(recommended="true",view="rtue")
 									+icon('save-search')
 									| Сохраняйте поиски, чтобы не пропустить новые предложения
 				//- .col-4
-				.col-auto.m-0.p-0
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+e.tel(href='tel:88003330600')
-								+icon('phone')
-								| 8 800 333-0-600
-							+mnu
+				//- .col-auto.m-0.p-0
+				//- 	.menu-mobile.menu-mobile--js
+				//- 		.menu-mobile__inner
+				//- 			+e.tel(href='tel:88003330600')
+				//- 				+icon('phone')
+				//- 				| 8 800 333-0-600
+				//- 			+mnu
 				//- .col-auto.d-lg-none
 				//- 	+menu-toggle()
 	// end top-nav
