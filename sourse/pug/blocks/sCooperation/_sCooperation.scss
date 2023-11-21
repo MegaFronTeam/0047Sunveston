@@ -13,7 +13,7 @@
 		--bs-gutter-y: #{rem(16)};
 	}
 	.section-title{
-		margin-bottom: 24px;
+		margin-bottom: rem(24);
 		h2 {
 			font-size: rem(24);
 			@include media-breakpoint-up(lg) {
@@ -23,15 +23,15 @@
 	}
 	p {
 		margin: 0 auto;
-		margin-bottom: 24px;
-		max-width: 900px;
+		margin-bottom: rem(24);
+		max-width: rem(900);
 		color: $secondary;
 		font-style: normal;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height:  142.857%;
 		@include media-breakpoint-up(lg) {
-			margin-bottom: 56px;
+			margin-bottom: rem(56);
 			font-size: rem(18);
 			line-height: 155.556%;
 		}
@@ -43,16 +43,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 32px;
-		min-height: 100px;
-		border-radius: 24px;
+		padding: rem(32);
+		min-height: rem(100);
+		border-radius: rem(24);
 		background: $white;
 		@include media-breakpoint-up(sm) {
 			justify-content: center;
 		}
 		@include media-breakpoint-up(md) {
 			flex-direction: column;
-			min-height: 220px;
+			min-height: rem(220);
 		}
 		.icon {
 			font-size: rem(40);
@@ -62,11 +62,11 @@
 			order: 1;
 			@include media-breakpoint-up(sm) {
 				order: 0;
-				margin-right: 16px;
+				margin-right: rem(16);
 			}
 			@include media-breakpoint-up(md) {
 				margin-right: 0;
-				margin-bottom: 16px;
+				margin-bottom: rem(16);
 				font-size: rem(56);
 			}
 		}

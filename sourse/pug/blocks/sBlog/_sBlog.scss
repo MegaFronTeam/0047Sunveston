@@ -17,14 +17,14 @@
 	}
 	&__btn {
 		width: 100%;
-		margin-bottom: 24px;
+		margin-bottom: rem(24);
 	}
 	.page-numbers {
 		li:first-child {
-			margin-right: 32px;
+			margin-right: rem(32);
 		}
 		li:last-child {
-			margin-left: 32px;
+			margin-left: rem(32);
 		}
 		li {
 			@include media-breakpoint-down(md) {

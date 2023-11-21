@@ -31,7 +31,7 @@
 		}
 	}
 	&__btn-row {
-		padding-top: 24px;
+		padding-top: rem(24);
 		.swiper-slide {
 			width: auto;
 		}
@@ -97,14 +97,14 @@
 		// }
 		@include media-breakpoint-up(lg) {
 			display: flex;
-			top: 116px;
+			top: rem(116);
 		}
 	}
 	.sSimilar__scrollbar {
 		margin: 0 auto;
-		max-width: 268px;
+		max-width: rem(268);
 		@include media-breakpoint-up(lg) {
-			max-width: 506px;
+			max-width: rem(506);
 		}
 	}
 	.swiper-scrollbar {

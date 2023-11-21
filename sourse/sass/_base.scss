@@ -128,11 +128,11 @@ main{
 		padding-top: rem(256);
 	}
 	@include media-breakpoint-up(lg) {
-		padding-top: rem(250);
+		padding-top: rem(300);
 	}
-	@include media-breakpoint-up(xl) {
-		padding-top: rem(253);
-	}
+	// @include media-breakpoint-up(xl) {
+	// 	padding-top: rem(253);
+	// }
 	@include media-breakpoint-up(xxl) {
 		padding-top: rem(257);
 	}

@@ -14,11 +14,11 @@
 	&__service {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		gap: 12px;
+		gap: rem(12);
 		grid-auto-flow: dense;
 		list-style-type: none;
 		@include media-breakpoint-up(lg) {
-			gap: 24px;
+			gap: rem(24);
 		}
 	}
 	&__service-item {
@@ -43,11 +43,11 @@
 			&:nth-child(4n+2) {
 				grid-row: span 2;
 				flex-direction: column;
-				padding-bottom: 125px;
+				padding-bottom:rem(125);
 				.sAbout__btn {
 					position: absolute;
-					bottom: 32px;
-					left: 32px;
+					bottom: rem(32);
+					left: rem(32);
 				}
 			}
 		}
@@ -56,7 +56,7 @@
 		display: flex;
 		flex-direction: column;
 		flex-basis:calc(50% - 16px);
-		margin-right:16px
+		margin-right:rem(16)
 	}
 	&__title {
 		margin-bottom: rem(16);
@@ -70,7 +70,7 @@
 		}
 	}
 	&__descr {
-		margin-bottom: 16px;
+		margin-bottom: rem(16);
 		font-size: rem(14);
 		flex-grow: 1;
 		@include media-breakpoint-up(md) {
@@ -86,9 +86,9 @@
 		align-items: flex-end;
 		flex-basis: 50%;
 		text-align: right;
-		max-height: 185px;
+		max-height: rem(185);
 		@include media-breakpoint-up(lg) {
-			max-height: 373px;
+			max-height: rem(373);
 		}
 		img {
 			max-width: 100%;

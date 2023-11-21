@@ -19,10 +19,10 @@
 		// --bs-gutter-y: #{rem()};
 	}
 	.section-title{
-		margin-bottom: 32px;
+		margin-bottom:rem(32);
 		h2 {
 			margin: 0 auto;
-			max-width: 900px;
+			max-width: rem(900);
 			text-align: center;
 			font-size: rem(24);
 			line-height: 133%;
@@ -35,8 +35,8 @@
 	}
 	p {
 		margin: 0 auto;
-		margin-bottom: 40px;
-		max-width: 900px;
+		margin-bottom: rem(40);
+		max-width: rem(900);
 		font-size: rem(14);
 		line-height:143%;
 		font-weight: 500;
@@ -52,14 +52,14 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		padding: 20px;
+		padding: rem(20);
 		border-radius: rem(24);
 		overflow: hidden;
 		color: $white;
 		@include media-breakpoint-up(md) {
 			@include block(680,1360);
 			display: flex;
-			padding: 32px;
+			padding: rem(32);
 		}
 		img {
 			position: absolute;
@@ -72,7 +72,7 @@
 	}
 	&__text {
 		position: absolute;
-		top: 32px;
+		top: rem(32);
 		// left: 50%;
 		font-size: rem(12);
 		font-weight: 700;
@@ -80,8 +80,8 @@
 		@include media-breakpoint-up(md) {
 			font-size: rem(14);
 			transform: none;
-			top: 32px;
-			left: 32px;
+			top: rem(32);
+			left: rem(32);
 		}
 	}
 	&__title {
