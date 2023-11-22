@@ -389,8 +389,9 @@ function eventHandler() {
 
 		if(contentDropdownTarget) {
 			contentDropdownTarget.classList.toggle('active');
-		} else {
-			contentDropdownTarget.classList.remove('active');
+		} 
+		if(!contentDropdownTarget && document.querySelector('.sContact__wrap--js.active')) {
+			document.querySelector('.sContact__wrap--js.active').classList.remove('active');
 		}
 	})
 
