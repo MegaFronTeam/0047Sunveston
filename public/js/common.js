@@ -383,6 +383,17 @@ function eventHandler() {
 			});
 		}
 	}, { passive: true });
+
+	document.addEventListener('click', (event) => {
+		let contentDropdownTarget = event.target.closest('.sContact__wrap--js');
+
+		if(contentDropdownTarget) {
+			contentDropdownTarget.classList.toggle('active');
+		} else {
+			contentDropdownTarget.classList.remove('active');
+		}
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

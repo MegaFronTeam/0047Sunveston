@@ -8,17 +8,17 @@ mixin sContact()
 						title: 'Контакты',
 						items: ['Контакты', 'Хлебные крошки']
 					})
-					mixin item(title, adress, img, tel='+7 (495) 182-29-29', telHref='+74951822929')
-						+e.item&attributes(attributes)
+					mixin item(title, adress, coords, img, tel='+7 (495) 182-29-29', telHref='+74951822929')
+						+e.item(data-coords=coords)&attributes(attributes)
 							.row
 								.col
 									.h5!= title
-									+e.info
+									+e.info.d-none.d-lg-block
 										span Адрес
 										+e.text!= adress
-								.col-auto
+								.col-auto.d-none.d-lg-block
 									+img(`img/${img}`)
-							.row
+							.row.d-none.d-lg-block
 								.col
 									+e.info
 										span Телефон
@@ -32,70 +32,43 @@ mixin sContact()
 							.tabs__btn.active В России
 							.tabs__btn За рубежом
 						.tabs__content.active
-							+e.mobile
-								+input('Главный офис в Москве', 'select')
-								+e.info
-									span Адрес
-									+e.text г. Москва, Нижний Кисловский пер., д.6 стр 2
-								+e.info
-									span Телефон
-									+e.text(href='tel:+74951822929') +7 (495) 182-29-29
-								+e.info
-									span Электронная почта
-									+e.text(href='mailto:sale@sunveston.ru') sale@sunveston.ru
-							+e.desktop
-								+item('Главный офис в Москве', 'г. Москва, Нижний Кисловский пер., д.6 стр 2', 'sContact-img-1.png').active
-								+item('Офис в Новосибирске', 'г. Новосибирск, ул.Селезнева, д.47', 'sContact-img-2.png')
-								+item('Офис в Ростове-на-Дону', 'г. Новосибирск, ул.Селезнева, д.47', 'sContact-img-3.png')
-								+item('Офис в Казани', 'Респ. Татарстан, г. Казань, Улица Салиха', 'sContact-img-4.png', '+7 (939) 509-50-50', '+79395095050')
+							+e.wrap--js
+								+e.mobile-dropdown Главный офис в Москве
+								+e.mobile-wrap
+									+item('Главный офис в Москве', 'г. Москва, Нижний Кисловский пер., д.6 стр 2', [55.75414276239247, 37.6044559718461], 'sContact-img-1.png').active
+									+item('Офис в Новосибирске', 'г. Новосибирск, ул.Селезнева, д.47', [55.04493730092656, 82.9450686510871], 'sContact-img-2.png')
+									+item('Офис в Ростове-на-Дону', 'г. Новосибирск, ул.Селезнева, д.47', [55.04493730092656, 82.9450686510871], 'sContact-img-3.png')
+									+item('Офис в Казани', 'Респ. Татарстан, г. Казань, Улица Салиха', [55.75312602804311, 49.24369911904901], 'sContact-img-4.png', '+7 (939) 509-50-50', '+79395095050')
+							+e.info
+								span Адрес
+								+e.text г. Москва, Нижний Кисловский пер., д.6 стр 2
+							+e.info
+								span Телефон
+								+e.text +7 (495) 182-29-29
+							+e.info
+								span Электронная почта
+								+e.text sale@sunveston.ru
 						.tabs__content
-							+e.mobile
-								+input('Главный офис в Москве', 'select')
-								+e.info
-									span Адрес
-									+e.text г. Москва, Нижний Кисловский пер., д.6 стр 2
-								+e.info
-									span Телефон
-									+e.text(href='tel:+74951822929') +7 (495) 182-29-29
-								+e.info
-									span Электронная почта
-									+e.text(href='mailto:sale@sunveston.ru') sale@sunveston.ru
-							+e.desktop
-								+item('Офис в Новосибирске', 'г. Новосибирск, ул.Селезнева, д.47', 'sContact-img-2.png')
-								+item('Главный офис в Москве', 'г. Москва, Нижний Кисловский пер., д.6 стр 2', 'sContact-img-1.png')
-								+item('Офис в Казани', 'Респ. Татарстан, г. Казань, Улица Салиха', 'sContact-img-4.png', '+7 (939) 509-50-50', '+79395095050')
-								+item('Офис в Ростове-на-Дону', 'г. Новосибирск, ул.Селезнева, д.47', 'sContact-img-3.png')
+							+e.wrap--js
+								+e.mobile-dropdown Главный офис в Москве
+								+e.mobile-wrap
+									+item('Офис в Новосибирске', 'г. Новосибирск, ул.Селезнева, д.47', [55.04493730092656, 82.9450686510871], 'sContact-img-2.png')
+									+item('Главный офис в Москве', 'г. Москва, Нижний Кисловский пер., д.6 стр 2', [55.75414276239247, 37.6044559718461], 'sContact-img-1.png').active
+									+item('Офис в Казани', 'Респ. Татарстан, г. Казань, Улица Салиха', [55.75312602804311, 49.24369911904901], 'sContact-img-4.png', '+7 (939) 509-50-50', '+79395095050')
+									+item('Офис в Ростове-на-Дону', 'г. Новосибирск, ул.Селезнева, д.47', [55.04493730092656, 82.9450686510871], 'sContact-img-3.png')
+							+e.info
+								span Адрес
+								+e.text.dress-js г. Москва, Нижний Кисловский пер., д.6 стр 2
+							+e.info
+								span Телефон
+								+e.text.tel-js +7 (495) 182-29-29
+							+e.info
+								span Электронная почта
+								+e.text sale@sunveston.ru
 				.col-lg-6
 					+e.map
 						#map
 					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f23-bb68-eb2d6371a737" type="text/javascript")
-					script.
-						var myMap;
-						ymaps.ready(init);
-
-						function init () {
-							myMap = new ymaps.Map('map', {
-									center: [55.77353559113589,37.59458184788507],
-									zoom: 18
-							}, {
-									searchControlProvider: 'yandex#search'
-							});
-							myPlacemark = new ymaps.Placemark([55.77353559113589,37.59458184788507], {
-									// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-									//- balloonContentHeader: "Балун метки",
-									//- balloonContentBody: "Содержимое <em>балуна</em> метки",
-									//- balloonContentFooter: "Подвал",
-									//- hintContent: "Хинт метки"
-							}, {
-								iconLayout: 'default#image',
-								// Своё изображение иконки метки.
-								iconImageHref: 'img/svg/map-pin-2.svg',
-								// Размеры метки.
-								iconImageSize: [48, 77],
-								// Смещение левого верхнего угла иконки относительно
-								// её "ножки" (точки привязки).
-								iconImageOffset: [-24, -38]
-							});
-							myMap.geoObjects.add(myPlacemark);
-						};
+					script
+						include _sContact.js
 	// end sContact
