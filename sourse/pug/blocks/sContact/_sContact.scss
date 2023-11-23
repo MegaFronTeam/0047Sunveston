@@ -248,6 +248,10 @@
 		--bs-gutter-x: #{rem(8)};
 
 		margin-bottom: rem(26);
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
 	}
 	&__btn {
 		@include mt;
