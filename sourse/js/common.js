@@ -400,7 +400,7 @@ function eventHandler() {
 		if(sContactBtnTarget) {
 			let sContactBtns = document.querySelectorAll('.sContact__btn'),
 					sContactItems = document.querySelectorAll('.sContact__item'),
-					id = sContactBtnTarget.getAttribute('id');
+					id = sContactBtnTarget.dataset.type;
 
 			sContactBtns.forEach((sContactBtn) => {
 				sContactBtn.classList.remove('active');
@@ -410,7 +410,7 @@ function eventHandler() {
 			sContactItems.forEach((sContactItem) => {
 				sContactItem.classList.remove('shown');
 
-				if (sContactItem.getAttribute('id') == id) {
+				if (sContactItem.dataset.type == id) {
 					sContactItem.classList.add('shown');
 				}
 			});

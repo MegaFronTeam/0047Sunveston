@@ -9,7 +9,7 @@ mixin sContact()
 						items: ['Контакты', 'Хлебные крошки']
 					})
 					mixin item(title, adress, coords, img, tel='+7 (495) 182-29-29', telHref='+74951822929', activeClass, id, shownClass)
-						+e.item(data-coords=coords class=(activeClass ? 'active' : '', shownClass ? 'shown' : '') id=id, )&attributes(attributes)
+						+e.item(data-coords=coords class=(activeClass ? 'active' : '', shownClass ? 'shown' : '') data-type=id, )&attributes(attributes)
 							.row
 								.col
 									.h5!= title
@@ -30,9 +30,9 @@ mixin sContact()
 										+e.text(href='mailto:sale@sunveston.ru') sale@sunveston.ru
 					+e.row-btn.row
 						.col-auto
-							+e.btn(id='inRussia').active В России
+							+e.btn(data-type='inRussia').active В России
 						.col-auto
-							+e.btn(id='outerOfRussia') За рубежом
+							+e.btn(data-type='outerOfRussia') За рубежом
 					+e.wrap--js
 						+e.mobile-dropdown Главный офис в Москве
 						+e.mobile-wrap

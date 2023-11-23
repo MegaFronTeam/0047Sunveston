@@ -1,6 +1,6 @@
 mixin sSimilar(title="Похожие объекты",row, btn=true)
 	// start sSimilar
-	+b.SECTION.sSimilar.section#sSimilar&attributes(attributes)
+	+b.SECTION.sSimilar.section&attributes(attributes)
 		.container
 			+b.section-title
 				.row
@@ -12,13 +12,13 @@ mixin sSimilar(title="Похожие объекты",row, btn=true)
 								.sSimilar__btn-row.swiper.free-slider--js
 									.swiper-wrapper
 										.swiper-slide
-											.sSimilar__btn.btn.btn-primary(href="#") Продажа
+											a.sSimilar__btn.btn.btn-primary(href="#") Продажа
 										.swiper-slide
-											.sSimilar__btn.btn.btn.white-btn(href="#") Аренда
+											a.sSimilar__btn.btn.btn.white-btn(href="#") Аренда
 										.swiper-slide
-											.sSimilar__btn.btn.btn.white-btn(href="#") Торги
+											a.sSimilar__btn.btn.btn.white-btn(href="#") Торги
 										.swiper-slide
-											.sSimilar__btn.btn.btn.white-btn(href="#") Готовый бизнес
+											a.sSimilar__btn.btn.btn.white-btn(href="#") Готовый бизнес
 						else
 							.col-auto
 								+e.btn.btn.btn-outline-light(href='#') #[span.d-none.d-sm-inline Смотреть] все		
