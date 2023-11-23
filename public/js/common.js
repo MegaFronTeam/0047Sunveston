@@ -386,12 +386,45 @@ function eventHandler() {
 
 	document.addEventListener('click', (event) => {
 		let contentDropdownTarget = event.target.closest('.sContact__wrap--js');
+		let sContactBtnTarget = event.target.closest('.sContact__btn');
+		let sContactItemTarget = event.target.closest('.sContact__item');
 
 		if(contentDropdownTarget) {
 			contentDropdownTarget.classList.toggle('active');
 		} 
 		if(!contentDropdownTarget && document.querySelector('.sContact__wrap--js.active')) {
 			document.querySelector('.sContact__wrap--js.active').classList.remove('active');
+		}
+
+
+		if(sContactBtnTarget) {
+			let sContactBtns = document.querySelectorAll('.sContact__btn'),
+					sContactItems = document.querySelectorAll('.sContact__item'),
+					id = sContactBtnTarget.getAttribute('id');
+
+			sContactBtns.forEach((sContactBtn) => {
+				sContactBtn.classList.remove('active');
+			});
+			sContactBtnTarget.classList.add('active');
+
+			sContactItems.forEach((sContactItem) => {
+				sContactItem.classList.remove('shown');
+
+				if (sContactItem.getAttribute('id') == id) {
+					sContactItem.classList.add('shown');
+				}
+			});
+		};
+
+		if (sContactItemTarget) {
+			let officeInfo = sContactItemTarget.querySelectorAll('.sContact__info'),
+					infoTitle = sContactItemTarget.querySelector('.h5').innerText;
+
+			document.querySelector('.sContact__mobile-dropdown').innerText = infoTitle;
+			document.querySelector('.sContact__info-wrap').innerHTML = '';
+			officeInfo.forEach((item) => {
+				document.querySelector('.sContact__info-wrap').appendChild(item.cloneNode(true));
+			})
 		}
 	})
 

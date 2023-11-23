@@ -97,6 +97,7 @@
 		font-weight: 500;
 		ul {
 			list-style-type: none;
+			margin-bottom: 0;
 			@include media-breakpoint-up(md) {
 				display: flex;
 			}
