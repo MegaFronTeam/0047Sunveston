@@ -223,6 +223,7 @@
 		max-height: rem(493);
 		margin-top: rem(9);
 		overflow: visible;
+		height: 100%;
 		@include media-breakpoint-up(md) {
 			margin-top: rem(45);
 			overflow: hidden;
