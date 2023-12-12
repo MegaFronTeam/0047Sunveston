@@ -1,0 +1,32 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sBlog/_sBlog.pug
+
+
+block variables
+	- let  mainPage= 'blog-page' 
+	- let  bg= '05-contacts.jpg'
+
+block title
+	- let  title= 'Журнал'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			title: 'Журнал',
+			items: ['Журнал', 'Хлебные крошки']
+		})
+		+sBlog
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

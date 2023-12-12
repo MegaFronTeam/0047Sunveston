@@ -1,0 +1,97 @@
+// start .sKeyFigures
+.sKeyFigures {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(32)};
+	--sTPB: #{rem(32)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(56)};
+		--sPB: #{rem(56)};
+		--sTPB: #{rem(56)};
+	}
+	&__container {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% - var(--bs-gutter-x));
+			height: 1px;
+			background-color: $gray-200;
+			left: calc(var(--bs-gutter-x) / 2);
+			bottom: calc(var(--sPB) * -1);
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+	.section-title{
+		h2 {
+			margin-bottom: 0;
+			line-height: 1.25;
+		}
+		.row {
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(16)};
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		min-height: rem(170);
+		padding: rem(20);
+		border-radius: rem(16);
+		background-color: $gray-100;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			min-height: rem(260);
+			padding: rem(32) rem(28.800);
+			border-radius: rem(24);
+		}
+		p {
+			margin-bottom: 0;
+			margin-top: auto;
+			font-size: rem(14);
+			color: $gray-600;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(16);
+			}
+		}
+		&--primary {
+			background-color: $primary;
+			.sKeyFigures__title {
+				color: #fff;
+			}
+			p {
+				color: $gray-100;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: rem(16);
+		letter-spacing: -0.5px;
+		line-height: 1;
+		font-size: rem(12);
+		font-weight: 700;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(20);
+		}
+		span {
+			font-size: rem(32);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(56);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sKeyFigures

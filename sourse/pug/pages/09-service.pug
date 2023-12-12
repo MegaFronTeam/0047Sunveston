@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sCooperation/_sCooperation.pug
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '09-service.jpg'
+
+block title
+	- let  title= 'Сервис'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			items: ['breadcrums', 'Хлебные крошки']
+		})
+		+sServices2
+		+sCooperation
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

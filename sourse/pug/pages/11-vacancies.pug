@@ -1,0 +1,36 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sVacancy/_sVacancy.pug
+include ../blocks/sRenton/_sRenton.pug
+//- include ../blocks/sCooperation/_sCooperation.pug
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '11-vacancies.jpg'
+
+block title
+	- let  title= 'Вакансии'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			items: ['Карьера', 'Хлебные крошки'],
+			title: 'Вакансии',
+			subtitle: 'Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.'
+		})
+		+sVacancy
+		+sRenton
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

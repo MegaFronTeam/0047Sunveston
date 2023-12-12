@@ -1,0 +1,43 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sDescriptionAboutUs/_sDescriptionAboutUs.pug
+include ../blocks/sKeyFigures/_sKeyFigures.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sCooperation/_sCooperation.pug
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '04-agency.jpg'
+
+block title
+	- let  title= 'Агентство'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			title: 'Агентство',
+			subtitle: 'Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.',
+			items: ['О компании', 'Хлебные крошки']
+		})
+		+sDescriptionAboutUs
+		+sKeyFigures
+		+sTeam()
+		+sServices
+		+sPartners
+		+sCooperation
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

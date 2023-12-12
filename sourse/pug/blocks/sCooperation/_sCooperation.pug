@@ -1,0 +1,17 @@
+mixin sCooperation(data)
+	// start sCooperation
+	+b.SECTION.sCooperation.section#sCooperation&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Приглашаем к сотрудничеству
+			p.text-center Мы&nbsp;уверены в&nbsp;своей экспертности. Покажем реальные успешные кейсы, расскажем, как и&nbsp;что делали. Предоставим финансовые модели потенциальных проектов. 
+			+e.row.row
+				mixin coopItem(icon, title)
+					.col-md-4
+						+e.item
+							+icon(`${icon}`)
+							+e.item-title= title
+				+coopItem('keys','Собственников')
+				+coopItem('broker','Брокеров')
+				+coopItem('invest','Инвесторов')
+	// end sCooperation

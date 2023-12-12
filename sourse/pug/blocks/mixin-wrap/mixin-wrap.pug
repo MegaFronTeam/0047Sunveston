@@ -76,12 +76,27 @@ mixin page-head(t,...items)
 				.col-auto.me-auto.me-lg-0.ms-lg-auto
 					+e.id ID: 177259
 
-mixin page-head2(t,...items)
+mixin page-head2(data)
 	+b.page-head
-		- let l = items.length
-		+breadcrumb('Главная',...items)
-
-		h1= t
+		if data.container
+			.container
+				if data.items
+					+breadcrumb('Главная', ...data.items)
+				if data.title
+					h1!= data.title
+				if data.price 
+					+e.price!= data.price
+				if data.subtitle
+					+e.subtitle!= data.subtitle
+		else
+			if data.items
+				+breadcrumb('Главная', ...data.items)
+			if data.title
+				h1!= data.title
+			if data.price 
+				+e.price!= data.price
+			if data.subtitle
+				+e.subtitle!= data.subtitle
 
 mixin fixedProdCard(...items)
 	+b.fixed-prod-card
@@ -206,7 +221,7 @@ mixin catalogCard(data)
 				.swiper-wrapper
 					- for(let i = 0; i < data.slider.slidesCount; i++)
 						+e.slide.swiper-slide
-							+e.img-wrap(data-fancybox=`gallery-${data.slider.img}-${data.slider.gallery}` data-src=`img/catalog-card-img-${data.slider.img}-lg.png`): img(src=`img/catalog-card-img-${data.slider.img}.jpg`).object-fit-js
+							+e.img-wrap(data-fancybox=`gallery-${data.slider.img}-${data.slider.gallery}` data-src=`img/catalog-card-img-${data.slider.img}-lg.png`): img(src=`img/catalog-card-img-${data.slider.img}.jpg` alt='').object-fit-js
 				+e.slider-info
 					+e.slider-count
 						span.current-slide 01
@@ -254,7 +269,7 @@ mixin catalogCard(data)
 								+e.feature
 									| Этажи
 									span.text-secondary
-										.num!= data.features.floor
+										span.num!= data.features.floor
 										| #{data.features.allFloors}
 
 mixin controlsBtn()
@@ -263,7 +278,7 @@ mixin controlsBtn()
 			+icon('filter')
 			| Фильтры
 		+b.popup.popup-js
-			.btn.btn-light.popup-btn-js.controls-btn__btn.controls-btn__btn--search(href='#'): +icon('save-search')
+			a.btn.btn-light.popup-btn-js.controls-btn__btn.controls-btn__btn--search(href='#'): +icon('save-search')
 			+e.content
 				+e.head 
 					| Поиски
@@ -313,3 +328,17 @@ mixin controlsBtn()
 						p Торговое помещение, Офис, от 500 м², Под чистовую отделку
 						+input('Электронная почта', 'text')
 						+e.btn.btn.btn-primary(href='#') Получать на почту
+
+mixin imgCover(img, imgSm)
+	picture.img-cover
+		source(media="(min-width: 768px)", srcset=`img/${img}`)
+		img(src=`img/${imgSm}`, alt='').object-fit-js
+
+
+mixin blogItem(img,cat,title,date="24 апр 2023")
+	+b.blog-item(href="#")
+		+e.img-wrap
+			+img(`img/${img}.jpg`)
+		+e.category= cat
+		+e.title.H2= title
+		+e.date= date

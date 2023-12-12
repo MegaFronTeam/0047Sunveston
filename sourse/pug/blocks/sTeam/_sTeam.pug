@@ -1,0 +1,68 @@
+
+mixin sTeam(data)
+	mixin item(img, name, status, modal)
+		+e.item(data-fancybox=modal data-type="ajax" href='modal/profile.html')
+			+e.img-wrap: +img(`img/${img}`, 'bg')
+			.h4!=name 
+			+e.status!= status
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				.row
+					.col-lg-4.col-xl-6
+						h2.h1 Команда
+					.col-lg-8.col-xl-6
+						p Мы&nbsp;&mdash; коллектив профессионалов на&nbsp;рынке недвижимости, который способен решить самые сложные задачи. Наши сотрудники являются настоящими экспертами рынка недвижимости. Мы&nbsp;уделяем большое внимание кадровой политике и&nbsp;собрали команду единомышленников.
+			+e.row.row
+				.col-6.col-md-4.col-xl-6: +item('sTeam-img-1.jpg', 'Дарина Солодкова ', 'CEO', 1)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-2.jpg', 'Алексей Маслов', 'Эксперт по продажам', 2)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-3.jpg', 'Елена Никифорова', 'Эксперт по продажам', 3)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-4.jpg', 'Валерий Иванов', 'Эксперт по продажам', 4)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-5.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 5)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-6.jpg', 'Лилия Маркова', 'Эксперт по продажам', 6)
+				.col-6.col-md-4.col-xl-3: +item('sTeam-img-7.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 7)
+			+e.btn.btn.btn-outline-primary(href='#') Подробнее
+	// end sTeam
+
+mixin sTeam2(data)
+	mixin item(img, name, status, modal)
+		+e.item(data-fancybox=modal data-type="ajax" href='modal/profile.html')
+			+e.img-wrap: +img(`img/${img}`, 'bg')
+			.h4!=name 
+			+e.status!= status
+	// start sTeam
+	+b.sTeam--2.section#sTeam&attributes(attributes)
+		.container
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Руководство
+					.tabs__btn Менеджмент
+				.tabs__content.active
+					+e.row.row
+						.col-6.col-md-4.col-xl-6: +item('sTeam-img-1.jpg', 'Дарина Солодкова ', 'CEO', 8)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-2.jpg', 'Алексей Маслов', 'Эксперт по продажам', 9)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-3.jpg', 'Елена Никифорова', 'Эксперт по продажам', 10)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-4.jpg', 'Валерий Иванов', 'Эксперт по продажам', 11)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-5.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 12)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-7.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 13)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-6.jpg', 'Лилия Маркова', 'Эксперт по продажам', 14)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-8.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 15)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-9.jpg', 'Валерий Иванов', 'Эксперт по продажам', 16)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-10.jpg', 'Лилия Маркова', 'Эксперт по продажам', 17)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-11.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 18)
+				.tabs__content
+					+e.row.row
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-4.jpg', 'Валерий Иванов', 'Эксперт по продажам', 19)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-5.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 20)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-6.jpg', 'Лилия Маркова', 'Эксперт по продажам', 21)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-7.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 22)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-9.jpg', 'Валерий Иванов', 'Эксперт по продажам', 23)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-8.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 24)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-10.jpg', 'Лилия Маркова', 'Эксперт по продажам', 25)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-11.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 26)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-6.jpg', 'Лилия Маркова', 'Эксперт по продажам', 27)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-4.jpg', 'Валерий Иванов', 'Эксперт по продажам', 28)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-7.jpg', 'Сергей Матушкин', 'Эксперт по продажам', 29)
+						.col-6.col-md-4.col-xl-3: +item('sTeam-img-5.jpg', 'Оксана Танюшина', 'Эксперт по продажам', 30)
+	// end sTeam

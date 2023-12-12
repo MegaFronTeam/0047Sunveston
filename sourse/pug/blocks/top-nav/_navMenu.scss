@@ -1,11 +1,11 @@
-.menu{
+.menu {
 	@include media-breakpoint-up(lg) {
 
 		// display: flex;
 		// text-align: center;
 		// @include roww(20px);
 		// flex-wrap: wrap;
-		display: none;
+		display: flex;
 	}
 
 	list-style: none;
@@ -17,10 +17,35 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		@include media-breakpoint-up(lg) {
+			&:first-child {
+				a {
+					padding-left: 0;
+				}
+			}
+		}
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(20) calc(var(--bs-gutter-x) / 2) rem(11);
+		@include media-breakpoint-up(lg) {
+			color: $body-color;
+			font-size: rem(14);
+			font-weight: 700;
+			letter-spacing: -0.5px;
+			&:hover {
+				color: $primary;
+			}
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: 0 calc(var(--bs-gutter-x) / 2);
+
+		}
+		.icon {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -126,6 +151,19 @@
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
+			.topLine__tel {
+				align-items: center;
+				background-color: #f5f5f7;
+				display: flex;
+				font-weight: 700;
+				justify-content: center;
+				letter-spacing: -.5px;
+				line-height: 1.75;
+				padding: 1rem;
+			}
+			.topLine__tel:not(:hover) {
+				color: #303135;
+			}
 		}
 
 		&.active { 
@@ -171,4 +209,70 @@
 	@include media-breakpoint-down(sm) {
 		--topGutter: #{rem(118)};
 	} 
+}
+.menu .sub-menu {
+	list-style-type: none;
+	text-align: left;
+	padding-left: rem(20);
+	display: block;
+	@include media-breakpoint-up(lg) {
+		@include mt;
+		display: block;
+		position: absolute;
+    padding-left: 0;
+		top: calc(100% - 1px);
+		left: 0;		
+		width: max-content;
+		max-width: 400px;
+		opacity: 0;
+		pointer-events: none;
+		border-radius: rem(16);
+    border: 1px solid $gray-200;
+    background-color: $white;
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+		a {
+			padding: rem(16);
+			&:hover {
+				background-color: $gray-100;
+			}
+		}
+	}
+	a {
+		padding-block: rem(8);
+	}
+  li:first-child a {
+    padding-left: rem(24);
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(16);
+		}
+  }
+}
+.menu-item-has-children {
+  position: relative;
+	&:hover {
+		& > a {
+			color: $primary;
+		}
+	}
+}
+.menu-item-has-children.shown {
+	& > .sub-menu {
+			display: block;
+    }
+  & > a {
+    color: var(--bs-link-hover-color);
+  }
+}
+.menu-item-has-children:hover>.sub-menu {
+	opacity: 1;
+	pointer-events: all;
+}
+.menu-item-has-children:hover:before {
+	content: "";
+	height: 100%;
+	left: -10%;
+	position: absolute;
+	top: 50%;
+	width: 120%;
 }

@@ -1,0 +1,22 @@
+mixin sVacancy(data)
+	// start sVacancy
+	+b.sVacancy.section#sVacancy&attributes(attributes)
+		.container
+			mixin link(title)
+				+e.link(href='#')
+					+iconC('right-arrow')
+					+e.row.row
+						.col-sm-12.col-lg-4.col-xxl-5
+							.h2!= title
+						.col-12.col-sm.col-lg-3.col-xxl-2
+							p В офис или удаленно
+						.col.col-sm.col-lg-2
+							p.text-lg-center Москва
+						.col-auto.col-sm.col-lg-3
+							p Полная занятость
+			+link('Эксперт по недвижимости')
+			+link('Эксперт по недвижимости')
+			+link('Менеджер по продажам')
+			+link('Сотрудник в офис')
+			+link('Вакансия')
+	// end sVacancy

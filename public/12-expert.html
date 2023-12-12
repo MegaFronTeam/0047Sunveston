@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Эксперт по недвижимости</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="article-page" data-bg="10-service-article.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item breadcrumb-item--home swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item">
+										<svg class="icon icon-home ">
+											<use xlink:href="img/svg/sprite.svg#home"></use>
+										</svg>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Карьера</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Хлебные крошки</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<h1>Эксперт по недвижимости</h1>
+						<div class="page-head__price">от 70 000 до 210 000 ₽
+						</div>
+						<div class="page-head__subtitle">Эта страница создана для демонстрации блоков и&nbsp;элементов, которые используются на&nbsp;сайте, и&nbsp;служит руководством для всех, кто работает над ним. Дизайнеры и&nbsp;технологи отрабатывают здесь стили, чтобы добиться приемлемых результатов в&nbsp;различных сочетаниях блоков и&nbsp;элементов. Контент-менеджеры и&nbsp;редакторы используют страницу в&nbsp;качестве справочника по&nbsp;верстке типовых страниц. Здесь&nbsp;же рассказывается о&nbsp;некоторых общих правилах оформления контента.
+						</div>
+					</div>
+				</div>
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent">
+					<div class="container">
+						<div class="sContent__wrap">
+							<h2>Обязанности:</h2>
+							<ul>
+								<li>Картинка справа, картинка слева</li>
+								<li>Классы (важно, инфа, удачно, варнинг)</li>
+								<li>Подстрочный, надстрочный</li>
+								<li>Форма</li>
+								<li>Файлы для скачивания</li>
+							</ul>
+						</div>
+						<div class="sContent__wrap">
+							<h2>Условия:</h2>
+							<p>Типовые элементы оформляются в&nbsp;системе администрирования через визуальный редактор &laquo;Реформатор&raquo;. Чтобы контент-менеджеру было легче в&nbsp;них ориентироваться, их&nbsp;количество лучше свести к&nbsp;необходимому минимуму.</p>
+							<p>Имманентный подход подразумевает отношение к&nbsp;тексту как к&nbsp;автономной реальности, нацеленность на&nbsp;выявление его внутренней структуры. Репрезентативный&nbsp;&mdash; рассмотрение текста как особой формы представления знаний о&nbsp;внешней тексту действительности.</p>
+						</div>
+					</div>
+				</section>
+				<!-- end sContent-->
+				<!-- start sForm-->
+				<section class="sForm section" id="sForm">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2 class="h1">Оставить отклик</h2>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">ФИО</span><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Фамилия имя отчество"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Контактный телефон</span><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder=""/><span class="tel">+7</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="E-mail"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row">
+									<div class="col-lg-auto order-lg-1">
+										<button class="form-wrap__btn btn btn-primary" type="submit">Отправить
+										</button>
+									</div>
+									<div class="col-lg">
+										<div class="form-wrap__policy">Заполняя форму, вы принимате <a href="#">условия передачи информации</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+				<!-- end sForm-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+			<div class="controls-btn">
+				<a class="controls-btn__btn controls-btn__btn--filter btn btn-light" data-fancybox="filter-2" data-type="ajax" href="modal/filter.html">
+					<svg class="icon icon-filter ">
+						<use xlink:href="img/svg/sprite.svg#filter"></use>
+					</svg>Фильтры
+				</a>
+				<div class="popup popup-js"><a class="btn btn-light popup-btn-js controls-btn__btn controls-btn__btn--search" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg></a>
+					<div class="popup__content">
+						<div class="popup__head">
+							 Поиски
+							<div class="close"></div>
+						</div>
+						<div class="popup__body custom-scroll">
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Аренда недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+							<div class="popup__item">
+								<div class="row">
+									<div class="col">
+										<div class="h6">Продажа недвижимости</div>
+									</div>
+									<div class="col-auto">
+										<a class="popup__delete" href="#">Удалить
+											<svg class="icon icon-delete ">
+												<use xlink:href="img/svg/sprite.svg#delete"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<p>Торговое помещение, Офис, от 500 м², Под чистовую отделку</p>
+								<div class="popup__input-wrap form-group"><input class="popup__input form-control" inputmode="text" name="text" type="text" placeholder="Электронная почта"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<a class="popup__btn btn btn-primary" href="#">Получать на почту
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chat">
+				<svg class="icon icon-chat ">
+					<use xlink:href="img/svg/sprite.svg#chat"></use>
+				</svg>
+			</div>
+			<div class="scroll-to-top">
+				<svg class="icon icon-chevron-up ">
+					<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+				</svg>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit"> 
+						</button>
+						<div class="form-wrap__policy">Нажимая кнопку &laquo;Отправить заявку&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных, в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;27.07.2006 года &#8470;&nbsp;152-Ф3 &laquo;О&nbsp;обработке персональных данных&raquo;, на&nbsp;условиях и&nbsp;для целей, определенных в&nbsp;Политике конфиденциальности
+						</div>
+						<div class="form-wrap__policy">Нажимая кнопку &laquo;Отправить заявку&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных, в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;27.07.2006 года &#8470;&nbsp;152-Ф3 &laquo;О&nbsp;обработке персональных данных&raquo;, на&nbsp;условиях и&nbsp;для целей, определенных в&nbsp;Политике конфиденциальности
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="filter-1" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__head">
+					<a class="modal-win__save-search" href="#">
+						<svg class="icon icon-save-search ">
+							<use xlink:href="img/svg/sprite.svg#save-search"></use>
+						</svg><span>Сохранить поиск</span>
+					</a>
+					<div class="modal-win__title">Настроить фильтры
+					</div>
+				</div>
+				<div class="modal-win__body custom-scroll">
+					<div class="modal-win__wrap">
+						<div class="h6">Стоимость</div>
+						<div class="range-slider">
+							<div class="extra-controls">
+								<label><span>от</span>
+									<input class="js-input-from" type="text" value="0"/>
+								</label>
+								<label><span>до</span>
+									<input class="js-input-to" type="text" value="0"/>
+								</label>
+							</div>
+							<input class="js-range-slider" type="text" value=""/>
+						</div>
+					</div>
+					<div class="modal-win__wrap">
+						<div class="h6">Общая площадь</div>
+						<div class="range-slider">
+							<div class="extra-controls">
+								<label><span>от</span>
+									<input class="js-input-from2 form-control" type="text" value="0"/>
+								</label>
+								<label><span>до</span>
+									<input class="js-input-to2 form-control" type="text" value="0"/>
+								</label>
+							</div>
+							<input class="js-range-slider2" type="text" value=""/>
+						</div>
+					</div>
+					<div class="modal-win__wrap">
+						<div class="h6">Вид недвижимости</div>
+						<div class="modal-win__input-row row">
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Офис</span>
+								</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Общ. питания</span>
+								</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Склад</span>
+								</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Торговое помещение</span>
+								</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Свобод. назначения</span>
+								</label>
+							</div>
+							<div class="col-sm-4">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type" type="checkbox"/><span class="custom-input__text form-check-label">Производство</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-win__wrap">
+						<div class="h6">Ремонт</div>
+						<div class="modal-win__custom-input-row row">
+							<div class="col-auto">
+								<label class="custom-input-2 form-check">
+									<input class="custom-input-2__input form-check-input" name="repair" type="radio"/><span class="custom-input-2__text form-check-label">Без ремонта</span>
+								</label>
+							</div>
+							<div class="col-auto">
+								<label class="custom-input-2 form-check">
+									<input class="custom-input-2__input form-check-input" name="repair" type="radio"/><span class="custom-input-2__text form-check-label">Под чистовую отделку</span>
+								</label>
+							</div>
+							<div class="col-auto">
+								<label class="custom-input-2 form-check">
+									<input class="custom-input-2__input form-check-input" name="repair" type="radio"/><span class="custom-input-2__text form-check-label">Офисная отделка</span>
+								</label>
+							</div>
+							<div class="col-auto">
+								<label class="custom-input-2 form-check">
+									<input class="custom-input-2__input form-check-input" name="repair" type="radio"/><span class="custom-input-2__text form-check-label">Требуется кометический ремонт</span>
+								</label>
+							</div>
+							<div class="col-auto">
+								<label class="custom-input-2 form-check">
+									<input class="custom-input-2__input form-check-input" name="repair" type="radio"/><span class="custom-input-2__text form-check-label">Требуется капитальный ремонт</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-win__wrap">
+						<div class="h6">Этажи</div>
+						<div class="modal-win__content">
+							<div class="modal-win__heading">Этаж
+							</div>
+							<div class="modal-win__floor-row row">
+								<div class="col-auto">
+									<div class="modal-win__inputs-wrap">
+										<label class="modal-win__input-wrap form-group"><span class="prefix">от</span>
+											<input class="form-control" value="2"/>
+										</label>
+										<label class="modal-win__input-wrap form-group"><span class="prefix">до</span>
+											<input class="form-control" value="8"/>
+										</label>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="modal-win__inner-row row">
+										<div class="col-auto">
+											<label class="custom-input-2 form-check">
+												<input class="custom-input-2__input form-check-input" name="floor" type="radio"/><span class="custom-input-2__text form-check-label">Не последний</span>
+											</label>
+										</div>
+										<div class="col-auto">
+											<label class="custom-input-2 form-check">
+												<input class="custom-input-2__input form-check-input" name="floor" type="radio"/><span class="custom-input-2__text form-check-label">Последний</span>
+											</label>
+										</div>
+										<div class="col-auto">
+											<label class="custom-input-2 form-check">
+												<input class="custom-input-2__input form-check-input" name="floor" type="radio"/><span class="custom-input-2__text form-check-label">Не первый</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-win__content">
+							<div class="modal-win__heading">Этажность дома
+							</div>
+							<div class="modal-win__floor-row row">
+								<div class="col-auto">
+									<div class="modal-win__inputs-wrap">
+										<label class="modal-win__input-wrap form-group"><span class="prefix">от</span>
+											<input class="form-control" value="2"/>
+										</label>
+										<label class="modal-win__input-wrap form-group"><span class="prefix">до</span>
+											<input class="form-control" value="25"/>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-win__footer">
+					<div class="row">
+						<div class="col-md">
+							<a class="modal-win__reset" href="#">
+								<svg class="icon icon-refresh ">
+									<use xlink:href="img/svg/sprite.svg#refresh"></use>
+								</svg>Сбросить фильтры
+							</a>
+						</div>
+						<div class="col-md-auto">
+							<a class="modal-win__btn btn btn-primary" href="#">Показать 8 562 предложения
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end modals-->
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

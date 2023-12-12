@@ -2,8 +2,56 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				.col-lg-6
+					+page-head2({
+						title: 'Контакты',
+						items: ['Контакты', 'Хлебные крошки']
+					})
+					mixin item(title, adress, coords, img, tel='+7 (495) 182-29-29', telHref='+74951822929', activeClass, id, shownClass)
+						+e.item(data-coords=coords class=(activeClass ? 'active' : '') class=(shownClass ? 'shown' : '') data-type=id )&attributes(attributes)
+							.row
+								.col
+									.h5!= title
+									.d-none.d-lg-block
+										+e.info
+											span Адрес
+											+e.text!= adress
+								.col-auto.d-none.d-lg-block
+									+img(`img/${img}`)
+							.row.d-none.d-lg-flex
+								.col
+									+e.info
+										span Телефон
+										+e.text(href=`tel:${telHref}`)!= tel
+								.col-auto
+									+e.info
+										span Электронная почта
+										+e.text(href='mailto:sale@sunveston.ru') sale@sunveston.ru
+					+e.row-btn.row
+						.col-auto
+							+e.btn(data-type='inRussia').active В России
+						.col-auto
+							+e.btn(data-type='outerOfRussia') За рубежом
+					+e.wrap--js
+						+e.mobile-dropdown Главный офис в Москве
+						+e.mobile-wrap
+							each item in items
+								+item(item.title, item.adress, item.coords, item.img, item.tel[0], item.tel[1], item.activeClass, item.id, item.shownClass)
+					+e.info-wrap.d-lg-none
+						+e.info
+							span Адрес
+							+e.text г. Москва, Нижний Кисловский пер., д.6 стр 2
+						+e.info
+							span Телефон
+							+e.text +7 (495) 182-29-29
+						+e.info
+							span Электронная почта
+							+e.text sale@sunveston.ru
+				.col-lg-6
+					+e.map
+						#map
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=09afbf5f-475d-4f23-bb68-eb2d6371a737" type="text/javascript")
+					script
+						include _sContact.js
 	// end sContact

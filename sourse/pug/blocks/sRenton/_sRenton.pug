@@ -1,0 +1,15 @@
+mixin sRenton(data)
+	// start sRenton
+	+b.SECTION.sRenton.section#sRenton&attributes(attributes)
+		.container
+			+e.container
+				+b.section-title.text-center
+					h2 Sunveston&nbsp;&mdash; инвестиционное агентство недвижимости, которое входит в&nbsp;группу компаний Renton Yard
+				p Cпециализируемся на&nbsp;продаже, покупке, аренде и&nbsp;управлении коммерческой недвижимостью, такой как офисные помещения, торговые центры, склады, отели и&nbsp;другие объекты, предназначенные для использования в&nbsp;коммерческих целях.
+				+e.img-block 
+					+e.text Экспертность и опыт команды
+					+e.title.text-center Агентство
+					picture
+						source(media="(min-width: 768px)", srcset="img/renton-lg.jpg")
+						img(src="img/renton-sm.jpg" alt='').object-fit-js
+	// end sRenton

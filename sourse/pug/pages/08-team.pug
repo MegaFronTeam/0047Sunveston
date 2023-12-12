@@ -1,0 +1,32 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sTeam/_sTeam.pug
+
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '08-team.jpg'
+
+block title
+	- let  title= 'Наша команда'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head2({
+			container: true,
+			title: 'Наша команда',
+			items: ['О компании', 'Хлебные крошки']
+		})
+		+sTeam2
+	+parts('footer')
+	+controlsBtn()
+	+chat()
+	+scrollToTop()

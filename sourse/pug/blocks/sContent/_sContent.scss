@@ -1,26 +1,122 @@
 
-	// start .sContent
-	.sContent {
-	
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .sContent
+.sContent {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(48)};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(96)};
 	}
-	.section-title{
-		
+	img {
+		display: block;
+		border-radius: rem(24);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(28);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(56);
+		}
 	}
-	&__col{
-
+	&__wrap {
+		margin-bottom: rem(20);
+		text-align: left;
+		max-width: rem(900);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
-	&__item{
-
+	h2 {
+		line-height: 1.25;
+		margin-bottom: rem(18);
+		font-size: rem(24);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+			font-size: rem(32);
+		}
 	}
-	&__slide{
-		height: auto;
+	p {
+		line-height: 1.55;
+		font-size: rem(16);
+		color: $gray-600;
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+			margin-bottom: rem(24);
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			text-decoration-line: underline;
+		}
+	}
+	ul {
+		list-style-type: none;
+		margin-bottom: 0;
+		li {
+			position: relative;
+			padding-left: rem(38);
+			color: $gray-600;
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.55;
+			&:not(:last-child) {
+				margin-bottom: rem(8.680);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(8);
+				height: rem(8);
+				border-radius: 50%;
+				background-color: $primary;
+				// top: rem(10);
+				top: rem(9);
+				left: rem(10);
+			}
+		}
+	}
+	ol {
+		padding-left: 0;
+		counter-reset: title;
+		list-style-type: none;
+		li {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		h2::before {
+			counter-increment: title;
+			content: counter(title) ". ";
+		}
+	}
+	blockquote {
+		padding: rem(24);
+		border-radius: rem(24);
+		background-color: $gray-100;
+		color: $body-color;
+		font-size: rem(18);
+		font-style: italic;
+		font-weight: 500;
+		line-height: 1.66;
+		@include media-breakpoint-up(lg) {
+			padding: rem(32) rem(56);
+			font-size: rem(24);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
