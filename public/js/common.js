@@ -404,6 +404,7 @@ function eventHandler() {
 					rangeSlider(".js-range-slider4", ".js-input-from4", ".js-input-to4");
 					rangeSlider(".js-range-slider5", ".js-input-from5", ".js-input-to5");
 					rangeSlider(".js-range-slider6", ".js-input-from6", ".js-input-to6", ' м²');
+					
 	document.addEventListener('click', (event) => {
 		let contentDropdownTarget = event.target.closest('.sContact__wrap--js');
 		let sContactBtnTarget = event.target.closest('.sContact__btn');
