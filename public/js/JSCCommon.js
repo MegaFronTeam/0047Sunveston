@@ -73,7 +73,22 @@ class JSCCommon {
 			placeFocusBack: false,
 			dragToClose: false,
 			on: {
-				reveal: () => {
+				// reveal: () => {
+				// 	rangeSlider(".js-range-slider", ".js-input-from", ".js-input-to");
+				// 	rangeSlider(".js-range-slider2", ".js-input-from2", ".js-input-to2", ' м²');
+				// 	rangeSlider(".js-range-slider3", ".js-input-from3", ".js-input-to3");
+				// 	rangeSlider(".js-range-slider4", ".js-input-from4", ".js-input-to4");
+				// 	rangeSlider(".js-range-slider5", ".js-input-from5", ".js-input-to5");
+				// 	rangeSlider(".js-range-slider6", ".js-input-from6", ".js-input-to6", ' м²');
+
+				// 	// mask for input
+				// 	let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+				// 	InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+				// 	Inputmask({ "mask": "(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
+
+				// },
+				
+				done: () => {
 					rangeSlider(".js-range-slider", ".js-input-from", ".js-input-to");
 					rangeSlider(".js-range-slider2", ".js-input-from2", ".js-input-to2", ' м²');
 					rangeSlider(".js-range-slider3", ".js-input-from3", ".js-input-to3");
@@ -87,6 +102,7 @@ class JSCCommon {
 					Inputmask({ "mask": "(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 
 				},
+
 			},
 		});
 		Fancybox.bind(link, {
