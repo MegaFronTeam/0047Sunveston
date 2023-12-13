@@ -16,4 +16,27 @@ mixin sForm(title='Оставить заявку', text=true)
 						+e.btn.btn.btn-primary(type="submit") Отправить
 					.col-lg
 						+policy2
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.h1!= title
+				if text
+					p Мы&nbsp;уверены в&nbsp;своей экспертности. Покажем реальные успешные кейсы, расскажем, как и&nbsp;что делали. Предоставим финансовые модели потенциальных проектов.
+			+form-wrap
+				+input("Фамилия имя отчество",'text', 'ФИО')
+				+input("", 'tel', 'Контактный телефон')
+					span.tel +7
+				+input("E-mail", 'email', 'Электронная почта')
+				.row
+					.col-lg-auto.order-lg-1
+						+e.btn.btn.btn-primary(type="submit") Отправить
+					.col-lg
+						+policy2
+		+e.thanks.active
+			.container
+				+e.circle
+					+icon("check")
+				+e.title Спасибо, Ваша заявка принята!
+				p Мы свяжемся с вами в ближайшее время. Если вы хотите связаться с нами раньше, вы можете позвонить по телефону 
+				+e.tel(href="tel:8800333-0-600") 8 800 333-0-600
 	// end sForm

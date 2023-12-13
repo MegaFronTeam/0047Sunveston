@@ -23,9 +23,14 @@
 	width: calc(26 / #{$h} *1em );
 }
 .icon-check {
-	$h: 27;
+	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(27 / #{$h} *1em );
+	width: calc(24 / #{$h} *1em );
+}
+.icon-check-circle {
+	$h: 48;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(48 / #{$h} *1em );
 }
 .icon-chevron-down {
 	$h: 24;
