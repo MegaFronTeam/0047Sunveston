@@ -1,6 +1,6 @@
 {
 	"nav":[
-		{ "name":"Каталог объектов", "url":"#"},
+		{ "name":"Каталог объектов", "url":"#", "activeClass":"active"},
 		{	"name":"Агентство", "url":"#"},
 		{"name":"Карьера", "url":"#"},
 		{"subname":"Услуги", "suburl":"#","subnav":[

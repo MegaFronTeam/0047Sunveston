@@ -12,6 +12,46 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+	& > li {
+		&.active {
+			& > a {
+				&::after {
+					@include media-breakpoint-up(lg) {
+						background-color: $primary;
+					}
+				}
+			}
+		}
+		&:first-child {
+			& > a {
+				&:after {
+					@include media-breakpoint-up(lg) {
+						width: calc(100% - rem(8));
+						left: rem(0);
+					}
+				}
+			}
+		}
+		& > a {
+			&:after {
+				@include media-breakpoint-up(lg) {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					width: calc(100% - rem(16));
+					height: rem(3);
+					left: rem(8);
+					bottom: rem(-10);
+					background-color: transparent;
+					border-radius: rem(5) rem(5) 0 0 ;
+				}
+				@include media-breakpoint-up(xxl) {
+					bottom: rem(-21);
+				}
+			}
+		}
+	}
 	li{
 		
 		// margin-left: 0;
@@ -33,13 +73,19 @@
 			font-size: rem(14);
 			font-weight: 700;
 			letter-spacing: -0.5px;
+			position: relative;
 			&:hover {
 				color: $primary;
+				&::after {
+					background-color: $primary;
+				}
 			}
 		}
 		@include media-breakpoint-up(xxl) {
 			padding: 0 calc(var(--bs-gutter-x) / 2);
-
+			&:after {
+				bottom: rem(-21);
+			}
 		}
 		.icon {
 			@include media-breakpoint-up(lg) {
@@ -269,10 +315,12 @@
 	pointer-events: all;
 }
 .menu-item-has-children:hover:before {
-	content: "";
-	height: 100%;
-	left: -10%;
-	position: absolute;
-	top: 50%;
-	width: 120%;
+	@include media-breakpoint-up(lg) {
+		content: "";
+		height: 100%;
+		left: -10%;
+		position: absolute;
+		top: 50%;
+		width: 120%;
+	}
 }
