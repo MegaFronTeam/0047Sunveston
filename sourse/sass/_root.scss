@@ -1,88 +1,108 @@
-
 :root {
-	--animate-delay: 1.2s;
-	--bs-body-font-size: 14px;
+  --animate-delay: 1.2s;
+  --bs-body-font-size: 14px;
 
-	@include media-breakpoint-up(md) {
+  @include media-breakpoint-up(md) {
+    --sPT: #{rem(80)};
+    --sPB: #{rem(90)};
+    --sTPB: #{rem(40)};
+  }
+  @media screen and (min-width: 374.99px) {
+    --bs-body-font-size: #{$em-base};
+  }
+  --sPT: #{rem(80 * 0.5)};
+  --sPB: #{rem(90 * 0.5)};
+  --sTPB: #{rem(40 * 0.5)};
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
-	}
-	@media screen and (min-width: 374.99px) {
-		--bs-body-font-size: #{$em-base};
-	}
-	--sPT: #{rem(80 * .5)};
-	--sPB: #{rem(90 * .5)};
-	--sTPB: #{rem(40 * .5)};
+  --fancybox-content-color: var(--bs-body-color);
+  --swiperArrowSize: #{rem(68)};
+  --swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+  --swiperBorderColorDef: var(--bs-primary);
+  --swiperColorDef: var(--bs-primary);
+  --swiperBgDef: #ffffff;
 
+  --swiperBorderColorDefHover: var(--bs-primary);
+  --swiperColorDefHover: var(--bs-primary);
+  --swiperBgDefHover: #ffffff;
 
-	--fancybox-content-color: var(--bs-body-color);
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
-	
-		--swiperBorderColorDefHover: var(--bs-primary);
-		--swiperColorDefHover: var(--bs-primary);
-		--swiperBgDefHover: #ffffff;
+  --main-sp-top: 244px;
+  @media screen and (min-width: 374.99px) {
+    --main-sp-top: #{rem(278)};
+  }
+  @include media-breakpoint-up(sm) {
+    --main-sp-top: #{rem(256)};
+  }
+  @include media-breakpoint-up(lg) {
+    --main-sp-top: #{rem(300)};
+  }
+  @include media-breakpoint-up(xxl) {
+    --main-sp-top: #{rem(257)};
+  }
 
+  //  --carousel-button-width: 48px;
+  //  --carousel-button-height: 48px;
 
-		
-		
-		
-	  //  --carousel-button-width: 48px;
-	  //  --carousel-button-height: 48px;
-		
-	  //  --carousel-button-svg-width: 24px;
-	  //  --carousel-button-svg-height: 24px;
-		
-	  //  --carousel-button-svg-stroke-width: 2.5;
-	  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
-	}
-.fancybox__container{
-	
-	--fancybox-bg: rgba(0, 0, 0, 0.4);
+  //  --carousel-button-svg-width: 24px;
+  //  --carousel-button-svg-height: 24px;
+
+  //  --carousel-button-svg-stroke-width: 2.5;
+  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+}
+.fancybox__container {
+  --fancybox-bg: rgba(0, 0, 0, 0.4);
 }
 .container {
-	@include media-breakpoint-up(lg) {
-		--bs-gutter-x: #{rem(80)};
-	}
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: #{rem(80)};
+  }
 }
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(xs) {}
-
-//
-@include media-breakpoint-between(md, xl) {}
-
-
-//
-@include media-breakpoint-only(xs) {}
-
-@include media-breakpoint-only(sm) {}
-
-@include media-breakpoint-only(md) {}
-
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
+@include media-breakpoint-up(xs) {
+}
 
 //
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-between(md, xl) {
+}
 
-@include media-breakpoint-down(lg) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-only(lg) {
+}
 
+@include media-breakpoint-only(xl) {
+}
+
+//
+@include media-breakpoint-down(xl) {
+}
+
+@include media-breakpoint-down(lg) {
+}
+
+@include media-breakpoint-down(md) {
+}
+
+@include media-breakpoint-down(sm) {
+}
+
+@include media-breakpoint-down(xs) {
+}
